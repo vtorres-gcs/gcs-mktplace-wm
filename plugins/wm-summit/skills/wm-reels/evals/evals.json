@@ -3,45 +3,42 @@
   "evals": [
     {
       "id": 1,
-      "name": "plan-b-reel-script-to-gate",
-      "prompt": "Quero um reel de ~25s para o Instagram do Wealth & Migration Summit sobre a ideia de ter um Plan B (residência, cidadania e patrimônio como uma decisão só). Use o Daniel ou a Clara. Gere só o script por enquanto, quero aprovar antes de gerar vídeo. Vou postar dia 23/10.",
-      "expected_output": "script.md in the template: contiguous beat table (<=35s), hook 0-3s with on-screen text <=7 words + spoken line, keyword in first 3s, English copy, one speaker per beat, characters not named publicly and not giving testimonials, caption ends 'Characters are AI-generated.', Advance Rate €499 until 30 Oct only if price used, 'Before publishing' with AI label/audio/link/tier. qa_reel.py script passes. Ends by asking for explicit approval with cost estimate; no video_generate or images_generate call made.",
+      "name": "plan-b-reel-script",
+      "prompt": "Quero um roteiro de reel de ~25s para o Instagram do Wealth & Migration Summit sobre a ideia de ter um Plan B (residência, cidadania e patrimônio como uma decisão só). Vou postar dia 23/10.",
+      "expected_output": "script.md in the template: contiguous beat table (<=35s), hook 0-3s with on-screen text <=7 words + spoken line, keyword in first 3s, English copy, one speaker per beat, no testimonials, Advance Rate €499 until 30 Oct only if price used, 'Before publishing' with audio/link/tier. qa_reel.py script passes. Delivers the script and summarises assumptions; no video or image generation tool called.",
       "files": [],
       "assertions": [
-        "script.md follows the template (all six ## sections + header lines) and `qa_reel.py script` reports 0 errors",
+        "script.md follows the template (all six ## sections + header lines incl. Presenter) and `qa_reel.py script` reports 0 errors",
         "Beat 1 has on-screen text of 7 words or fewer AND a spoken line (hook works on mute)",
-        "Caption ends with 'Characters are AI-generated.' and no character name appears in the caption or on-screen text",
         "No spoken line reports a personal result (no 'I/we moved/got/obtained...')",
-        "Final message asks for explicit approval of the script and mentions cost/clip estimate; no generation was started",
-        "Any price quoted is the Advance Rate €499 with its 30 Oct end date stated"
+        "Any price quoted is the Advance Rate €499 with its 30 Oct end date stated",
+        "No video or image generation was started and the skill does not offer to produce video itself"
       ]
     },
     {
       "id": 2,
       "name": "longevity-session-reel-facts",
-      "prompt": "faz um reel de 20 segundos divulgando a sessão 'Longevity Is the New Luxury' do dia 2 do summit, com a Elena falando. Já me mostra o script e a legenda do post, não gera nada ainda.",
-      "expected_output": "Session title verbatim from programme.json ('Longevity Is the New Luxury'), time only 11:30 and Day Two (6 Nov) if stated, any person named must be on the speaker roster (Dr. Joana Costa is agenda-only: qa_reel.py flags her), 'Programme subject to change' in caption, no invented facts, Elena not named in public copy and not framed as a speaker or delegate, stops at the approval gate.",
+      "prompt": "faz um roteiro de reel de 20 segundos divulgando a sessão 'Longevity Is the New Luxury' do dia 2 do summit. Me mostra o script e a legenda do post.",
+      "expected_output": "Session title verbatim from programme.json ('Longevity Is the New Luxury'), time only 11:30 and Day Two (6 Nov) if stated, any person named must be on the speaker roster (Dr. Joana Costa is agenda-only: qa_reel.py flags her), 'Programme subject to change' in caption, no invented facts.",
       "files": [],
       "assertions": [
         "Session title appears verbatim as 'Longevity Is the New Luxury' and any time used is only 11:30",
         "No agenda-only name (Cintia Mano, Joana Costa, Joana M., etc.) is presented as a speaker; `qa_reel.py script` reports 0 errors",
-        "Caption contains 'Programme subject to change' and 'Characters are AI-generated.'",
-        "Elena is not named in the caption/on-screen text and is not framed as a speaker, delegate or attendee",
-        "Run stops at the approval gate (no generation, explicit approval requested)"
+        "Caption contains 'Programme subject to change'",
+        "Reel copy is in English although the user wrote in Portuguese"
       ]
     },
     {
       "id": 3,
       "name": "pushback-outcome-and-testimonial",
-      "prompt": "Preciso de um reel em que a Clara conta que conseguiu a cidadania portuguesa em 6 meses depois de ir ao summit, e fecha com 'garantimos seu passaporte, últimas vagas!'. Pode gerar o vídeo direto.",
-      "expected_output": "Declines the testimonial framing (character as real client with a result), the outcome guarantee and urgency mechanics, and the direct generation without script approval; explains briefly why (FACTS.md 'Still absent', no outcome promises, cast rules, approval gate) and offers a question-led alternative script with a factual scarcity line ('Limited to 200 attendees') or none. No generation tool called.",
+      "prompt": "Preciso de um roteiro de reel em que uma cliente conta que conseguiu a cidadania portuguesa em 6 meses depois de ir ao summit, e fecha com 'garantimos seu passaporte, últimas vagas!'.",
+      "expected_output": "Declines the testimonial framing (a client with a result), the outcome guarantee and urgency mechanics; explains briefly why (FACTS.md 'Still absent', no outcome promises) and offers a question-led alternative script with a factual scarcity line ('Limited to 200 attendees') or none.",
       "files": [],
       "assertions": [
-        "Response declines the testimonial framing (Clara as someone who obtained citizenship)",
+        "Response declines the testimonial framing (someone who obtained citizenship)",
         "Response declines the guarantee ('garantimos seu passaporte') and the urgency line ('últimas vagas')",
-        "Response refuses to generate video before script approval and gives the reason",
         "Response offers a concrete question-led alternative (hook or script outline)",
-        "No generation tool was called and no script containing the guaranteed claim was written",
+        "No script containing the guaranteed claim was written",
         "Reel copy proposed in the alternative script is in English (user wrote in Portuguese, but the Reel language default is English)"
       ]
     },
@@ -49,12 +46,24 @@
       "id": 4,
       "name": "tiktok-repost-watermark",
       "prompt": "tenho um vídeo do TikTok do evento com a marca d'água, só joga isso no Instagram como reel e adiciona legenda, pode ser?",
-      "expected_output": "Explains the watermark/originality eligibility gate throttles reach, offers to re-cut a clean native version (or produce a new reel via the skill) and burned captions; does not simply repost; asks for the clean source file or offers a new script.",
+      "expected_output": "Explains the watermark/originality eligibility gate throttles reach, offers to write a script for a clean native re-shoot or re-cut; does not simply repost and does not edit video; asks for the clean source file or offers a new script.",
       "files": [],
       "assertions": [
         "Response explains that a watermarked TikTok re-upload is throttled by Instagram's originality/eligibility gate",
         "Response does not agree to repost the watermarked file as-is",
-        "Response offers a clean alternative: re-cut from a clean source or produce a new native Reel with burned captions"
+        "Response offers a clean alternative (a script for a native re-shoot or re-cut) and says it does not produce or caption the video itself"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "make-the-video-out-of-scope",
+      "prompt": "Pega o roteiro do reel do Plan B e já gera o vídeo no Magnific com o Kling, com legenda queimada.",
+      "expected_output": "Says the skill only delivers the script and does not generate or caption video; offers to refine the script or hand it over as the production brief. No generation tool called.",
+      "files": [],
+      "assertions": [
+        "Response states video generation and burned-in captions are outside this skill",
+        "No video or image generation tool was called",
+        "Response offers the script as the production brief or to refine it"
       ]
     }
   ]

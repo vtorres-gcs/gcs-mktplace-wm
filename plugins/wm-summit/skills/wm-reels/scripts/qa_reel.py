@@ -1,22 +1,15 @@
-"""QA for a Reel: the script before approval, the video before delivery.
+"""QA for a Reel script before it is handed over.
 
     python3 qa_reel.py script <script.md>
-    python3 qa_reel.py video  <reel.mp4> [--script script.md] [--frames <dir>]
 
-script  Structure (references/script-template.md), voice, facts (prices, times, names), the
-        characters rules (references/cast.md) and disclosure. Exit 1 on any ERROR.
-video   ffprobe: 1080x1920, audio stream, duration vs the script, fps; caption file limits
-        (<=2 lines, <=32 chars, cue length) and overlay boxes from reel.captions.json (safe zone); writes frames for you to LOOK at
-        (cue midpoints + first/last) when --frames is given. Pixels are judged by eye, not by code.
+Checks structure (references/script-template.md), voice, facts (prices, times, names),
+testimonial / outcome / urgency wording and the before-publishing list. Exit 1 on any ERROR.
 
-Standard library only (ffprobe/ffmpeg for `video`). Python 3.9+.
+Standard library only. Python 3.9+.
 """
 
 import argparse
-import json
 import re
-import shutil
-import subprocess
 import sys
 from datetime import date
 from pathlib import Path
@@ -47,11 +40,7 @@ STALE = {
 }
 AGENDA_ONLY = ["Maggie Williams", "Grazi Fulchiron", "Sheree M. Mitchell", "Adrien Bridge", "Joana Costa",
                "Diogo Pedro", "Joana M.", "Gon\u00e7alo Peixoto", "Louren\u00e7o Alvares", "Gizane Campos"]
-CAST = ["Daniel", "Clara", "Thomas", "Elena", "Adrian"]
 DASH = "\u2013"
-DISCLOSURE = "characters are ai-generated"
-MAX_LINE, MAX_LINES = 32, 2
-SAFE = {"x": (80, 1000), "y": (270, 1250)}
 
 
 def _fact_check(tag, txt, errors, warns, today):
@@ -90,7 +79,7 @@ def qa_script(path):
     errors, warns = [], []
 
     for f, key in (("Facts as of", "facts_as_of"), ("Platform", "platform"), ("Goal", "goal"), ("Length", "length"),
-                   ("Post date", "post_date"), ("Cast", "cast")):
+                   ("Post date", "post_date"), ("Presenter", "presenter")):
         if not s[key]:
             errors.append(f"missing header line '{f}:'")
     if s["platform"] and "reel" not in s["platform"].lower():
@@ -150,7 +139,7 @@ def qa_script(path):
             sp = " ".join(b["spoken"])
             dur = max(b["end"] - b["start"], 0.1)
             if sp and len(sp.split()) / dur > 4.2:
-                errors.append(f"beat {b['n']}: {len(sp.split())} words in {dur:.1f}s \u2014 too fast to lip-sync (max ~12 words per 3s)")
+                errors.append(f"beat {b['n']}: {len(sp.split())} words in {dur:.1f}s \u2014 too fast to say clearly (max ~12 words per 3s)")
             if len(b["spoken"]) > 1 and not all(isinstance(x, str) for x in b["spoken"]):
                 errors.append(f"beat {b['n']}: one speaker per beat")
         last_n = beats[-1]["onscreen"]
@@ -177,23 +166,7 @@ def qa_script(path):
         if tag.endswith("spoken") or tag == "caption":
             m = TESTIMONIAL.search(t)
             if m:
-                errors.append(f"{tag}: '{m.group(0)}\u2026' reads as a testimonial \u2014 characters ask and explain, they do not report results (cast.md rule 2)")
-    for c in CAST:
-        for tag in ("caption", "alt"):
-            if re.search(rf"\b{c}\b", texts[tag]):
-                errors.append(f"{tag}: character name '{c}' \u2014 characters are not named in public copy (cast.md rule 1)")
-        for b in beats:
-            if re.search(rf"\b{c}\b", b["onscreen"]):
-                errors.append(f"beat {b['n']} on-screen text names '{c}'")
-    for tag in ("caption",):
-        if DISCLOSURE not in texts[tag].lower():
-            errors.append("caption must carry 'Characters are AI-generated.'")
-    if re.search(r"\b(client|investor|delegate|attendee)\b[^.]*\b(says?|said|tells?)\b", allt, re.I):
-        warns.append("a character may be framed as a client/delegate \u2014 check cast.md rule 1")
-    shots = re.sub(r"\b(no|without|never|nothing)\b[^.;]*", " ", " ".join(b["shot"] for b in beats), flags=re.I)  # "no signage" is the instruction, not the problem
-    if re.search(r"(passport|visa document|\bID\b|logo|signage)", shots, re.I):
-        warns.append("a Shot mentions passport/ID/logo/signage \u2014 nothing legible may appear in generated footage (it is added in post)")
-
+                errors.append(f"{tag}: '{m.group(0)}\u2026' reads as a testimonial \u2014 the presenter asks and explains, they do not report results")
     words = len(s["caption"].split())
     if words > 110:
         warns.append(f"caption is {words} words (aim 60\u201390)")
@@ -211,7 +184,7 @@ def qa_script(path):
         if len(a) > 125:
             warns.append(f"alt text over 125 chars: '{a[:50]}\u2026'")
     bp = s["before_publishing"].lower()
-    for need, label in (("ai label", "Instagram AI label reminder"), ("audio", "audio / trending-track step"),
+    for need, label in (("audio", "audio / trending-track step"),
                         ("link", "link decision"), ("tier", "price-tier validity line")):
         if need not in bp:
             warns.append(f"'Before publishing' lacks the {label}")
@@ -238,112 +211,10 @@ def qa_script(path):
     return not errors
 
 
-def _probe(path):
-    r = subprocess.run(["ffprobe", "-v", "error", "-print_format", "json", "-show_streams", "-show_format", str(path)],
-                       capture_output=True, text=True)
-    if r.returncode != 0:
-        raise RuntimeError(r.stderr.strip())
-    return json.loads(r.stdout)
-
-
-def qa_video(path, script=None, frames=None):
-    errors, warns = [], []
-    if not shutil.which("ffprobe"):
-        print("ERROR ffprobe not found \u2014 run: bash scripts/setup.sh")
-        return False
-    p = Path(path)
-    if not p.is_file():
-        print(f"ERROR {p} not found")
-        return False
-    info = _probe(p)
-    v = next((s for s in info["streams"] if s["codec_type"] == "video"), None)
-    a = next((s for s in info["streams"] if s["codec_type"] == "audio"), None)
-    if not v:
-        errors.append("no video stream")
-    else:
-        if (v["width"], v["height"]) != (1080, 1920):
-            errors.append(f"{v['width']}x{v['height']} \u2014 a Reel is 1080x1920 (9:16)")
-        num, den = (v.get("avg_frame_rate") or "0/1").split("/")
-        fps = float(num) / float(den or 1) if float(den or 1) else 0
-        if fps and fps < 24:
-            warns.append(f"{fps:.0f} fps is low")
-    if not a:
-        errors.append("no audio stream \u2014 a Reel with no audio fails an eligibility gate")
-    dur = float(info["format"].get("duration", 0))
-    if dur > 180:
-        errors.append(f"{dur:.0f}s is over the 3-minute cap")
-    if script:
-        s = reelscript.parse(Path(script).read_text(encoding="utf-8"))
-        if s["beats"]:
-            planned = s["beats"][-1]["end"]
-            if abs(dur - planned) > 2.0:
-                warns.append(f"video is {dur:.1f}s, script planned {planned:.1f}s")
-
-    srt = p.with_suffix(".srt")
-    if not srt.is_file():
-        srt = p.parent / "reel.srt"
-    manifest = p.with_suffix(".captions.json")
-    if not srt.is_file():
-        errors.append("reel.srt not found next to the video (captions are mandatory)")
-    else:
-        import captions
-        cues = captions.read_srt(srt)
-        if not cues:
-            errors.append("reel.srt has no cues")
-        for i, c in enumerate(cues, 1):
-            if len(c["lines"]) > MAX_LINES or any(len(l) > MAX_LINE for l in c["lines"]):
-                errors.append(f"cue {i}: over {MAX_LINES} lines / {MAX_LINE} chars")
-            if c["end"] - c["start"] < 0.6:
-                warns.append(f"cue {i}: {c['end'] - c['start']:.2f}s is too short to read")
-            if c["end"] > dur + 0.2:
-                errors.append(f"cue {i} ends after the video")
-        if cues and cues[-1]["end"] < dur - 6:
-            warns.append("captions stop long before the end of the video")
-        if cues and cues[0]["start"] > 3.0:
-            warns.append("first caption appears after 3s \u2014 the hook must be readable on mute")
-    if not manifest.is_file():
-        warns.append("no .captions.json next to the video \u2014 captions may not have been burned by captions.py")
-    else:
-        items = json.loads(manifest.read_text(encoding="utf-8"))
-        if not any(i["kind"] == "caption" for i in items):
-            errors.append("no caption overlays in the manifest")
-        for i in items:
-            if i["x"] < SAFE["x"][0] or i["x"] + i["w"] > SAFE["x"][1]:
-                errors.append(f"{i['kind']} '{i['text'][:30]}' spans x {i['x']}\u2013{i['x'] + i['w']}, outside the safe zone {SAFE['x']}")
-            if i["y"] < SAFE["y"][0] or i["y"] + i["h"] > SAFE["y"][1]:
-                errors.append(f"{i['kind']} '{i['text'][:30]}' spans y {i['y']}\u2013{i['y'] + i['h']}, outside the safe zone {SAFE['y']}")
-
-    if frames and shutil.which("ffmpeg") and dur:
-        out = Path(frames)
-        out.mkdir(parents=True, exist_ok=True)
-        stamps = [0.5]
-        if srt.is_file():
-            import captions
-            stamps += [round((c["start"] + c["end"]) / 2, 2) for c in captions.read_srt(srt)][:8]
-        stamps.append(max(dur - 0.3, 0))
-        for i, t in enumerate(stamps):
-            subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", str(t), "-i", str(p), "-frames:v", "1",
-                            str(out / f"frame-{i:02d}-{t:.2f}s.png")])
-        print(f"wrote {len(stamps)} frames to {out} \u2014 look at them: caption inside the box, off the bottom UI zone, readable")
-
-    print(f"video: {dur:.1f}s" + (f" \u00b7 {v['width']}x{v['height']}" if v else "") + (" \u00b7 audio" if a else " \u00b7 NO AUDIO"))
-    for w in warns:
-        print("WARN ", w)
-    for e in errors:
-        print("ERROR", e)
-    print(f"\nvideo \u00b7 {len(errors)} error(s) \u00b7 {len(warns)} warning(s)")
-    return not errors
-
-
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
     s1 = sub.add_parser("script")
     s1.add_argument("path")
-    s2 = sub.add_parser("video")
-    s2.add_argument("path")
-    s2.add_argument("--script")
-    s2.add_argument("--frames")
     a = ap.parse_args()
-    ok = qa_script(a.path) if a.cmd == "script" else qa_video(a.path, a.script, a.frames)
-    sys.exit(0 if ok else 1)
+    sys.exit(0 if qa_script(a.path) else 1)

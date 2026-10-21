@@ -46,7 +46,7 @@ def _spoken_lines(cell):
 def parse(md):
     out = {"raw": md}
     out["title"] = (re.search(r"^#\s+(.+)$", md, re.M) or [None, ""])[1].strip() if re.search(r"^#\s+(.+)$", md, re.M) else ""
-    for f in ("Facts as of", "Platform", "Language", "Goal", "Length", "Post date", "Cast"):
+    for f in ("Facts as of", "Platform", "Language", "Goal", "Length", "Post date", "Presenter"):
         out[f.lower().replace(" ", "_")] = _header(md, f)
     concept = _section(md, "Concept")
     out["concept"] = concept
