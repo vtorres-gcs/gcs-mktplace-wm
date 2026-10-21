@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "title": "Wealth & Migration Summit 2026 — overview",
+    "author": "Global Citizen Solutions",
+    "fonts": "office",
+    "lang": "en-GB",
+    "confirmed": [],
+    "alternate": true
+  },
+  "slides": [
+    {
+      "type": "cover",
+      "image": "hero",
+      "title": "@site.headline",
+      "lede": "@site.lede",
+      "notes": "Cover. Service line, headline and lede are the site's own words, verbatim."
+    },
+    {
+      "type": "split",
+      "headline": "@site.about_heading",
+      "image": "img/epic-sana-1440.webp",
+      "image_alt": "The EPIC SANA Marques Hotel, Lisbon",
+      "caption": "EPIC SANA Marquês · Lisbon",
+      "body": [
+        "Residency and citizenship planning are increasingly treated as part of a broader wealth strategy, not an isolated legal decision.",
+        "@site.setting_heading"
+      ]
+    },
+    {
+      "type": "ledger",
+      "headline": "Two days, one room",
+      "items": [
+        {
+          "auto": "days"
+        },
+        {
+          "auto": "workshops"
+        },
+        {
+          "auto": "speakers"
+        },
+        {
+          "auto": "capacity"
+        }
+      ]
+    },
+    {
+      "type": "entries",
+      "headline": "Who is in the room",
+      "items": "@audience"
+    },
+    {
+      "type": "days",
+      "pick": {
+        "1": [
+          "d1-0915",
+          "d1-1110"
+        ],
+        "2": [
+          "d2-0930",
+          "d2-1150"
+        ]
+      }
+    },
+    {
+      "type": "programme",
+      "day": 1,
+      "track": "main",
+      "columns": 2
+    },
+    {
+      "type": "programme",
+      "day": 1,
+      "track": "workshops"
+    },
+    {
+      "type": "programme",
+      "day": 2,
+      "track": "main",
+      "columns": 2
+    },
+    {
+      "type": "programme",
+      "day": 2,
+      "track": "workshops"
+    },
+    {
+      "type": "speakers",
+      "names": "all",
+      "headline": "Speakers",
+      "tone": "paper"
+    },
+    {
+      "type": "rates",
+      "tone": "navy"
+    },
+    {
+      "type": "closing",
+      "headline": "Your Plan B starts in Lisbon",
+      "lead": "Attendance is limited to 200 attendees."
+    }
+  ]
+}

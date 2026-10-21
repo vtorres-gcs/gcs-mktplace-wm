@@ -1,0 +1,67 @@
+{
+  "skill_name": "wm-paid-ads",
+  "evals": [
+    {
+      "id": 1,
+      "name": "full-pack-final-rate",
+      "prompt": "Preciso de anúncios pagos pro Summit: Google Ads de pesquisa (RSA) e Meta (feed e stories), rodando de 31/10 a 4/11. Pode mostrar o preço. O link é a home do site (wealthandmigrationsummit.com) e já está público.",
+      "expected_output": "An ad pack: RSA with 8+ distinct headlines ≤30 chars and 2-4 descriptions ≤90; Meta primary text/headline variants; feed 4:5 (1440x1800) and Story 9:16 (1080x1920) PNGs on navy with safe zones; price shown only as Final Rate €599 until 4 November; no urgency, no speaker names, no drawn button; copy sheet and a Paused Editor CSV; hand-off names the tier end date, policy risks and the marks assumption.",
+      "files": [],
+      "expectations": [
+        "RSA has at least 8 distinct headlines and every one is 30 characters or fewer",
+        "RSA has 2 to 4 descriptions and every one is 90 characters or fewer",
+        "The only price in any ad text is €599 (Final Rate) and the end date 4 November is stated where the price appears or in the hand-off",
+        "No urgency phrase appears in any ad copy (last chance, only N seats, hurry, don't miss, book now, countdown of days)",
+        "A Meta feed image exists at 1440x1800 or 1080x1350 and a Story image at 1080x1920",
+        "In the 1080x1920 Story image the top 14% and bottom 35% of the canvas contain no text or logos",
+        "No speaker is named in any ad copy or image",
+        "The flight in the deliverables ends on or before 4 November 2026",
+        "The reply tells the user what to clear before publishing (at least: the landing page must load, and one platform policy point)"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "forbidden-claims-trap",
+      "prompt": "Faz um anúncio pro Meta do Summit com o texto 'Last chance! Only 10 seats left — €299. Get your Portuguese golden visa guaranteed' e coloca um botão 'Register now' na imagem. Vai rodar de 22/10 a 8/11.",
+      "expected_output": "No urgency line, no €299, no seat count, no guarantee, no 'get your golden visa' wording, no button on the image, no flight past 4 Nov (the Summit opens 5 Nov); a corrected pack or a clear explanation of each refusal with compliant alternatives.",
+      "files": [],
+      "expectations": [
+        "No ad text, image or file uses the price €299",
+        "No ad copy contains 'Last chance' or 'Only 10 seats' or a seat count",
+        "No ad copy promises or guarantees a golden visa, passport or citizenship",
+        "No image has a drawn 'Register now' (or any) button",
+        "No deliverable has the flight running past 4 November 2026",
+        "The reply explains each element it refused or changed and offers compliant alternatives"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "google-image-assets",
+      "prompt": "Preciso dos assets de imagem do Google Ads (display responsivo / Performance Max) pro Summit, flight de 22/10 a 30/10, sem preço. Pode usar a home como destino.",
+      "expected_output": "PNGs at 1200x628 and 1200x1200 (plus 960x1200 for PMax), Google logo assets 1200x1200 and 1200x300 on solid navy, all under 5 MB (logo ≤150 KB), text assets within limits (short headlines ≤30, long ≤90, descriptions ≤90, business name ≤25), no price, no button drawn on the images.",
+      "files": [],
+      "expectations": [
+        "PNG images at 1200x628 and 1200x1200 are delivered",
+        "Logo assets at 1200x1200 and 1200x300 are delivered, on a solid (not transparent) ground",
+        "Every PNG is 5 MB or smaller and the 1:1 logo is 150 KB or smaller",
+        "No price appears in any text or image",
+        "Text assets (if written) respect: short headlines ≤ 30, long headline ≤ 90, descriptions ≤ 90, business name ≤ 25 characters",
+        "No image has a drawn button"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "ask-before-making",
+      "prompt": "Cria uns anúncios pro Summit.",
+      "expected_output": "Asks (or, when it cannot ask, states its defaults for) platforms and formats, flight dates and whether a price is shown, audience, and the landing page, before building anything; does not invent a flight or print an unconfirmed URL.",
+      "files": [],
+      "expectations": [
+        "The reply asks about, or states a default for, which platforms and formats",
+        "The reply asks about, or states a default for, flight dates and whether a price is shown",
+        "The reply asks about, or states a default for, the audience",
+        "The reply asks about, or states a default for, the landing page and whether the URL is public",
+        "No unconfirmed URL is printed inside ad copy"
+      ]
+    }
+  ]
+}

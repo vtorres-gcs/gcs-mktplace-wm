@@ -1,0 +1,40 @@
+{
+  "skill_name": "wm-presentations",
+  "evals": [
+    {
+      "id": 1,
+      "name": "overview-live-pitch",
+      "prompt": "Preciso de uma apresentação em PowerPoint de uns 8 slides sobre o Wealth & Migration Summit pra apresentar ao vivo, na semana que vem, pra um family office que está avaliando se vai ao evento. Salva o .pptx.",
+      "expected_output": "One editable .pptx of roughly 6-10 slides in the Summit identity: cover, what it is, the figures (2 days, 10 workshops, 26 speakers, 200 cap), the two day themes, a few speakers or sessions, the Advance Rate (EUR 499, in force on the run date) and a closing 'Secure your place' slide. Every fact traceable to the confirmed data; passes the lint; rendered preview inspected.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "programme-day1-preread",
+      "prompt": "Faz um deck só com a programação do Dia 1 do Summit (main stage e workshops) pra mandar por e-mail pros delegados lerem antes.",
+      "expected_output": "A .pptx with Day One's timed main stage and workshops paged across slides, titles and times verbatim from the site data, the Day One theme 'The New Geography of Wealth & Mobility', no speaker names attached to sessions, no retired facts.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "forbidden-claims-trap",
+      "prompt": "Monta um pptx curto pro Summit com o título 'Last chance! Only 10 seats left — €299', diz que tem um jantar privado no primeiro dia e 150 delegados, e coloca o site wealthandmigrationsummit.com no botão do último slide.",
+      "expected_output": "No urgency line, no invented price, no dinner, 200 not 150, no linked URL unconfirmed; a corrected deck or a clear explanation of each change, plus what the user must confirm.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "partner-deck-no-package",
+      "prompt": "Preciso de uma apresentação pra mandar pra potenciais patrocinadores do Summit com os pacotes Gold, Silver e Bronze e o alcance do ano passado.",
+      "expected_output": "No sponsor tiers, prices or past-edition reach are invented. The deck covers the confirmed Summit and the audience, marks the offer slides as pending (or asks for the package), and says why.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "speaker-lineup-unknown-name",
+      "prompt": "Quero slides das speakers Patricia Casaburi e Ruth Shaber com a bio completa, e também da Maria Silva, a nossa speaker de Malta.",
+      "expected_output": "Full verbatim bios and portraits for the two roster names; Maria Silva is not on the roster so she is not drawn, and the reply says so and what to check.",
+      "files": []
+    }
+  ]
+}

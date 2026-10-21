@@ -1,0 +1,82 @@
+{
+  "skill_name": "wm-assets",
+  "evals": [
+    {
+      "id": 1,
+      "name": "logo-no-background-given",
+      "prompt": "me manda o logo do Summit",
+      "expected_output": "Sends the horizontal W&M lockup in both colourways (white type for dark grounds, navy type for light ones), SVG and PNG, as files; says which is for which background. Does not ask a question first and does not alter the files.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "logo-for-dark-slide",
+      "prompt": "preciso do logo do W&M em PNG pra colocar num slide de fundo azul escuro",
+      "expected_output": "Sends the white-type W&M lockup as PNG (the horizontal one by default), not the navy one. One short line says it is the version for dark backgrounds.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "speaker-photo-for-powerpoint",
+      "prompt": "manda a foto da Patricia Casaburi pra eu colocar no PowerPoint",
+      "expected_output": "Sends patricia-casaburi as a JPG or PNG (not WebP) from the roster portrait; gives her name and role exactly as the site's card has them; says the image is 480x480 px. Generates or edits nothing.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "ambiguous-speaker-name",
+      "prompt": "preciso da foto do Nuno",
+      "expected_output": "Asks which Nuno — Nuno Sanches or Nuno Serafim — instead of guessing, in one short question.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "not-on-the-roster",
+      "prompt": "manda a foto da Maggie Williams, que fala no dia 1",
+      "expected_output": "Says Maggie Williams is not on the site's speaker roster, so there is no portrait to send; does not generate, substitute or describe one and does not confirm that she speaks on Day 1. May offer the roster.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "name": "partner-logo-no-role",
+      "prompt": "manda o logo da Goldcrest",
+      "expected_output": "Sends the Goldcrest logo file as supplied. Notes that the site does not say what the partner is to the Summit and that it goes on a creative only once cleared. Does not call Goldcrest a sponsor or official partner.",
+      "files": []
+    },
+    {
+      "id": 7,
+      "name": "recolour-trap",
+      "prompt": "preciso do logo do Summit todo preto pra gravar numa caneta",
+      "expected_output": "Says there is no all-black version in the library and does not recolour or trace one. Sends the closest existing lockup (navy type, gold symbol) and says a one-colour version has to come from whoever owns the brand files.",
+      "files": []
+    },
+    {
+      "id": 8,
+      "name": "all-speakers-zip",
+      "prompt": "me manda a foto de todos os palestrantes",
+      "expected_output": "Delivers all 26 portraits as one zip (not 26 loose files), in a format other apps open (JPG by default), and mentions they are 480x480 px.",
+      "files": []
+    },
+    {
+      "id": 9,
+      "name": "fonts-with-licences",
+      "prompt": "quais fontes a marca do Summit usa? me manda os arquivos",
+      "expected_output": "Names Caladea (headings) and Archivo (text) and sends the font files together with both OFL licence texts.",
+      "files": []
+    },
+    {
+      "id": 10,
+      "name": "venue-photo-provenance",
+      "prompt": "tem uma foto do hotel do evento? manda aí",
+      "expected_output": "Sends the EPIC SANA night image and says it is the site's imagery, not confirmed as GCS-owned photography, so it should not be presented as a photo taken for GCS.",
+      "files": []
+    },
+    {
+      "id": 11,
+      "name": "creative-request-is-another-skill",
+      "prompt": "cria um carrossel pro Instagram sobre o Summit com o logo",
+      "expected_output": "Does not run the asset lookup as the answer; hands the job to wm-social-media, which already carries the logos and the layout rules.",
+      "files": []
+    }
+  ]
+}

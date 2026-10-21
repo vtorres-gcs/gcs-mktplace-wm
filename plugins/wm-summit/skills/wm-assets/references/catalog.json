@@ -1,0 +1,1280 @@
+{
+  "_meta": {
+    "as_of": "2026-10-21",
+    "note": "Snapshot of the Summit's assets, collected from the site repo (gcs-wealth-migration-summit) and the wm-summit sibling skills. Paths are relative to assets/."
+  },
+  "bundles": {
+    "logos": [
+      "wm-logos",
+      "gcs-logos",
+      "cnn-portugal-logos"
+    ],
+    "brand-kit": [
+      "wm-logos",
+      "gcs-logos",
+      "cnn-portugal-logos",
+      "fonts"
+    ]
+  },
+  "speaker_caution": "Client-supplied headshot, as supplied (never generated or altered). 480×480 px — fine for slides and social, too small for print. Name and role are the site's card; a speaker's name is not tied to any session.",
+  "site_ignore": [
+    "assets/img/hero-900.webp",
+    "assets/img/epic-sana-900.webp",
+    "assets/img/nocturne-texture-900.webp",
+    "assets/img/claim-your-seat.webp",
+    "assets/img/hero-cnn-portugal.png",
+    "assets/img/hero-gcs-symbol.svg",
+    "assets/img/hero-gcs-text.svg",
+    "assets/img/Symbol-W&MS.svg",
+    "assets/img/reg-arrow-right.svg",
+    "assets/img/reg-check.svg",
+    "assets/img/reg-users.svg",
+    "assets/img/cnn-portugal.png",
+    "assets/docs/wms2026-programme.pdf"
+  ],
+  "entries": [
+    {
+      "id": "wm.horizontal.white",
+      "title": "W&M lockup — horizontal, white type",
+      "kind": "logo",
+      "group": "wm-logos",
+      "files": [
+        "logos/wm/wm-horizontal-white.svg",
+        "logos/wm/wm-horizontal-white.png"
+      ],
+      "ground": "dark",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "wealth and migration summit",
+        "wealth & migration summit",
+        "w&m",
+        "wm",
+        "summit",
+        "evento",
+        "white",
+        "branco",
+        "branca",
+        "horizontal",
+        "masthead",
+        "cabeçalho",
+        "linha"
+      ],
+      "note": "Gold mark + the name on one line, white type. The masthead lockup of the site; the default pick for \"the Summit logo\" on a dark/navy ground."
+    },
+    {
+      "id": "wm.horizontal.blue",
+      "title": "W&M lockup — horizontal, navy type",
+      "kind": "logo",
+      "group": "wm-logos",
+      "files": [
+        "logos/wm/wm-horizontal-blue.svg",
+        "logos/wm/wm-horizontal-blue.png"
+      ],
+      "ground": "light",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "wealth and migration summit",
+        "wealth & migration summit",
+        "w&m",
+        "wm",
+        "summit",
+        "evento",
+        "blue",
+        "azul",
+        "navy",
+        "horizontal",
+        "masthead",
+        "cabeçalho",
+        "linha"
+      ],
+      "note": "Gold mark + the name on one line, navy type. The same masthead lockup for white / light grounds."
+    },
+    {
+      "id": "wm.default.white",
+      "title": "W&M lockup — stacked, left-aligned, white type",
+      "kind": "logo",
+      "group": "wm-logos",
+      "files": [
+        "logos/wm/wm-default-white.svg",
+        "logos/wm/wm-default-white.png"
+      ],
+      "ground": "dark",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "wealth and migration summit",
+        "wealth & migration summit",
+        "w&m",
+        "wm",
+        "summit",
+        "evento",
+        "white",
+        "branco",
+        "branca",
+        "stacked",
+        "empilhado",
+        "default",
+        "padrão",
+        "vertical"
+      ],
+      "note": "Gold mark above a three-line name, left-aligned, white type. For square or tall spaces on a dark ground."
+    },
+    {
+      "id": "wm.default.blue",
+      "title": "W&M lockup — stacked, left-aligned, navy type",
+      "kind": "logo",
+      "group": "wm-logos",
+      "files": [
+        "logos/wm/wm-default-blue.svg",
+        "logos/wm/wm-default-blue.png"
+      ],
+      "ground": "light",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "wealth and migration summit",
+        "wealth & migration summit",
+        "w&m",
+        "wm",
+        "summit",
+        "evento",
+        "blue",
+        "azul",
+        "navy",
+        "stacked",
+        "empilhado",
+        "default",
+        "padrão",
+        "vertical"
+      ],
+      "note": "Gold mark above a three-line name, left-aligned, navy type. For square or tall spaces on a light ground."
+    },
+    {
+      "id": "wm.vertical.white",
+      "title": "W&M lockup — centred, white type",
+      "kind": "logo",
+      "group": "wm-logos",
+      "files": [
+        "logos/wm/wm-vertical-white.svg",
+        "logos/wm/wm-vertical-white.png"
+      ],
+      "ground": "dark",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "wealth and migration summit",
+        "wealth & migration summit",
+        "w&m",
+        "wm",
+        "summit",
+        "evento",
+        "white",
+        "branco",
+        "branca",
+        "vertical",
+        "centered",
+        "centrado",
+        "centralizado"
+      ],
+      "note": "Gold mark above a two-line name, centred, white type. Dark ground."
+    },
+    {
+      "id": "wm.vertical.blue",
+      "title": "W&M lockup — centred, navy type",
+      "kind": "logo",
+      "group": "wm-logos",
+      "files": [
+        "logos/wm/wm-vertical-blue.svg",
+        "logos/wm/wm-vertical-blue.png"
+      ],
+      "ground": "light",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "wealth and migration summit",
+        "wealth & migration summit",
+        "w&m",
+        "wm",
+        "summit",
+        "evento",
+        "blue",
+        "azul",
+        "navy",
+        "vertical",
+        "centered",
+        "centrado",
+        "centralizado"
+      ],
+      "note": "Gold mark above a two-line name, centred, navy type. Light ground."
+    },
+    {
+      "id": "wm.symbol",
+      "title": "W&M monogram (gold, no name)",
+      "kind": "logo",
+      "group": "wm-logos",
+      "files": [
+        "logos/wm/wm-symbol.svg",
+        "logos/wm/wm-symbol.png"
+      ],
+      "ground": "any",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "wealth and migration summit",
+        "wealth & migration summit",
+        "w&m",
+        "wm",
+        "summit",
+        "evento",
+        "symbol",
+        "símbolo",
+        "simbolo",
+        "monogram",
+        "monograma",
+        "icon",
+        "ícone",
+        "icone",
+        "gold",
+        "dourado"
+      ],
+      "note": "The gold W&M mark alone. Works as a mark on both dark and light grounds; never as text."
+    },
+    {
+      "id": "gcs.primary.white",
+      "title": "Global Citizen Solutions — primary (symbol + name), white",
+      "kind": "logo",
+      "group": "gcs-logos",
+      "files": [
+        "logos/gcs/gcs-primary-white.png",
+        "logos/gcs/gcs-primary-white.svg"
+      ],
+      "ground": "dark",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "gcs",
+        "global citizen solutions",
+        "convener",
+        "organizador",
+        "organizadora",
+        "white",
+        "branco",
+        "branca",
+        "primary",
+        "principal"
+      ],
+      "note": "The GCS mark stands alone — nothing written above, beside or over it. Use as supplied; never recolour or redraw."
+    },
+    {
+      "id": "gcs.primary.blue",
+      "title": "Global Citizen Solutions — primary (symbol + name), blue",
+      "kind": "logo",
+      "group": "gcs-logos",
+      "files": [
+        "logos/gcs/gcs-primary-blue.png"
+      ],
+      "ground": "light",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "gcs",
+        "global citizen solutions",
+        "convener",
+        "organizador",
+        "organizadora",
+        "blue",
+        "azul",
+        "navy",
+        "primary",
+        "principal"
+      ],
+      "note": "The GCS mark stands alone — nothing written above, beside or over it. Use as supplied; never recolour or redraw. PNG only."
+    },
+    {
+      "id": "gcs.secondary.white",
+      "title": "Global Citizen Solutions — wordmark on one line, white",
+      "kind": "logo",
+      "group": "gcs-logos",
+      "files": [
+        "logos/gcs/gcs-secondary-white.png",
+        "logos/gcs/gcs-secondary-white.svg"
+      ],
+      "ground": "dark",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "gcs",
+        "global citizen solutions",
+        "convener",
+        "organizador",
+        "organizadora",
+        "white",
+        "branco",
+        "branca",
+        "secondary",
+        "secundário",
+        "secundario",
+        "wordmark",
+        "texto",
+        "linha"
+      ],
+      "note": "The GCS mark stands alone — nothing written above, beside or over it. Use as supplied; never recolour or redraw."
+    },
+    {
+      "id": "gcs.secondary.blue",
+      "title": "Global Citizen Solutions — wordmark on one line, blue",
+      "kind": "logo",
+      "group": "gcs-logos",
+      "files": [
+        "logos/gcs/gcs-secondary-blue.png",
+        "logos/gcs/gcs-secondary-blue.svg"
+      ],
+      "ground": "light",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "gcs",
+        "global citizen solutions",
+        "convener",
+        "organizador",
+        "organizadora",
+        "blue",
+        "azul",
+        "navy",
+        "secondary",
+        "secundário",
+        "secundario",
+        "wordmark",
+        "texto",
+        "linha"
+      ],
+      "note": "The GCS mark stands alone — nothing written above, beside or over it. Use as supplied; never recolour or redraw."
+    },
+    {
+      "id": "gcs.symbol.white",
+      "title": "Global Citizen Solutions — symbol only, white",
+      "kind": "logo",
+      "group": "gcs-logos",
+      "files": [
+        "logos/gcs/gcs-symbol-white.png",
+        "logos/gcs/gcs-symbol-white.svg"
+      ],
+      "ground": "dark",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "gcs",
+        "global citizen solutions",
+        "convener",
+        "organizador",
+        "organizadora",
+        "white",
+        "branco",
+        "branca",
+        "symbol",
+        "símbolo",
+        "simbolo",
+        "star",
+        "estrela",
+        "icon",
+        "ícone"
+      ],
+      "note": "The GCS mark stands alone — nothing written above, beside or over it. Use as supplied; never recolour or redraw."
+    },
+    {
+      "id": "gcs.symbol.blue",
+      "title": "Global Citizen Solutions — symbol only, blue",
+      "kind": "logo",
+      "group": "gcs-logos",
+      "files": [
+        "logos/gcs/gcs-symbol-blue.svg"
+      ],
+      "ground": "light",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "gcs",
+        "global citizen solutions",
+        "convener",
+        "organizador",
+        "organizadora",
+        "blue",
+        "azul",
+        "navy",
+        "symbol",
+        "símbolo",
+        "simbolo",
+        "star",
+        "estrela",
+        "icon",
+        "ícone"
+      ],
+      "note": "The GCS mark stands alone — nothing written above, beside or over it. Use as supplied; never recolour or redraw. SVG only."
+    },
+    {
+      "id": "cnn.white",
+      "title": "CNN Portugal — white",
+      "kind": "logo",
+      "group": "cnn-portugal-logos",
+      "files": [
+        "logos/cnn-portugal/cnn-portugal-white.png"
+      ],
+      "ground": "dark",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "cnn",
+        "cnn portugal",
+        "media",
+        "imprensa",
+        "white",
+        "branco",
+        "branca"
+      ],
+      "note": "CNN Portugal's mark, as shown beside Global Citizen Solutions in the site's hero. Third-party mark: use as supplied; no wording that gives it a role (\"official partner\", \"in partnership with\")."
+    },
+    {
+      "id": "cnn.red",
+      "title": "CNN Portugal — red",
+      "kind": "logo",
+      "group": "cnn-portugal-logos",
+      "files": [
+        "logos/cnn-portugal/cnn-portugal-red.png"
+      ],
+      "ground": "light",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "cnn",
+        "cnn portugal",
+        "media",
+        "imprensa",
+        "red",
+        "vermelho",
+        "vermelha",
+        "colour",
+        "cor"
+      ],
+      "note": "CNN Portugal's mark, as shown beside Global Citizen Solutions in the site's hero. Third-party mark: use as supplied; no wording that gives it a role (\"official partner\", \"in partnership with\")."
+    },
+    {
+      "id": "cnn.black",
+      "title": "CNN Portugal — black",
+      "kind": "logo",
+      "group": "cnn-portugal-logos",
+      "files": [
+        "logos/cnn-portugal/cnn-portugal-black.png"
+      ],
+      "ground": "light",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "cnn",
+        "cnn portugal",
+        "media",
+        "imprensa",
+        "black",
+        "preto",
+        "preta",
+        "mono"
+      ],
+      "note": "CNN Portugal's mark, as shown beside Global Citizen Solutions in the site's hero. Third-party mark: use as supplied; no wording that gives it a role (\"official partner\", \"in partnership with\")."
+    },
+    {
+      "id": "cnn.square-red",
+      "title": "CNN Portugal — square badge, red",
+      "kind": "logo",
+      "group": "cnn-portugal-logos",
+      "files": [
+        "logos/cnn-portugal/cnn-portugal-square-red.png"
+      ],
+      "ground": "any",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "cnn",
+        "cnn portugal",
+        "media",
+        "imprensa",
+        "square",
+        "quadrado",
+        "badge",
+        "red",
+        "vermelho"
+      ],
+      "note": "CNN Portugal's mark, as shown beside Global Citizen Solutions in the site's hero. Third-party mark: use as supplied; no wording that gives it a role (\"official partner\", \"in partnership with\")."
+    },
+    {
+      "id": "partner.goldcrest",
+      "title": "Goldcrest Portugal Real Estate — logo",
+      "kind": "logo",
+      "group": "partner-logos",
+      "files": [
+        "logos/partners/goldcrest.png"
+      ],
+      "ground": "any",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "partner",
+        "parceiro",
+        "parceira",
+        "patrocinador",
+        "sponsor",
+        "goldcrest portugal real estate",
+        "goldcrest",
+        "portugal",
+        "real",
+        "estate"
+      ],
+      "caution": "Third-party logo from the site's partner strip. The site does not say what this partner is to the Summit (sponsor, partner, media, venue-side), and neither do we. Send as a file only; it goes on a creative only if the user names it for that piece and confirms it is cleared. Never add a role.",
+      "cleared": false
+    },
+    {
+      "id": "partner.optimize-investment-partners",
+      "title": "Optimize Investment Partners — logo",
+      "kind": "logo",
+      "group": "partner-logos",
+      "files": [
+        "logos/partners/optimize-investment-partners.png"
+      ],
+      "ground": "any",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "partner",
+        "parceiro",
+        "parceira",
+        "patrocinador",
+        "sponsor",
+        "optimize investment partners",
+        "optimize",
+        "investment",
+        "partners"
+      ],
+      "caution": "Third-party logo from the site's partner strip. The site does not say what this partner is to the Summit (sponsor, partner, media, venue-side), and neither do we. Send as a file only; it goes on a creative only if the user names it for that piece and confirms it is cleared. Never add a role.",
+      "cleared": false
+    },
+    {
+      "id": "partner.capitalpartners",
+      "title": "CapitalPartners (a member of Gaw Capital) — logo",
+      "kind": "logo",
+      "group": "partner-logos",
+      "files": [
+        "logos/partners/capitalpartners.png"
+      ],
+      "ground": "any",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "partner",
+        "parceiro",
+        "parceira",
+        "patrocinador",
+        "sponsor",
+        "capitalpartners (a member of gaw capital)",
+        "capitalpartners",
+        "member",
+        "capital"
+      ],
+      "caution": "Third-party logo from the site's partner strip. The site does not say what this partner is to the Summit (sponsor, partner, media, venue-side), and neither do we. Send as a file only; it goes on a creative only if the user names it for that piece and confirms it is cleared. Never add a role.",
+      "cleared": false
+    },
+    {
+      "id": "partner.blue-crow",
+      "title": "Blue Crow — logo",
+      "kind": "logo",
+      "group": "partner-logos",
+      "files": [
+        "logos/partners/blue-crow.png"
+      ],
+      "ground": "any",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "partner",
+        "parceiro",
+        "parceira",
+        "patrocinador",
+        "sponsor",
+        "blue crow",
+        "blue",
+        "crow"
+      ],
+      "caution": "Third-party logo from the site's partner strip. The site does not say what this partner is to the Summit (sponsor, partner, media, venue-side), and neither do we. Send as a file only; it goes on a creative only if the user names it for that piece and confirms it is cleared. Never add a role.",
+      "cleared": false
+    },
+    {
+      "id": "partner.lisboa-2030",
+      "title": "Lisboa 2030 — logo",
+      "kind": "logo",
+      "group": "partner-logos",
+      "files": [
+        "logos/partners/lisboa-2030.png"
+      ],
+      "ground": "any",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "partner",
+        "parceiro",
+        "parceira",
+        "patrocinador",
+        "sponsor",
+        "lisboa 2030",
+        "lisboa",
+        "2030"
+      ],
+      "caution": "Third-party logo from the site's partner strip. The site does not say what this partner is to the Summit (sponsor, partner, media, venue-side), and neither do we. Send as a file only; it goes on a creative only if the user names it for that piece and confirms it is cleared. Never add a role.",
+      "cleared": false
+    },
+    {
+      "id": "partner.portuguese-chamber",
+      "title": "Portuguese Chamber of Commerce — logo",
+      "kind": "logo",
+      "group": "partner-logos",
+      "files": [
+        "logos/partners/portuguese-chamber.png"
+      ],
+      "ground": "any",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "partner",
+        "parceiro",
+        "parceira",
+        "patrocinador",
+        "sponsor",
+        "portuguese chamber of commerce",
+        "portuguese",
+        "chamber",
+        "commerce"
+      ],
+      "caution": "Third-party logo from the site's partner strip. The site does not say what this partner is to the Summit (sponsor, partner, media, venue-side), and neither do we. Send as a file only; it goes on a creative only if the user names it for that piece and confirms it is cleared. Never add a role.",
+      "cleared": false
+    },
+    {
+      "id": "partner.atlantico-europa",
+      "title": "Atlântico Europa — logo",
+      "kind": "logo",
+      "group": "partner-logos",
+      "files": [
+        "logos/partners/atlantico-europa.svg"
+      ],
+      "ground": "any",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "partner",
+        "parceiro",
+        "parceira",
+        "patrocinador",
+        "sponsor",
+        "atlântico europa",
+        "atlântico",
+        "europa"
+      ],
+      "caution": "Third-party logo from the site's partner strip. The site does not say what this partner is to the Summit (sponsor, partner, media, venue-side), and neither do we. Send as a file only; it goes on a creative only if the user names it for that piece and confirms it is cleared. Never add a role.",
+      "cleared": false
+    },
+    {
+      "id": "partner.joao-m-barbosa",
+      "title": "João M. Barbosa — logo",
+      "kind": "logo",
+      "group": "partner-logos",
+      "files": [
+        "logos/partners/joao-m-barbosa.svg"
+      ],
+      "ground": "any",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "partner",
+        "parceiro",
+        "parceira",
+        "patrocinador",
+        "sponsor",
+        "joão m. barbosa",
+        "joão",
+        "barbosa"
+      ],
+      "caution": "Third-party logo from the site's partner strip. The site does not say what this partner is to the Summit (sponsor, partner, media, venue-side), and neither do we. Send as a file only; it goes on a creative only if the user names it for that piece and confirms it is cleared. Never add a role.",
+      "cleared": false
+    },
+    {
+      "id": "partner.cascais-ventures",
+      "title": "Cascais Ventures — logo",
+      "kind": "logo",
+      "group": "partner-logos",
+      "files": [
+        "logos/partners/cascais-ventures.svg"
+      ],
+      "ground": "any",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "partner",
+        "parceiro",
+        "parceira",
+        "patrocinador",
+        "sponsor",
+        "cascais ventures",
+        "cascais",
+        "ventures"
+      ],
+      "caution": "Third-party logo from the site's partner strip. The site does not say what this partner is to the Summit (sponsor, partner, media, venue-side), and neither do we. Send as a file only; it goes on a creative only if the user names it for that piece and confirms it is cleared. Never add a role.",
+      "cleared": false
+    },
+    {
+      "id": "partner.gfpi",
+      "title": "Global Financial Planning Institute (GFPI) — logo",
+      "kind": "logo",
+      "group": "partner-logos",
+      "files": [
+        "logos/partners/gfpi.png"
+      ],
+      "ground": "any",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "partner",
+        "parceiro",
+        "parceira",
+        "patrocinador",
+        "sponsor",
+        "global financial planning institute (gfpi)",
+        "global",
+        "financial",
+        "planning",
+        "institute",
+        "gfpi"
+      ],
+      "caution": "Third-party logo from this partner's own booking page on the site (\"… partner offer\"). The site does not describe the partnership beyond that page. Send as a file only; it goes on a creative only if the user confirms it is cleared. Never add a role.",
+      "cleared": false
+    },
+    {
+      "id": "partner.imglobalwealth",
+      "title": "IMGlobalWealth — logo",
+      "kind": "logo",
+      "group": "partner-logos",
+      "files": [
+        "logos/partners/imglobalwealth.png"
+      ],
+      "ground": "any",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "partner",
+        "parceiro",
+        "parceira",
+        "patrocinador",
+        "sponsor",
+        "imglobalwealth",
+        "imglobalwealth"
+      ],
+      "caution": "Third-party logo from this partner's own booking page on the site (\"… partner offer\"). The site does not describe the partnership beyond that page. Send as a file only; it goes on a creative only if the user confirms it is cleared. Never add a role.",
+      "cleared": false
+    },
+    {
+      "id": "partner.redbridge",
+      "title": "RedBridge — logo",
+      "kind": "logo",
+      "group": "partner-logos",
+      "files": [
+        "logos/partners/redbridge.svg"
+      ],
+      "ground": "any",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "partner",
+        "parceiro",
+        "parceira",
+        "patrocinador",
+        "sponsor",
+        "redbridge",
+        "redbridge"
+      ],
+      "caution": "Third-party logo from this partner's own booking page on the site (\"… partner offer\"). The site does not describe the partnership beyond that page. Send as a file only; it goes on a creative only if the user confirms it is cleared. Never add a role.",
+      "cleared": false
+    },
+    {
+      "id": "partner.trustedadvisor",
+      "title": "Trusted Advisor — logo",
+      "kind": "logo",
+      "group": "partner-logos",
+      "files": [
+        "logos/partners/trustedadvisor.png"
+      ],
+      "ground": "any",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "partner",
+        "parceiro",
+        "parceira",
+        "patrocinador",
+        "sponsor",
+        "trusted advisor",
+        "trusted",
+        "advisor"
+      ],
+      "caution": "Third-party logo from this partner's own booking page on the site (\"… partner offer\"). The site does not describe the partnership beyond that page. Send as a file only; it goes on a creative only if the user confirms it is cleared. Never add a role.",
+      "cleared": false
+    },
+    {
+      "id": "img.og-share",
+      "title": "Share card — headline on the hero photograph (1200×630)",
+      "kind": "graphic",
+      "group": "imagery",
+      "files": [
+        "imagery/og-share-card-1200x630.jpg"
+      ],
+      "ground": "any",
+      "aliases": [
+        "og",
+        "share",
+        "card",
+        "cartão",
+        "partilha",
+        "compartilhamento",
+        "preview",
+        "link preview",
+        "imagem de partilha",
+        "open graph",
+        "capa"
+      ],
+      "note": "The image link previews show: the Summit lockup, date and place, the site's headline, and the GCS + CNN Portugal marks.",
+      "caution": "Carries the site's headline as of 20 Oct 2026 (\"Your residency, your citizenship, your Plan B. Don't let the world decide for you.\"), baked into the image. Site imagery. The site's own PRODUCT.md says its page imagery is generated and on the client's replacement list — it is not GCS-owned photography, so don't present it as a photo taken for GCS."
+    },
+    {
+      "id": "img.hero",
+      "title": "Hero photograph — the red suspension bridge over the Tagus at sunset",
+      "kind": "photo",
+      "group": "imagery",
+      "files": [
+        "imagery/hero-bridge-1920.webp",
+        "imagery/hero-bridge-1920.jpg"
+      ],
+      "ground": "any",
+      "aliases": [
+        "hero",
+        "foto",
+        "imagem",
+        "image",
+        "photo",
+        "lisbon",
+        "lisboa",
+        "bridge",
+        "ponte",
+        "tagus",
+        "tejo",
+        "sunset",
+        "pôr do sol",
+        "fundo",
+        "background"
+      ],
+      "note": "1920×1080. The WebP is the graded site hero; the JPG is the ungraded original.",
+      "caution": "Site imagery. The site's own PRODUCT.md says its page imagery is generated and on the client's replacement list — it is not GCS-owned photography, so don't present it as a photo taken for GCS."
+    },
+    {
+      "id": "img.venue",
+      "title": "EPIC SANA hotel at night",
+      "kind": "photo",
+      "group": "imagery",
+      "files": [
+        "imagery/venue-epic-sana-1440.webp"
+      ],
+      "ground": "any",
+      "aliases": [
+        "venue",
+        "local",
+        "hotel",
+        "epic sana",
+        "epic",
+        "sana",
+        "marques",
+        "marquês",
+        "foto",
+        "imagem",
+        "image",
+        "photo"
+      ],
+      "note": "1440 px wide. The Summit's venue as the site shows it.",
+      "caution": "Provenance isn't confirmed: the site's own docs say its imagery is generated and that this photo is not evidence for any claim about the venue. Site imagery. The site's own PRODUCT.md says its page imagery is generated and on the client's replacement list — it is not GCS-owned photography, so don't present it as a photo taken for GCS."
+    },
+    {
+      "id": "img.texture",
+      "title": "Nocturne texture — wet street, amber reflections",
+      "kind": "photo",
+      "group": "imagery",
+      "files": [
+        "imagery/texture-nocturne-1440.webp"
+      ],
+      "ground": "any",
+      "aliases": [
+        "texture",
+        "textura",
+        "fundo",
+        "background",
+        "nocturne",
+        "wet street",
+        "night",
+        "noite",
+        "reflections"
+      ],
+      "note": "1440 px wide. The site's atmospheric background plate (navy, amber light).",
+      "caution": "Site imagery. The site's own PRODUCT.md says its page imagery is generated and on the client's replacement list — it is not GCS-owned photography, so don't present it as a photo taken for GCS."
+    },
+    {
+      "id": "img.plate.bridge",
+      "title": "Plate — the bridge, darkened (2160 px)",
+      "kind": "photo",
+      "group": "imagery",
+      "files": [
+        "imagery/plate-bridge-dark-2160.webp"
+      ],
+      "ground": "any",
+      "aliases": [
+        "plate",
+        "placa",
+        "carousel",
+        "carrossel",
+        "cover",
+        "capa",
+        "bridge",
+        "ponte",
+        "dark",
+        "escuro",
+        "foto",
+        "imagem",
+        "image",
+        "photo",
+        "lisbon",
+        "lisboa"
+      ],
+      "note": "Cover plate for social carousels, graded into the navy.",
+      "caution": "Darkened crop made for the social-media skill; it is not on the site. The repo does not record the photograph's source or licence — confirm before any external or paid use. Site imagery. The site's own PRODUCT.md says its page imagery is generated and on the client's replacement list — it is not GCS-owned photography, so don't present it as a photo taken for GCS."
+    },
+    {
+      "id": "img.plate.castle",
+      "title": "Plate — Lisbon rooftops and the castle at dusk, darkened (1600 px)",
+      "kind": "photo",
+      "group": "imagery",
+      "files": [
+        "imagery/plate-castle-dark-1600.webp"
+      ],
+      "ground": "any",
+      "aliases": [
+        "plate",
+        "placa",
+        "carousel",
+        "carrossel",
+        "castle",
+        "castelo",
+        "são jorge",
+        "rooftops",
+        "telhados",
+        "dark",
+        "escuro",
+        "foto",
+        "imagem",
+        "image",
+        "photo",
+        "lisbon",
+        "lisboa"
+      ],
+      "note": "Banner plate for social carousels, graded into the navy.",
+      "caution": "Darkened crop made for the social-media skill; it is not on the site. The repo does not record the photograph's source or licence — confirm before any external or paid use. Site imagery. The site's own PRODUCT.md says its page imagery is generated and on the client's replacement list — it is not GCS-owned photography, so don't present it as a photo taken for GCS."
+    },
+    {
+      "id": "img.plate.maat",
+      "title": "Plate — MAAT and the bridge, darkened (1600 px)",
+      "kind": "photo",
+      "group": "imagery",
+      "files": [
+        "imagery/plate-maat-dark-1600.webp"
+      ],
+      "ground": "any",
+      "aliases": [
+        "plate",
+        "placa",
+        "carousel",
+        "carrossel",
+        "maat",
+        "museum",
+        "museu",
+        "dark",
+        "escuro",
+        "foto",
+        "imagem",
+        "image",
+        "photo",
+        "lisbon",
+        "lisboa"
+      ],
+      "note": "Banner plate for social carousels, graded into the navy.",
+      "caution": "Darkened crop made for the social-media skill; it is not on the site. The repo does not record the photograph's source or licence — confirm before any external or paid use. Site imagery. The site's own PRODUCT.md says its page imagery is generated and on the client's replacement list — it is not GCS-owned photography, so don't present it as a photo taken for GCS."
+    },
+    {
+      "id": "fonts.brand",
+      "title": "Brand fonts — Caladea (headings) + Archivo (text) with OFL licences",
+      "kind": "font",
+      "group": "fonts",
+      "files": [
+        "fonts/Caladea-Regular.ttf",
+        "fonts/Archivo-400.ttf",
+        "fonts/Archivo-500.ttf",
+        "fonts/Archivo-600.ttf",
+        "fonts/OFL-Caladea.txt",
+        "fonts/OFL-Archivo.txt"
+      ],
+      "ground": "any",
+      "aliases": [
+        "font",
+        "fonts",
+        "fonte",
+        "fontes",
+        "tipografia",
+        "typeface",
+        "caladea",
+        "archivo",
+        "ttf",
+        "letra"
+      ],
+      "note": "Caladea Regular for headings, Archivo 400/500/600 for text. Open-licence (SIL OFL) fonts.",
+      "caution": "Send the two OFL licence files with the fonts — they travel together."
+    },
+    {
+      "id": "img.lisbon.sunset",
+      "title": "Photograph — Lisbon rooftops and the 25 de Abril Bridge at sunset (2400×1602)",
+      "kind": "photo",
+      "group": "imagery",
+      "files": [
+        "imagery/lisbon-sunset-panorama-2400.webp"
+      ],
+      "ground": "any",
+      "aliases": [
+        "lisbon",
+        "lisboa",
+        "sunset",
+        "pôr do sol",
+        "por do sol",
+        "panorama",
+        "panorâmica",
+        "rooftops",
+        "telhados",
+        "cityscape",
+        "cidade",
+        "bridge",
+        "ponte",
+        "25 de abril",
+        "tagus",
+        "tejo",
+        "foto",
+        "imagem",
+        "image",
+        "photo"
+      ],
+      "note": "Warm evening panorama over the red-tiled roofs, the Tagus and the red suspension bridge. Undarkened.",
+      "caution": "Licensed stock photograph (GCS holds the usage rights, as confirmed on 21 Oct 2026) — not photography taken by GCS, so don't present it as such. 2400 px on the long edge."
+    },
+    {
+      "id": "img.lisbon.vasco-da-gama",
+      "title": "Photograph — Vasco da Gama Bridge at sunrise, blue hour (2400×1600)",
+      "kind": "photo",
+      "group": "imagery",
+      "files": [
+        "imagery/lisbon-vasco-da-gama-sunrise-2400.webp"
+      ],
+      "ground": "any",
+      "aliases": [
+        "lisbon",
+        "lisboa",
+        "vasco da gama",
+        "bridge",
+        "ponte",
+        "sunrise",
+        "nascer do sol",
+        "amanhecer",
+        "blue hour",
+        "hora azul",
+        "tagus",
+        "tejo",
+        "foto",
+        "imagem",
+        "image",
+        "photo"
+      ],
+      "note": "Cable-stayed bridge over the Tagus at first light, blue and violet sky. Undarkened.",
+      "caution": "Licensed stock photograph (GCS holds the usage rights, as confirmed on 21 Oct 2026) — not photography taken by GCS, so don't present it as such. 2400 px on the long edge."
+    },
+    {
+      "id": "img.lisbon.arco",
+      "title": "Photograph — Arco da Rua Augusta, Praça do Comércio (2400×1600)",
+      "kind": "photo",
+      "group": "imagery",
+      "files": [
+        "imagery/lisbon-arco-rua-augusta-2400.webp"
+      ],
+      "ground": "any",
+      "aliases": [
+        "lisbon",
+        "lisboa",
+        "arco",
+        "arco da rua augusta",
+        "rua augusta",
+        "arch",
+        "praça do comércio",
+        "praca do comercio",
+        "commerce square",
+        "baixa",
+        "foto",
+        "imagem",
+        "image",
+        "photo"
+      ],
+      "note": "The triumphal arch and the yellow arcades of Praça do Comércio under a blue sky. Undarkened.",
+      "caution": "Licensed stock photograph (GCS holds the usage rights, as confirmed on 21 Oct 2026) — not photography taken by GCS, so don't present it as such. 2400 px on the long edge."
+    }
+  ],
+  "site_map": {
+    "logos/gcs/gcs-primary-white.svg": "assets/img/GCS-Primary-White.svg",
+    "logos/partners/goldcrest.png": "assets/img/goldcrest.png",
+    "logos/partners/optimize-investment-partners.png": "assets/img/Optimize-Investment-Partners_Horizontal.png",
+    "logos/partners/capitalpartners.png": "assets/img/capitalpartners.png",
+    "logos/partners/blue-crow.png": "assets/img/Blue-Crow.png",
+    "logos/partners/lisboa-2030.png": "assets/img/LISBOA-2030.png",
+    "logos/partners/portuguese-chamber.png": "assets/img/portuguese-chamber.png",
+    "logos/partners/atlantico-europa.svg": "assets/img/atlantico-europa.svg",
+    "logos/partners/joao-m-barbosa.svg": "assets/img/joao-m-barbosa.svg",
+    "logos/partners/cascais-ventures.svg": "assets/img/cascais-ventures.svg",
+    "logos/partners/gfpi.png": "assets/img/gfpi-logo.png",
+    "logos/partners/imglobalwealth.png": "assets/img/imglobalwealth-logo.png",
+    "logos/partners/redbridge.svg": "assets/img/redbridge-logo.svg",
+    "logos/partners/trustedadvisor.png": "assets/img/trustedadvisor-logo.png",
+    "imagery/og-share-card-1200x630.jpg": "assets/img/og-share.jpg",
+    "imagery/hero-bridge-1920.webp": "assets/img/hero-1920.webp",
+    "imagery/hero-bridge-1920.jpg": "assets/img/hero.jpg",
+    "imagery/venue-epic-sana-1440.webp": "assets/img/epic-sana-1440.webp",
+    "imagery/texture-nocturne-1440.webp": "assets/img/nocturne-texture-1440.webp",
+    "speakers/patricia-casaburi.webp": "assets/img/speakers/patricia-casaburi.webp",
+    "speakers/bruno-lecuyer.webp": "assets/img/speakers/bruno-lecuyer.webp",
+    "speakers/mehdi-el-kadiri.webp": "assets/img/speakers/mehdi-el-kadiri.webp",
+    "speakers/calvin-st-juste.webp": "assets/img/speakers/calvin-st-juste.webp",
+    "speakers/alex-muscat.webp": "assets/img/speakers/alex-muscat.webp",
+    "speakers/pedro-lino.webp": "assets/img/speakers/pedro-lino.webp",
+    "speakers/francisca-van-dijken.webp": "assets/img/speakers/francisca-van-dijken.webp",
+    "speakers/adalberto-pucca.webp": "assets/img/speakers/adalberto-pucca.webp",
+    "speakers/ayoub-rebroub.webp": "assets/img/speakers/ayoub-rebroub.webp",
+    "speakers/nina-patrick.webp": "assets/img/speakers/nina-patrick.webp",
+    "speakers/nathalie-willis-davis.webp": "assets/img/speakers/nathalie-willis-davis.webp",
+    "speakers/duarte-calheiros.webp": "assets/img/speakers/duarte-calheiros.webp",
+    "speakers/thanos-tsoukalas.webp": "assets/img/speakers/thanos-tsoukalas.webp",
+    "speakers/nuno-serafim.webp": "assets/img/speakers/nuno-serafim.webp",
+    "speakers/cintia-mano.webp": "assets/img/speakers/cintia-mano.webp",
+    "speakers/joe-rice.webp": "assets/img/speakers/joe-rice.webp",
+    "speakers/bernardo-meyrelles.webp": "assets/img/speakers/bernardo-meyrelles.webp",
+    "speakers/laura-madrid.webp": "assets/img/speakers/laura-madrid.webp",
+    "speakers/albert-morgenstern.webp": "assets/img/speakers/albert-morgenstern.webp",
+    "speakers/yanimar-hernandez.webp": "assets/img/speakers/yanimar-hernandez.webp",
+    "speakers/ruth-shaber.webp": "assets/img/speakers/ruth-shaber.webp",
+    "speakers/joao-pacheco-goncalves.webp": "assets/img/speakers/joao-pacheco-goncalves.webp",
+    "speakers/marc-jancou.webp": "assets/img/speakers/marc-jancou.webp",
+    "speakers/luca-calabrese.webp": "assets/img/speakers/luca-calabrese.webp",
+    "speakers/diane-bidna.webp": "assets/img/speakers/diane-bidna.webp",
+    "speakers/nuno-sanches.webp": "assets/img/speakers/nuno-sanches.webp"
+  }
+}

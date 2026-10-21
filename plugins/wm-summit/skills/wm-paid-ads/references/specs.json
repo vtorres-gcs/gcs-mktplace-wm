@@ -1,0 +1,108 @@
+{
+  "_meta": {
+    "checked_on": "2026-10-21",
+    "how": "Google: the Google Ads Help pages named in 'source' (read on the checked_on date). Meta: Meta's Ads Guide for the Feed image ad (4:5, 1440x1800, 27-char headline, 50-150 char primary text) plus a third-party 2026 placement table for the rest. Platforms change these without notice - ads.py lint treats Google text limits as hard (the Ads UI rejects them) and Meta text lengths as guidance (the UI accepts longer text and truncates it).",
+    "refresh": "Re-read the 'source' pages, edit this file, bump 'checked_on'. ads.py reads only this file for limits, so nothing else needs to change."
+  },
+  "google": {
+    "rsa": {
+      "label": "Responsive search ad",
+      "source": "https://support.google.com/google-ads/answer/7684791",
+      "headline": {"min": 3, "max": 15, "chars": 30, "recommend_min": 8},
+      "description": {"min": 2, "max": 4, "chars": 90, "recommend_min": 3},
+      "path": {"max": 2, "chars": 15},
+      "pin_positions": {"headline": [1, 2, 3], "description": [1, 2]},
+      "notes": [
+        "Assets are shown in any order and any mix; each must read alone and in every combination.",
+        "Pinning to H1/H2/D1 guarantees the text shows; H3/D2 is not guaranteed. Pinning cuts combinations and can lower Ad Strength - pin only what must always show.",
+        "A line that must appear in every ad (a disclaimer) is pinned to H1, H2 or D1.",
+        "Double-width characters (Korean, Japanese, Chinese) count as 2."
+      ]
+    },
+    "display": {
+      "label": "Responsive display ad",
+      "source": "https://support.google.com/google-ads/answer/7005917",
+      "short_headline": {"min": 1, "max": 5, "chars": 30},
+      "long_headline": {"min": 1, "max": 1, "chars": 90},
+      "description": {"min": 1, "max": 5, "chars": 90},
+      "business_name": {"chars": 25}
+    },
+    "pmax": {
+      "label": "Performance Max asset group",
+      "source": "https://support.google.com/google-ads/answer/17091269",
+      "short_headline": {"min": 3, "max": 15, "chars": 30, "needs_one_at_most_chars": 15},
+      "long_headline": {"min": 1, "max": 5, "chars": 90},
+      "description": {"min": 2, "max": 5, "chars": 90},
+      "business_name": {"chars": 25},
+      "notes": ["Business name must match the domain name or the legally verified business name (Advertiser Verification)."]
+    },
+    "demand_gen": {
+      "label": "Demand Gen ad",
+      "source": "https://support.google.com/google-ads/answer/17091672",
+      "headline": {"min": 1, "max": 5, "chars": 40, "needs_one_at_most_chars": 30},
+      "description": {"min": 1, "max": 5, "chars": 90},
+      "business_name": {"chars": 25}
+    }
+  },
+  "meta": {
+    "text": {
+      "source": "https://www.facebook.com/business/ads-guide (Feed image ad) + 2026 third-party placement tables",
+      "primary_text": {"recommend_chars": 125, "note": "Feed shows about 125 characters before 'See more'; Meta's Ads Guide suggests 50-150. The first sentence must carry the message on its own."},
+      "headline": {"recommend_chars": 27, "soft_max_chars": 40, "note": "Feed shows about 27 characters; up to ~40 can appear on some placements before it is cut."},
+      "description": {"recommend_chars": 30, "note": "Often not shown at all on mobile feed; never put anything essential here."}
+    },
+    "cta": ["Learn more", "Book now", "Sign up", "Contact us"],
+    "cta_note": "Platform button labels, set in the ad UI. The list that actually appears depends on the objective and the account."
+  },
+  "google_cta": ["Automated", "Learn more", "Book now", "Sign up", "Contact us", "Get started"],
+  "formats": {
+    "meta_feed_4x5": {
+      "platform": "meta", "label": "Meta Feed 4:5 (Facebook + Instagram)", "ratio": "4:5",
+      "design": [1080, 1350], "out": [1440, 1800], "safe": {"top": 0, "bottom": 0, "side": 0.075}, "max_kb": 30720, "types": "jpg/png",
+      "note": "Meta's Ads Guide recommends 1440x1800 for 4:5; 1080 on the short side is the floor. Instagram's profile grid shows the middle 3:4, so keep the side margins."
+    },
+    "meta_square_1x1": {
+      "platform": "meta", "label": "Meta Square 1:1 (Feed, carousel card, right column, Marketplace)", "ratio": "1:1",
+      "design": [1080, 1080], "out": [1080, 1080], "safe": {"top": 0, "bottom": 0, "side": 0.075}, "max_kb": 30720, "types": "jpg/png",
+      "note": "Carousel cards are cropped to 1:1 (2-10 cards) - never design a 4:5 carousel card."
+    },
+    "meta_story_9x16": {
+      "platform": "meta", "label": "Meta Stories + Reels 9:16 (Instagram + Facebook)", "ratio": "9:16",
+      "design": [1080, 1920], "out": [1080, 1920], "safe": {"top": 0.14, "bottom": 0.35, "side": 0.075}, "max_kb": 30720, "types": "jpg/png",
+      "note": "Safe zone: nothing within the top 14% (profile bar) or the bottom 35% (Reels caption + buttons; Stories only needs 20%). One file serves both."
+    },
+    "meta_link_landscape": {
+      "platform": "meta", "label": "Meta link ad 1.91:1 (Feed link, Audience Network)", "ratio": "1.91:1",
+      "design": [1200, 628], "out": [1200, 628], "safe": {"top": 0.08, "bottom": 0.08, "side": 0.06}, "max_kb": 30720, "types": "jpg/png",
+      "note": "Legacy landscape link card; still used by link ads and some placements."
+    },
+    "google_landscape": {
+      "platform": "google", "label": "Google landscape image 1.91:1 (Display, PMax, Demand Gen)", "ratio": "1.91:1",
+      "design": [1200, 628], "out": [1200, 628], "min": [600, 314], "safe": {"top": 0.08, "bottom": 0.08, "side": 0.06}, "max_kb": 5120, "types": "jpg/png",
+      "note": "Google crops images for some placements - keep the headline inside the middle."
+    },
+    "google_square": {
+      "platform": "google", "label": "Google square image 1:1 (Display, PMax, Demand Gen)", "ratio": "1:1",
+      "design": [1200, 1200], "out": [1200, 1200], "min": [300, 300], "safe": {"top": 0.075, "bottom": 0.075, "side": 0.075}, "max_kb": 5120, "types": "jpg/png"
+    },
+    "google_portrait": {
+      "platform": "google", "label": "Google portrait image 4:5 (PMax, Demand Gen; optional)", "ratio": "4:5",
+      "design": [960, 1200], "out": [960, 1200], "min": [480, 600], "safe": {"top": 0.075, "bottom": 0.075, "side": 0.075}, "max_kb": 5120, "types": "jpg/png"
+    },
+    "google_vertical_9x16": {
+      "platform": "google", "label": "Google vertical image 9:16 (Demand Gen on YouTube Shorts; optional)", "ratio": "9:16",
+      "design": [1080, 1920], "out": [1080, 1920], "min": [600, 1067], "safe": {"top": 0.14, "bottom": 0.35, "side": 0.075}, "max_kb": 5120, "types": "jpg/png",
+      "note": "Google says the safe zones match 9:16 video (YouTube Shorts)."
+    }
+  },
+  "logos": {
+    "google_logo_square": {"label": "Google logo 1:1", "out": [1200, 1200], "min": [128, 128], "max_kb": 150, "note": "Demand Gen: min 144x144 and 150 KB max. Solid navy ground - Google advises against mostly-white logos on a transparent background."},
+    "google_logo_landscape": {"label": "Google logo 4:1", "out": [1200, 300], "min": [512, 128], "max_kb": 5120, "note": "Optional."}
+  },
+  "uploaded_display": {
+    "sizes": ["300x250", "336x280", "728x90", "970x90", "160x600", "300x600", "320x50"],
+    "max_kb": 150,
+    "types": "jpg, png, non-animated gif",
+    "route": "wm-web-banners builds these (with a button, a GIF if wanted, the 150 KB ceiling)."
+  }
+}

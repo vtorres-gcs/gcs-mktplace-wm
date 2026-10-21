@@ -1,0 +1,22 @@
+{
+  "name": "wm-summit",
+  "version": "1.2.0",
+  "description": "Skills for the Wealth & Migration Summit 2026 (Lisbon, 5–6 November 2026, convened by Global Citizen Solutions): editable PowerPoint decks, social creatives, Word letterhead, web banners and Google Ads / Meta Ads paid-ad packs, all in the Summit's own identity and built from the site's confirmed facts; plus an asset library that sends existing logos, speaker portraits, imagery and fonts on request.",
+  "author": {
+    "name": "Global Citizen Solutions",
+    "email": "victor@globalcitizensolutions.com"
+  },
+  "keywords": [
+    "wealth-migration-summit",
+    "gcs",
+    "presentations",
+    "social-media",
+    "letterhead",
+    "web-banners",
+    "assets",
+    "logos",
+    "paid-ads",
+    "google-ads",
+    "meta-ads"
+  ]
+}

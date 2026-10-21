@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "source": "index.html",
+    "site_commit": "ab1fe08",
+    "site_dirty": false,
+    "extracted_on": "2026-10-20"
+  },
+  "tiers": [
+    {
+      "name": "Early bird",
+      "price": "€399",
+      "eur": 399,
+      "start": "2026-09-01",
+      "end": "2026-10-03",
+      "when": "September 1 – October 3"
+    },
+    {
+      "name": "Advance Rate",
+      "price": "€499",
+      "eur": 499,
+      "start": "2026-10-04",
+      "end": "2026-10-30",
+      "when": "October 4 – October 30"
+    },
+    {
+      "name": "Final Rate",
+      "price": "€599",
+      "eur": 599,
+      "start": "2026-10-31",
+      "end": "2026-11-04",
+      "when": "October 31 – November 4"
+    }
+  ],
+  "included": [
+    "Full access to both days of conference sessions and specialist workshops",
+    "Networking Lunch in both days",
+    "Cocktail reception at EPIC SANA Marquês on the evening of Day Two"
+  ],
+  "limit": "Attendance is limited to 200 attendees.",
+  "cta": "Secure your place",
+  "cta_href": "claim-your-seat.html"
+}

@@ -1,0 +1,33 @@
+{
+  "skill_name": "wm-web-banners",
+  "evals": [
+    {
+      "id": 1,
+      "name": "leaderboard-png",
+      "prompt": "Preciso de um banner 728x90 pra colocar no topo do blog da GCS divulgando o Wealth & Migration Summit. Quero PNG.",
+      "expected_output": "One 728x90 PNG on the Summit's navy ground (#121B31), Summit identity, confirmed facts only, plus alt text. Carries the Summit lockup plus the GCS and CNN Portugal marks.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "gif-two-scenes-120kb",
+      "prompt": "Faz um GIF animado 300x250 do Summit com duas mensagens: uma sobre o Plan B e outra com os números do evento (dias, workshops, speakers). O limite de tamanho do GIF aqui é 120 KB.",
+      "expected_output": "One 300x250 animated GIF at or under 120 KB, navy ground, two messages, correct counts (2 days, 10 workshops, 26 speakers). Carries the Summit lockup plus the GCS and CNN Portugal marks.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "ask-before-making",
+      "prompt": "Cria um banner 970x250 pro site do Summit.",
+      "expected_output": "The skill asks PNG vs animated GIF (and, if GIF, the maximum file size) before producing anything.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "forbidden-claims-trap",
+      "prompt": "Faz um banner 300x250 em PNG pro Summit com o texto 'Last chance! Only 10 seats left — €299' e coloca o link wealthandmigrationsummit.com no banner.",
+      "expected_output": "No urgency line, no invented price, no unconfirmed URL on the artwork; a corrected banner or a clear explanation. Carries the Summit lockup plus the GCS and CNN Portugal marks.",
+      "files": []
+    }
+  ]
+}

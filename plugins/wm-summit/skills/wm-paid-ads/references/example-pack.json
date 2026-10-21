@@ -1,0 +1,101 @@
+{
+  "name": "example-advance-rate",
+  "goes_live": "2026-10-22",
+  "ends": "2026-10-30",
+  "final_url": "https://wealthandmigrationsummit.com/",
+  "url_confirmed": false,
+  "utm": {
+    "campaign": "wms26-advance-rate"
+  },
+  "business_name": "Wealth & Migration Summit",
+  "google": {
+    "rsa": {
+      "campaign": "WMS26 | Search | Event",
+      "ad_group": "Event | Lisbon",
+      "path1": "Summit",
+      "path2": "Lisbon",
+      "headlines": [
+        {
+          "text": "Wealth & Migration Summit",
+          "pin": 1
+        },
+        "Lisbon · 5–6 November 2026",
+        "Two days in Lisbon",
+        "Ten workshops, 26 speakers",
+        "Limited to 200 attendees",
+        "Your residency, your Plan B",
+        "Global mobility, in one room",
+        "Advance Rate €499 to 30 Oct",
+        "For advisors, family offices",
+        "Global Plan B, C and D",
+        "Secure your place",
+        "EPIC SANA Marques Hotel"
+      ],
+      "descriptions": [
+        "Two days of main-stage sessions and specialist workshops on global mobility.",
+        "Residency and citizenship planning as part of a broader wealth strategy.",
+        "Advance Rate €499 until 30 October. Both days, networking lunches, cocktail reception.",
+        "Lisbon, 5–6 November 2026. Limited to 200 attendees."
+      ]
+    },
+    "display": {
+      "short_headlines": [
+        "Wealth & Migration Summit",
+        "Lisbon · 5–6 November",
+        "Limited to 200 attendees",
+        "Your residency, your Plan B",
+        "Secure your place"
+      ],
+      "long_headline": "Your residency, your citizenship, your Plan B. Two days in Lisbon, 5–6 November 2026",
+      "descriptions": [
+        "Two days of main-stage sessions and specialist workshops on global mobility.",
+        "Residency and citizenship planning as part of a broader wealth strategy."
+      ]
+    },
+    "cta": "Learn more"
+  },
+  "meta": {
+    "primary_texts": [
+      "Residency and citizenship planning is part of a wider wealth strategy. Two days in Lisbon, 5–6 November 2026.",
+      "Plan B, C and D, tax, banking and mobility, in one room for two days. Limited to 200 attendees.",
+      "Advance Rate €499 until 30 October. Two days, ten workshops, 26 speakers. Secure your place."
+    ],
+    "headlines": [
+      "Wealth & Migration Summit",
+      "Lisbon · 5–6 November",
+      "Limited to 200 attendees"
+    ],
+    "descriptions": [
+      "Lisbon, 5–6 November 2026"
+    ],
+    "cta": "Learn more"
+  },
+  "creatives": [
+    {
+      "id": "plan-b",
+      "headline": "Your residency, your citizenship, your Plan B.",
+      "support": "Don’t let the world decide for you.",
+      "formats": [
+        "meta_feed_4x5",
+        "meta_square_1x1",
+        "meta_story_9x16",
+        "meta_link_landscape",
+        "google_landscape",
+        "google_square",
+        "google_portrait"
+      ]
+    },
+    {
+      "id": "numbers",
+      "headline": "Two days. Ten workshops. Twenty-six speakers.",
+      "support": "Limited to 200 attendees",
+      "formats": [
+        "meta_feed_4x5",
+        "meta_story_9x16",
+        "google_landscape",
+        "google_square"
+      ]
+    }
+  ],
+  "google_logos": true
+}

@@ -1,0 +1,193 @@
+{
+  "_meta": {
+    "source": "index.html",
+    "site_commit": "1823ec1",
+    "site_dirty": false,
+    "extracted_on": "2026-10-20",
+    "note": "Trimmed copy of wm-social-media/references/data/speakers.json: name, role and slug only (bios omitted). Order = the site's order."
+  },
+  "speakers": [
+    {
+      "order": 1,
+      "name": "Patricia Casaburi",
+      "display": "Patricia Casaburi",
+      "role": "Founder & Chief Executive Officer at Global Citizen Solutions",
+      "slug": "patricia-casaburi"
+    },
+    {
+      "order": 2,
+      "name": "Bruno L’ecuyer",
+      "display": "Bruno L’ecuyer",
+      "role": "Co-founder at Investment Migration Council",
+      "slug": "bruno-lecuyer"
+    },
+    {
+      "order": 3,
+      "name": "Mehdi Kadiri",
+      "display": "Mehdi Kadiri",
+      "role": "President at Global Citizen Solutions",
+      "slug": "mehdi-el-kadiri"
+    },
+    {
+      "order": 4,
+      "name": "H.E. Calvin St. Juste",
+      "display": "H.E. Calvin St. Juste",
+      "role": "Executive Chairman, St. Kitts and Nevis Citizenship Unit",
+      "slug": "calvin-st-juste"
+    },
+    {
+      "order": 5,
+      "name": "Alex Muscat",
+      "display": "Alex Muscat",
+      "role": "Member of Parliament, Malta",
+      "slug": "alex-muscat"
+    },
+    {
+      "order": 6,
+      "name": "Pedro Lino",
+      "display": "Pedro Lino",
+      "role": "Chief Executive Officer at Optimize Investment Partners",
+      "slug": "pedro-lino"
+    },
+    {
+      "order": 7,
+      "name": "Francisca van Dijken",
+      "display": "Francisca van Dijken",
+      "role": "EMEA Head of Global Client Solutions at Citigroup Private Bank",
+      "slug": "francisca-van-dijken"
+    },
+    {
+      "order": 8,
+      "name": "Adalberto Pucca",
+      "display": "Adalberto Pucca",
+      "role": "Head of Global Client Advisory at Global Citizen Solutions",
+      "slug": "adalberto-pucca"
+    },
+    {
+      "order": 9,
+      "name": "Ayoub Rebroub",
+      "display": "Ayoub Rebroub",
+      "role": "Legal Manager, Malta at Endevio Group",
+      "slug": "ayoub-rebroub"
+    },
+    {
+      "order": 10,
+      "name": "Dr. Nina Patrick, PhD",
+      "display": "Dr. Nina Patrick",
+      "role": "Longevity Researcher, Science Communicator & Entrepreneur",
+      "slug": "nina-patrick"
+    },
+    {
+      "order": 11,
+      "name": "Nathalie Willis-Davis",
+      "display": "Nathalie Willis-Davis",
+      "role": "Founder & Managing Director at Tendoria",
+      "slug": "nathalie-willis-davis"
+    },
+    {
+      "order": 12,
+      "name": "Duarte Calheiros Menezes",
+      "display": "Duarte Calheiros Menezes",
+      "role": "Partner & Fund Manager at BlueCrow Capital",
+      "slug": "duarte-calheiros"
+    },
+    {
+      "order": 13,
+      "name": "Athanassios (Thanos) Tsoukalas",
+      "display": "Athanassios (Thanos) Tsoukalas",
+      "role": "Legal Manager, Greece at AT Legal",
+      "slug": "thanos-tsoukalas"
+    },
+    {
+      "order": 14,
+      "name": "Nuno Serafim",
+      "display": "Nuno Serafim",
+      "role": "Partner at C2 Capital",
+      "slug": "nuno-serafim"
+    },
+    {
+      "order": 15,
+      "name": "Cintia Mano",
+      "display": "Cintia Mano",
+      "role": "Chief Investment Officer at European Longevity Hub",
+      "slug": "cintia-mano"
+    },
+    {
+      "order": 16,
+      "name": "Joe Rice",
+      "display": "Joe Rice",
+      "role": "Head of Citizenship Programs at Global Citizen Solutions",
+      "slug": "joe-rice"
+    },
+    {
+      "order": 17,
+      "name": "Bernardo Meyrelles",
+      "display": "Bernardo Meyrelles",
+      "role": "Country Head, Portugal at EFG",
+      "slug": "bernardo-meyrelles"
+    },
+    {
+      "order": 18,
+      "name": "Dr. Laura Madrid, PhD",
+      "display": "Dr. Laura Madrid",
+      "role": "Global Intelligence Unit Research Lead at Global Citizen Solutions",
+      "slug": "laura-madrid"
+    },
+    {
+      "order": 19,
+      "name": "Albert Morgenstern",
+      "display": "Albert Morgenstern",
+      "role": "Chief Financial Officer at Construnews · Academic Collaborator at ESADE Business School",
+      "slug": "albert-morgenstern"
+    },
+    {
+      "order": 20,
+      "name": "Yanimar Hernandez",
+      "display": "Yanimar Hernandez",
+      "role": "Legal Manager, Spain at Global Citizen Solutions",
+      "slug": "yanimar-hernandez"
+    },
+    {
+      "order": 21,
+      "name": "Ruth Shaber, MD",
+      "display": "Ruth Shaber, MD",
+      "role": "Founder & President at Tara Health Foundation",
+      "slug": "ruth-shaber"
+    },
+    {
+      "order": 22,
+      "name": "João Pacheco Gonçalves",
+      "display": "João Pacheco Gonçalves",
+      "role": "Head of Institutional Relations at Global Citizen Solutions",
+      "slug": "joao-pacheco-goncalves"
+    },
+    {
+      "order": 23,
+      "name": "Marc Jancou",
+      "display": "Marc Jancou",
+      "role": "Founder at Marc Jancou Contemporary & Porto Arts Club",
+      "slug": "marc-jancou"
+    },
+    {
+      "order": 24,
+      "name": "Luca Calabrese",
+      "display": "Luca Calabrese",
+      "role": "Legal Manager, Italy at Global Citizen Solutions",
+      "slug": "luca-calabrese"
+    },
+    {
+      "order": 25,
+      "name": "Diane Bidna",
+      "display": "Diane Bidna",
+      "role": "University & Career Counselor at TASIS Portugal",
+      "slug": "diane-bidna"
+    },
+    {
+      "order": 26,
+      "name": "Nuno Sanches",
+      "display": "Nuno Sanches",
+      "role": "Partner & Head of Operations at Cascais Ventures",
+      "slug": "nuno-sanches"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+# Saídas de teste/avaliação das skills (decks, carrosséis, banners, benchmarks)
+# Não fazem parte do plugin instalado.
+output/
+
+# Pacotes .skill gerados
+*.skill
+
+# Instruções locais para o Claude (caminho absoluto desta máquina)
+CLAUDE.md
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Node (playwright, pptxgenjs, etc.)
+node_modules/
+
+# Segredos e configuração local
+.env
+.env.*
+!.env.example
+.claude/settings.local.json
+
+# Logs e temporários
+*.log
+*.tmp
+*.bak
+*.swp
+.idea/
+.vscode/
