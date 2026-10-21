@@ -8,7 +8,7 @@ Read the site repo's own files before changing anything here (`gcs-wealth-migrat
 |---|---|---|
 | Event title (footer, left) | **Wealth and Migration Summit 2026** | `PRODUCT.md` (page title); footer of `index.html` and the copy deck ("© 2026 Wealth and Migration Summit · Global Citizen Solutions") |
 | Website (footer, right) | **wealthandmigrationsummit.com**, linked to `https://wealthandmigrationsummit.com` | domain in the site's share metadata (`og:image`, `index.html`); the user asked for the site to be printed |
-| Convened by | Global Citizen Solutions (the GCS mark in the footer) | `PRODUCT.md`, site footer |
+| Curated by | Global Citizen Solutions (the GCS mark in the footer) | `PRODUCT.md`, site footer |
 | Dates / place, if a letter needs them | 5–6 November 2026 · Lisbon · EPIC SANA Marques Hotel | `PRODUCT.md`; the site spells the venue both *Marques* and *Marquês* — use what the user gives |
 | Cap, if a letter needs it | "Limited to 200 attendees" (site); `PRODUCT.md` still says 150–200 — that is the older page | the banner and social skills carry the full fact sheet (`wm-web-banners/references/FACTS.md`) |
 

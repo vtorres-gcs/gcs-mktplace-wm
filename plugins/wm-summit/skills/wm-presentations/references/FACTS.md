@@ -32,7 +32,7 @@
 ## The event
 
 - **Dates:** 5–6 November 2026 (Thursday and Friday). **City:** Lisbon, Portugal.
-- **Venue:** EPIC SANA Marques Hotel (see "Spelling" — the site also writes *Marquês*). Convened by Global Citizen Solutions. The Summit chair named in `PRODUCT.md` is Patricia Casaburi.
+- **Venue:** EPIC SANA Marques Hotel (see "Spelling" — the site also writes *Marquês*). Curated by Global Citizen Solutions. The Summit chair named in `PRODUCT.md` is Patricia Casaburi.
 - **Format:** two days · main stage + parallel **workshops · breakout room** · networking lunches on both days · cocktail reception on the evening of Day Two (the venue section calls it "a rooftop cocktail evening overlooking the city").
 - **Capacity:** limited to 200 attendees.
 - **Site's own lines** (verbatim, usable in Mode B):

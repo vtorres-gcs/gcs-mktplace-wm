@@ -60,7 +60,7 @@ marks("dark")   # cover, closing: Global Citizen Solutions + CNN Portugal, white
 marks("light")  # white closing: GCS primary blue, CNN Portugal red
 ```
 
-The masthead is the **event's horizontal lockup** (`assets/logos/w&m-horizontal White|blue.svg`: the W mark and the name on one line, no GCS line), top-left, 705px wide, on every slide. The **GCS and CNN Portugal marks** sit side by side, **left-aligned** at the foot of the cover and of the closing slide only (80px tall, 40px apart), the way the site hero pairs them. The GCS mark **stands alone: nothing is written above, beside or over it** — no "Convened by", no caption (`qa.py` rejects text next to it). Use the files as supplied (`assets/logos/`), never recoloured; white marks on dark grounds; on white, the primary blue GCS and the red CNN Portugal. Any other partner logo needs the user's confirmation for the post.
+The masthead is the **event's horizontal lockup** (`assets/logos/w&m-horizontal White|blue.svg`: the W mark and the name on one line, no GCS line), top-left, 705px wide, on every slide. The **GCS and CNN Portugal marks** sit side by side, **left-aligned** at the foot of the cover and of the closing slide only (80px tall, 40px apart), the way the site hero pairs them. The GCS mark **stands alone: nothing is written above, beside or over it** — no "Curated by", no caption (`qa.py` rejects text next to it). Use the files as supplied (`assets/logos/`), never recoloured; white marks on dark grounds; on white, the primary blue GCS and the red CNN Portugal. Any other partner logo needs the user's confirmation for the post.
 
 ### 1 · Cover — always slide 1
 

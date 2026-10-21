@@ -54,7 +54,7 @@ Floor: **24px** on a 1080 canvas. Archivo is bundled at 400/500/600 only (500 is
 
 `DESIGN.md` describes the wordmark as a small gold square with a soft halo. On the canvas the masthead is the **event's horizontal lockup** instead (`assets/logos/w&m-horizontal White|blue.svg`, W mark + name on one line, via `mast("dark" | "light")`), top-left on every slide, 705px wide; margins are 125px on every side, as on the client's reference cover (`references/img/cover-reference.webp`). The **Global Citizen Solutions** and **CNN Portugal** marks sit side by side, left-aligned at the foot of the cover and the closing slide (`marks("dark" | "light")`), the way the site hero pairs them. Files are used as supplied, never recoloured: white marks on dark grounds; on white, the primary blue GCS (`GCS-Primary-Blue.png`) and the red CNN Portugal (`Logo CNN PORTUGAL Float Final.png`).
 
-**Nothing is written above, beside or over the GCS mark** — no "Convened by", no caption; its name is in the mark. `qa.py lint` rejects text next to it. Any other partner logo needs the user's confirmation for the post.
+**Nothing is written above, beside or over the GCS mark** — no "Curated by", no caption; its name is in the mark. `qa.py lint` rejects text next to it. Any other partner logo needs the user's confirmation for the post.
 
 ## Imagery
 
@@ -126,7 +126,7 @@ State "⏳ Waiting for the image" and the next action. When the file returns, in
 `DESIGN.md` is the site's system and stays untouched. For social, the client's designer chose:
 
 1. **White and navy alternate.** The site is one navy ground with a single white surface; a carousel alternates white and navy slides (cover and programme stay dark). On white, ink is navy and gold is a mark only.
-2. **The event logo is the masthead,** and the GCS + CNN Portugal marks close the cover and the final slide, instead of the gold square + name lockup and a "Convened by" label.
+2. **The event logo is the masthead,** and the GCS + CNN Portugal marks close the cover and the final slide, instead of the gold square + name lockup and a "Curated by" label.
 3. **The cover follows the client's reference image** (`references/img/cover-reference.webp`): hero photograph under one dawn-blue → navy-wash gradient fitted to it, left-aligned foot block, GCS + CNN marks bottom-left. It keeps more photograph than the 0.04 limit allows, so the cover is gated by 3:1 contrast instead. (An earlier version copied the site hero's 65.4° wash and failed the limit anyway.)
 
 ## Open assumptions to confirm with the design lead

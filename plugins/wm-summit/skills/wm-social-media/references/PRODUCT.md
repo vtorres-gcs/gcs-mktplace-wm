@@ -20,7 +20,7 @@ Secondary audience: prospective partners and sponsors, who need a route to `even
 
 ## Product Purpose
 
-The Wealth and Migration Summit 2026 — a private two-day gathering in Lisbon, Portugal, 5–6 November 2026, at EPIC SANA Marques Hotel, convened by Global Citizen Solutions and chaired by Patricia Casaburi (Founder & CEO). Attendance is intentionally limited to approximately 150–200 curated delegates, by registration.
+The Wealth and Migration Summit 2026 — a private two-day gathering in Lisbon, Portugal, 5–6 November 2026, at EPIC SANA Marques Hotel, curated by Global Citizen Solutions and chaired by Patricia Casaburi (Founder & CEO). Attendance is intentionally limited to approximately 150–200 curated delegates, by registration.
 
 The page exists to make the Summit intelligible and desirable to a qualified stranger and to capture registrations of interest, which the GCS team then follows up to confirm a place and share the full programme. Success = a qualified visitor understands what it is, why it matters now, and submits the register-interest form.
 
@@ -47,7 +47,7 @@ Lisbon is framed as a European capital with a global outlook — from Web Summit
 
 ## Brand Commitments
 
-- Name and lockup: "Wealth & Migration Summit" in navigation; "Wealth and Migration Summit 2026" as the page title. Convened by Global Citizen Solutions; GCS descriptor and stats appear in the footer.
+- Name and lockup: "Wealth & Migration Summit" in navigation; "Wealth and Migration Summit 2026" as the page title. Curated by Global Citizen Solutions; GCS descriptor and stats appear in the footer.
 - **Pinned palette (binding):** primary `#121B31`, secondary `#C2A358`, support `#FFFFFF` and `#C8CCD7`.
 - Visual reference supplied at `references/c97b78d0bd8b9dbfc21ef57bb80ef115.webp` is binding as a **craft/finish bar only** — the user explicitly ruled out its layout and its lime palette.
 - Voice: restrained, factual, institutional. British spelling in the source copy ("organised", "programme") is preserved.
