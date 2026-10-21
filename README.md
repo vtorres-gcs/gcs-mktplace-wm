@@ -8,12 +8,13 @@ Marketplace de plugins do Claude para o **Wealth & Migration Summit 2026** (Lisb
 |---|---|
 | `wm-presentations` | Decks PowerPoint (.pptx) editáveis do Summit |
 | `wm-social-media` | Carrosséis, posts, Stories e posts de LinkedIn |
+| `wm-reels` | Reels do Instagram: script (gancho em 3s, tabela de beats, legenda, capa) → **aprovação** → vídeo 9:16 gerado no Magnific com Kling 3.0 e os characters GCS-PPC, com legenda queimada |
 | `wm-letterhead` | Papel timbrado A4 em Word (.docx) |
 | `wm-web-banners` | Banners web em PNG ou GIF animado, em qualquer WxH |
 | `wm-paid-ads` | Pacotes de anúncios pagos para Google Ads (RSA, Display, Performance Max, Demand Gen) e Meta Ads (Feed, Stories/Reels, carrossel): textos dentro dos limites de cada plataforma, criativos PNG nos tamanhos e zonas seguras certos, lint de preço e fatos |
 | `wm-assets` | Entrega assets que já existem: logos (W&M, GCS, CNN Portugal, parceiros), fotos dos 26 palestrantes, imagens e fontes |
 
-As cinco que criam peças usam a identidade própria do Summit e puxam os fatos (programa, 26 palestrantes, três faixas de preço, teto de 200 participantes) dos dados confirmados do site, nunca de texto digitado à mão.
+As que criam peças usam a identidade própria do Summit e puxam os fatos (programa, 26 palestrantes, três faixas de preço, teto de 200 participantes) dos dados confirmados do site, nunca de texto digitado à mão.
 
 ### Instalar
 
@@ -27,6 +28,7 @@ Para testar localmente, sem publicar: `/plugin marketplace add "/caminho/para/gc
 ### Requisitos na máquina
 
 - Python 3 com `python-pptx`, `python-docx`, `Pillow`, `lxml`, `beautifulsoup4`, `playwright` (+ Chromium)
+- `wm-reels`: conector Magnific (MCP) com créditos e `ffmpeg` com libass (`brew install ffmpeg`; `bash plugins/wm-summit/skills/wm-reels/scripts/setup.sh` confere)
 - LibreOffice (`soffice`) e `pdftoppm` (poppler) para renderizar as prévias
 - As fontes da marca (Caladea, Archivo) já vão dentro de cada skill
 
