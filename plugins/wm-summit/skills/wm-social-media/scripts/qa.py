@@ -147,8 +147,8 @@ STALE_FACTS = {
     "150–200": "capacity is 'Limited to 200'",
     "150-200": "capacity is 'Limited to 200'",
     "150 curated": "capacity is 'Limited to 200'",
-    "14 named speakers": "the site lists 26 speakers",
-    "14 speakers": "the site lists 26 speakers",
+    "14 named speakers": "the site lists 28 speakers",
+    "14 speakers": "the site lists 28 speakers",
     "register your interest": None,  # WARN, not ERROR: CTA is now 'Secure your place'
 }
 # On the agenda page of 16 Oct but not a speaker card on the site — never named (FACTS.md, Speakers).

@@ -5,7 +5,7 @@ allowed-tools: Bash(*), Read, Write, Edit, AskUserQuestion
 metadata:
   last_updated: "2026-10-21"
   updated_by: claude-skill-creator
-  change_note: "New skill. Platform limits read from Google Ads Help and Meta's Ads Guide on 2026-10-21 (references/specs.json); facts from the site repo commit 1823ec1 via the sibling skills' FACTS.md and data copies. Fills the gap the social and banner skills leave ('Not for paid ads')."
+  change_note: "Sync with site repo at 6725cff: 28 speakers (added José Carlos Reis, John McNertney), 5 partner booking pages, IMGW promo code WMSIMGLOBALWEALTH25, FACTS.md + data JSONs + PRODUCT.md + DESIGN.md refreshed, new speaker photos and American Club partner logo added."
 ---
 
 # Paid ads — Wealth & Migration Summit 2026
@@ -141,12 +141,12 @@ The brand and the evidence on hand set hard edges. Never, in any mode:
 - state a **price** that is not one of the three published tiers, or that is not the tier in force for the whole flight; use **urgency mechanics** ("last chance", "only N seats", "book now" as copy), a day count, or a countdown that goes stale. Scarcity is factual and said once: "Limited to 200 attendees." A deadline is a date;
 - write anything that reads as **selling a visa, passport, residency or citizenship**, or promises an outcome ("guaranteed", "fast-track", "approval in 30 days") — the ad sells a conference place;
 - address the viewer as **wealthy, high-net-worth, an immigrant or an expat** — both platforms bar ads that assert or imply a personal attribute; speak of roles in the third person;
-- pair a **speaker** with a session, or name anyone not in the 26-speaker roster — the two programme pages disagree about who is where, so a pairing needs the user's confirmation in this conversation; portraits come only from `assets/speakers/`, unaltered;
+- pair a **speaker** with a session, or name anyone not in the 28-speaker roster — the two programme pages disagree about who is where, so a pairing needs the user's confirmation in this conversation; portraits come only from `assets/speakers/`, unaltered;
 - put a **partner or sponsor logo** (`assets/logos/partners/`) on a creative unless the user names it for that ad, and never give any logo a role ("official partner of…") — the site does not say what each one is;
 - generate a **new** AI image, present a stock picture as the real venue or a real event of this Summit, or draw a button, a play icon or a fake notification;
 - show a **partner price or promo code** — the partner landing pages (`/gfpi`, `/redbridge`, `/trustedadvisor`, `/imglobalwealth`) carry partner-only prices and codes; they are not a public offer and the lint rejects the amounts;
 - print a **URL** in the copy that the user has not confirmed, or put a URL in Google text assets at all;
-- state a session title or time that is not in `references/data/programme.json`, compute end times, or give a "session" count (the countable facts are 2 days · 10 workshops · 26 speakers);
+- state a session title or time that is not in `references/data/programme.json`, compute end times, or give a "session" count (the countable facts are 2 days · 10 workshops · 28 speakers);
 - use a retired fact: "Golden Visa Pathway" / "Structuring, Context & Experience" day themes, a 150–200 cap, a networking dinner, "Register your interest" (`FACTS.md` lists them; `lint` rejects them);
 - keep the sanctions / restricted-nationals workshop in paid copy, or use "immigration", "migrants", "border", "refugee" or "asylum" on Meta (a warning, not a block: the user may overrule it knowingly).
 

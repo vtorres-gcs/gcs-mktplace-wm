@@ -1,7 +1,7 @@
 {
   "_meta": {
     "as_of": "2026-10-21",
-    "note": "Snapshot of the Summit's assets, collected from the site repo (gcs-wealth-migration-summit) and the wm-summit sibling skills. Paths are relative to assets/."
+    "note": "Snapshot of the Summit's assets, collected from the site repo (gcs-wealth-migration-summit) and the wm-summit sibling skills. Paths are relative to assets/. Updated 21 Oct 2026: 28 speakers (added José Carlos Reis, John McNertney, Francisca van Dijken), American Club partner logo added."
   },
   "bundles": {
     "logos": [
@@ -16,7 +16,7 @@
       "fonts"
     ]
   },
-  "speaker_caution": "Client-supplied headshot, as supplied (never generated or altered). 480×480 px — fine for slides and social, too small for print. Name and role are the site's card; a speaker's name is not tied to any session.",
+  "speaker_caution": "Client-supplied headshot, as supplied (never generated or altered). 480×480 px — fine for slides and social, too small for print. Name and role are the site's card; a speaker's name is not tied to any session. Two speakers (José Carlos Reis, John McNertney) have JPG originals instead of WebP.",
   "site_ignore": [
     "assets/img/hero-900.webp",
     "assets/img/epic-sana-900.webp",
@@ -806,6 +806,35 @@
       "cleared": false
     },
     {
+      "id": "partner.americanclub",
+      "title": "The American Club of Lisbon — logo",
+      "kind": "logo",
+      "group": "partner-logos",
+      "files": [
+        "logos/partners/americanclub.png"
+      ],
+      "ground": "any",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "partner",
+        "parceiro",
+        "parceira",
+        "patrocinador",
+        "sponsor",
+        "the american club of lisbon",
+        "american club",
+        "american",
+        "club",
+        "lisbon"
+      ],
+      "caution": "Third-party logo from this partner's own booking page on the site (\"… partner offer\"). The site does not describe the partnership beyond that page. Send as a file only; it goes on a creative only if the user confirms it is cleared. Never add a role.",
+      "cleared": false
+    },
+    {
       "id": "partner.gfpi",
       "title": "Global Financial Planning Institute (GFPI) — logo",
       "kind": "logo",
@@ -1275,6 +1304,9 @@
     "speakers/marc-jancou.webp": "assets/img/speakers/marc-jancou.webp",
     "speakers/luca-calabrese.webp": "assets/img/speakers/luca-calabrese.webp",
     "speakers/diane-bidna.webp": "assets/img/speakers/diane-bidna.webp",
-    "speakers/nuno-sanches.webp": "assets/img/speakers/nuno-sanches.webp"
+    "speakers/nuno-sanches.webp": "assets/img/speakers/nuno-sanches.webp",
+    "speakers/jose-carlos-reis.jpg": "assets/img/speakers/jose-carlos-reis.jpg",
+    "speakers/john-mcnertney.jpg": "assets/img/speakers/john-mcnertney.jpg",
+    "logos/partners/americanclub.png": "assets/img/americanclub-logo.png"
   }
 }

@@ -3,9 +3,9 @@ name: wm-web-banners
 description: "Creates web banners for the Wealth and Migration Summit 2026 (Lisbon, 5–6 Nov 2026, convened by Global Citizen Solutions) in the size the user gives (728x90, 300x250, 970x250, 160x600, 320x50 or any WxH) as a PNG or an animated GIF. Always asks which output the user wants; for a GIF it asks the maximum file size and compresses to fit without changing the dimensions. Follows the site's identity, navy first (white Caladea + Archivo type, gold only for the button and one rule, W&M lockup) and always carries the Global Citizen Solutions and CNN Portugal marks. Copy from confirmed facts only; lints words and layout before rendering; ships alt text. Use whenever the user mentions a banner, web or display banner, leaderboard, skyscraper, medium rectangle, billboard, GIF animado, banner animado, or any WxH graphic for the Summit. Not for social carousels, stories or LinkedIn posts (use wm-social-media), Google Ads or Meta Ads campaigns (use wm-paid-ads), the landing page, or general GCS banners."
 allowed-tools: Bash(*), Read, Write, Edit, AskUserQuestion
 metadata:
-  last_updated: "2026-10-20"
+  last_updated: "2026-10-21"
   updated_by: claude-skill-creator
-  change_note: "Navy ground (as the site) replaces the first version's white ground, on the user's decision of 2026-10-20; every banner now carries the GCS and CNN Portugal marks (the hero pair) beside the Summit lockup. Facts, palette and logos from the sibling wm-social-media skill (site repo commit 1823ec1)."
+  change_note: "Sync with site repo at 6725cff: 28 speakers, FACTS.md + data JSONs + PRODUCT.md + DESIGN.md refreshed, partner booking pages documented."
 ---
 
 # Web banners — Wealth & Migration Summit 2026
@@ -53,7 +53,7 @@ Defaults you state in the hand-off rather than ask: a GIF plays **3 times and st
 
 Two modes, chosen before touching the text:
 
-- **A — you author** (a topic or a goal): write inside the confirmed facts. Every claim must trace to `FACTS.md` or text the user supplied. The programme is the argument: a specific fact beats an adjective. Usable lines: the site's hero ("Your residency, your citizenship, your Plan B. Don't let the world decide for you."), the service line (`5–6 November 2026 · Lisbon`), "Limited to 200 attendees", "2 days · 10 workshops · 26 speakers" (written as words: *Two days. Ten workshops. Twenty-six speakers.*), a day theme, a workshop title verbatim from `programme.json`.
+- **A — you author** (a topic or a goal): write inside the confirmed facts. Every claim must trace to `FACTS.md` or text the user supplied. The programme is the argument: a specific fact beats an adjective. Usable lines: the site's hero ("Your residency, your citizenship, your Plan B. Don't let the world decide for you."), the service line (`5–6 November 2026 · Lisbon`), "Limited to 200 attendees", "2 days · 10 workshops · 28 speakers" (written as words: *Two days. Ten workshops. Twenty-eight speakers.*), a day theme, a workshop title verbatim from `programme.json`.
 - **B — the user gives finished copy**: keep it verbatim. Shorten only by splitting across scenes; never reword, and flag (don't fix) spelling the site itself mixes.
 
 The CTA is **"Secure your place"** — a booking, which the site takes payment for. Not "Register your interest", not "Book now".
@@ -79,7 +79,7 @@ Write the spec from Python (`Path.write_text(json.dumps(...))`), never a shell h
   "width": 300, "height": 250,
   "scenes": [
     {"headline": "Your residency, your citizenship, your Plan B."},
-    {"headline": "Two days. Ten workshops. Twenty-six speakers.", "subline": "Limited to 200 attendees"}
+    {"headline": "Two days. Ten workshops. Twenty-eight speakers.", "subline": "Limited to 200 attendees"}
   ],
   "cta": "Secure your place"
 }
@@ -138,7 +138,7 @@ The brand and the evidence on hand set hard edges. Never, in any mode:
 - state a **price** that is not one of the three published tiers, or not the tier in force on the go-live date; use **urgency mechanics** ("last chance", "only N seats", "book now"). Scarcity is factual and said once: "Limited to 200 attendees." A deadline is a date;
 - put any **partner or sponsor logo other than Global Citizen Solutions and CNN Portugal** on a banner unless the user names it for this banner and confirms it is cleared (the site never says what each logo is). The user decided on 2026-10-20 that every banner carries GCS and CNN Portugal — the pair the site's hero shows beside the title — so those two are always on, with no wording that gives either a role ("official partner of…", "in partnership with…");
 - name a **speaker**, draw a portrait, or pair a speaker with a session — this skill is typographic. Speaker spotlights belong to `wm-social-media`, which carries the roster and the rules;
-- state a session title or time that is not in `references/data/programme.json`, compute end times, or give a "session" count (the countable facts are 2 days · 10 workshops · 26 speakers);
+- state a session title or time that is not in `references/data/programme.json`, compute end times, or give a "session" count (the countable facts are 2 days · 10 workshops · 28 speakers);
 - print a **URL** on the artwork the user did not ask for or confirm;
 - use a retired fact: "Golden Visa Pathway" / "Structuring, Context & Experience" day themes, a 150–200 cap, a networking dinner, "Register your interest", the older "passport programme" vocabulary (`FACTS.md` lists them; `check` rejects them);
 - set type below 12px, small gold text, or a headline in capitals (sentence case, exactly as written; capitals are for labels only).

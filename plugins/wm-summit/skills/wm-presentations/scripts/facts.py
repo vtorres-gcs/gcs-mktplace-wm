@@ -252,7 +252,7 @@ def _cli(argv):
         s = speaker(" ".join(argv[1:]))
         print(f"{s['display']}\n{s['role']}\nportrait: assets/speakers/{s['slug']}.webp\n\n{s['bio']}")
     elif cmd == "names":
-        print("on the agenda but not on the 26-speaker roster:", ", ".join(agenda_only_names()) or "none")
+        print("on the agenda but not on the 28-speaker roster:", ", ".join(agenda_only_names()) or "none")
     elif cmd == "overlaps":
         for day, a, b in overlaps():
             print(f"{day}: {a['time']}–{a['end']} {a['title']!r} runs into {b['time']} {b['title']!r}")

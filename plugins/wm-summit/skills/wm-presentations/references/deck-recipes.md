@@ -8,7 +8,7 @@ Before any recipe: read `FACTS.md`; run `python3 scripts/facts.py freshness`; kn
 
 For a prospective delegate, an advisor, a journalist, a first call. Argument: *capital is mobile; the right decisions need the right people in one room; here is the room.*
 
-`cover` (hero, GCS + CNN marks) → `split` (about + venue photo) → `ledger` (2 days · 10 workshops · 26 speakers · 200) → `entries` (@audience) → `days` (two themes, two picked sessions each) → `programme` ×4 (use `"columns": 2` on the main stage) (Day 1 main, Day 1 workshops, Day 2 main, Day 2 workshops) → `speakers` (all) → `rates` → `closing` (the dark-blue back cover). `meta.alternate: true` interleaves white slides (the template also fixes the roster on white and the rates on navy).
+`cover` (hero, GCS + CNN marks) → `split` (about + venue photo) → `ledger` (2 days · 10 workshops · 28 speakers · 200) → `entries` (@audience) → `days` (two themes, two picked sessions each) → `programme` ×4 (use `"columns": 2` on the main stage) (Day 1 main, Day 1 workshops, Day 2 main, Day 2 workshops) → `speakers` (all) → `rates` → `closing` (the dark-blue back cover). `meta.alternate: true` interleaves white slides (the template also fixes the roster on white and the rates on navy).
 
 Short version (6–8 slides, a live pitch): `cover` → `statement` → `ledger` → `days` → `speakers` (4-up, five or six names the user picks) → `rates` → `closing`. Drop the full programme and roster; say they are on the site.
 
@@ -51,4 +51,4 @@ Facts as in recipe 1, plus whatever internal content the user supplies (targets,
 
 The site repo holds two versions of the schedule: `programme/build.py` / `agenda.html` (with end times, formats and speakers; updated 20 Oct in site PR #77) and the home page `index.html` (different titles and times). The site's own `programme/THEMES.md` calls the mismatch "pending editorial resolution before publication". **The user chose `programme/build.py` as this skill's source on 20 Oct 2026**, so `data/programme.json` is that version and `data/programme_index.json` is the home page's, kept only so `sync_site_facts.py check` can show how they differ.
 
-Every deck that shows the programme must say in the hand-off: which version it used; that the home page differs; the **ten agenda-only names** (not on the 26-speaker roster) and the **five "to be announced" slots** it shows (`facts.py names`); and the **Day Two overlaps** (`facts.py overlaps`). The build prints all of these as deck-level warnings — carry them through.
+Every deck that shows the programme must say in the hand-off: which version it used; that the home page differs; the **ten agenda-only names** (not on the 28-speaker roster) and the **five "to be announced" slots** it shows (`facts.py names`); and the **Day Two overlaps** (`facts.py overlaps`). The build prints all of these as deck-level warnings — carry them through.

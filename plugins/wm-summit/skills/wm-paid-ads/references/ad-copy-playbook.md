@@ -8,14 +8,14 @@ Everything below is built from `FACTS.md` and `references/data/`. `ads.py lint` 
 |---|---|---|
 | Name | Wealth & Migration Summit 2026 (text assets use "&"; the lockup says "and") | site |
 | Dates, place | 5–6 November 2026 · Lisbon; venue **EPIC SANA Marques Hotel** (the site also writes *Marquês* — one spelling per pack, and tell the user) | `FACTS.md` |
-| Format | Two days · ten workshops · 26 speakers · limited to 200 attendees | `FACTS.md` |
+| Format | Two days · ten workshops · 28 speakers · limited to 200 attendees | `FACTS.md` |
 | Day themes | Day One *The New Geography of Wealth & Mobility* · Day Two *Global Wealth & the International Family* | `programme.json` |
 | Included | Both days of sessions and workshops · networking lunch on both days · cocktail reception on the evening of Day Two | `rates.json` |
 | Sessions | A title verbatim from `programme.json` — never a time that isn't there, never an end time | `facts` |
 | Rate | Only the tier in force for the **whole flight**, with its end date (below) | `rates.json` |
 | Call to action | "Secure your place" in the copy; the platform button is set in the UI | site |
 
-**Never in an ad:** a speaker paired with a session (the site's two programme pages disagree; the user must confirm each pairing) or anyone outside the 26-speaker roster — portraits and names come only from `assets/speakers/`; a partner or sponsor logo other than the GCS + CNN Portugal pair unless the user names it for that ad; past-edition figures or "returns"; testimonials; urgency ("last chance", "only 10 seats", "book now"); a day count ("12 days to go"); a price that isn't a published tier; anything that reads as selling a visa, passport or citizenship; the sanctions / restricted-nationals workshop; "immigration" wording on Meta; a second-person claim about the viewer's wealth.
+**Never in an ad:** a speaker paired with a session (the site's two programme pages disagree; the user must confirm each pairing) or anyone outside the 28-speaker roster — portraits and names come only from `assets/speakers/`; a partner or sponsor logo other than the GCS + CNN Portugal pair unless the user names it for that ad; past-edition figures or "returns"; testimonials; urgency ("last chance", "only 10 seats", "book now"); a day count ("12 days to go"); a price that isn't a published tier; anything that reads as selling a visa, passport or citizenship; the sanctions / restricted-nationals workshop; "immigration" wording on Meta; a second-person claim about the viewer's wealth.
 
 ## Not in `FACTS.md` yet (site repo read 2026-10-21, after the commit `FACTS.md` was built from)
 
@@ -44,18 +44,18 @@ The site names four rooms: global individuals and families · legal and tax coun
 | **Global families** | A Plan B that holds up, tax and banking included | "Your residency, your citizenship, your Plan B." · "Global Plan B, C and D" (session: *Building a Global Plan B, C and D: Contingency Planning for Global Families*) · "Growing Up Global" (session title) |
 | **Legal and tax counsel** | Country-specific detail from specialists | "Ten workshops: Portugal, Italy, Greece, Spain, Malta, the Caribbean, Panama" (the timed list; the site's intro sentence also says Turkey but no Turkey workshop is timed — flag it) · "Plan Smart: Combining Residency and Tax Benefits in Portugal" (workshop title) |
 | **Private banking and wealth managers** | How international families structure and move capital | *Inside the Private Bank: How International Families Structure Their Wealth* · *Asset Location vs. Asset Allocation* · *Money Without Borders: Diversification and Wealth Management for the Global Citizen in 2026* |
-| **Family offices, industry, government** | Who is in the room, and how many | "Limited to 200 attendees" · "Global mobility, in one room" · "26 speakers" (count only — no names) |
+| **Family offices, industry, government** | Who is in the room, and how many | "Limited to 200 attendees" · "Global mobility, in one room" · "28 speakers" (count only — no names) |
 
 ## Copy bank — lint-clean, to adapt
 
-**Google RSA headlines (≤ 30)** — Wealth & Migration Summit · Lisbon · 5–6 November 2026 · Two days in Lisbon · Ten workshops, 26 speakers · Limited to 200 attendees · Your residency, your Plan B · Global mobility, in one room · For advisors, family offices · Global Plan B, C and D · Secure your place · EPIC SANA Marques Hotel · *(Final Rate)* Final Rate €599 to 4 Nov · *(Advance)* Advance Rate €499 to 30 Oct
+**Google RSA headlines (≤ 30)** — Wealth & Migration Summit · Lisbon · 5–6 November 2026 · Two days in Lisbon · Ten workshops, 28 speakers · Limited to 200 attendees · Your residency, your Plan B · Global mobility, in one room · For advisors, family offices · Global Plan B, C and D · Secure your place · EPIC SANA Marques Hotel · *(Final Rate)* Final Rate €599 to 4 Nov · *(Advance)* Advance Rate €499 to 30 Oct
 
 **Google descriptions (≤ 90)** — Two days of main-stage sessions and specialist workshops on global mobility. · Residency and citizenship planning as part of a broader wealth strategy. · Lisbon, 5–6 November 2026. Limited to 200 attendees. · Advance Rate €499 until 30 October. Both days, networking lunches, cocktail reception.
 
 **Meta primary text (first ~125 characters carry it)**
 - *Programme:* Residency and citizenship planning is part of a wider wealth strategy. Two days in Lisbon, 5–6 November 2026.
 - *Room:* Plan B, C and D, tax, banking and mobility, in one room for two days. Limited to 200 attendees.
-- *Rate (warm):* Advance Rate €499 until 30 October. Two days, ten workshops, 26 speakers. Secure your place.
+- *Rate (warm):* Advance Rate €499 until 30 October. Two days, ten workshops, 28 speakers. Secure your place.
 
 **Meta headlines (≤ 27)** — Wealth & Migration Summit · Lisbon · 5–6 November · Limited to 200 attendees
 

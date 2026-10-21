@@ -267,7 +267,7 @@ def lint_text(text, where, platform, rep, ctx):
         n = WORDNUM.get(raw) or int(raw.replace(",", ""))
         noun = m.group(2).lower().rstrip("s")
         if noun == "session":
-            rep.err(where, "a 'session' count - the site never defines a session; the countable facts are 2 days, 10 workshops, 26 speakers")
+            rep.err(where, "a 'session' count - the site never defines a session; the countable facts are 2 days, 10 workshops, 28 speakers")
         elif COUNTS.get(noun) not in (None, n):
             rep.err(where, f"'{m.group(0)}' - the site says {COUNTS[noun]} {noun}s")
     if re.search(r"Marqu[eê]s", text):

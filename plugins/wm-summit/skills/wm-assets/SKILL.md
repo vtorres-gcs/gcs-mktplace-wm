@@ -1,11 +1,11 @@
 ---
 name: wm-assets
-description: "Finds and sends existing Wealth and Migration Summit 2026 assets (Lisbon, 5–6 Nov 2026, convened by Global Citizen Solutions) from a bundled library: the W&M logos and lockups (horizontal, stacked, vertical, symbol; white or navy; SVG + PNG), the Global Citizen Solutions and CNN Portugal marks, partner logos, the 26 speakers' portraits, the share card, the hero, venue, Lisbon photographs, plates and textures and the brand fonts (Caladea, Archivo). Picks the colourway that fits the user's background, converts WebP to JPG/PNG or resizes on request, zips big sets, and flags what is not cleared or not confirmed. Use whenever someone asks for, or needs, a file that already exists — 'me manda o logo', 'preciso da foto do speaker', 'logo branco em SVG', 'imagem de partilha', 'fontes da marca', 'send me the logo', 'all speaker photos', 'where is the …' — even if they never say 'asset'. Not for making anything new: carousels and posts (wm-social-media), banners (wm-web-banners), decks (wm-presentations), letterhead (wm-letterhead)."
+description: "Finds and sends existing Wealth and Migration Summit 2026 assets (Lisbon, 5–6 Nov 2026, convened by Global Citizen Solutions) from a bundled library: the W&M logos and lockups (horizontal, stacked, vertical, symbol; white or navy; SVG + PNG), the Global Citizen Solutions and CNN Portugal marks, partner logos, the 28 speakers' portraits, the share card, the hero, venue, Lisbon photographs, plates and textures and the brand fonts (Caladea, Archivo). Picks the colourway that fits the user's background, converts WebP to JPG/PNG or resizes on request, zips big sets, and flags what is not cleared or not confirmed. Use whenever someone asks for, or needs, a file that already exists — 'me manda o logo', 'preciso da foto do speaker', 'logo branco em SVG', 'imagem de partilha', 'fontes da marca', 'send me the logo', 'all speaker photos', 'where is the …' — even if they never say 'asset'. Not for making anything new: carousels and posts (wm-social-media), banners (wm-web-banners), decks (wm-presentations), letterhead (wm-letterhead)."
 allowed-tools: Bash(*), Read, AskUserQuestion, SendUserFile
 metadata:
   last_updated: "2026-10-21"
   updated_by: claude-skill-creator
-  change_note: "First version. Library built from the site repo (assets/img, speakers) and the sibling wm-summit skills, with clean file names; catalogue in references/catalog.json, delivery by scripts/assets.py. Three licensed stock photographs of Lisbon added to imagery, as 2400 px WebP (same files as wm-social-media's)."
+  change_note: "Sync with site repo at 6725cff: 28 speakers (added José Carlos Reis, John McNertney), American Club partner logo added (14 partners total), IMGW promo code updated to WMSIMGLOBALWEALTH25, 4 new partner booking pages. catalog.json and site_map updated."
 ---
 
 # Assets — Wealth & Migration Summit 2026
@@ -23,8 +23,8 @@ Everything is inside this folder (`<SKILL_DIR>` = the folder that holds this `SK
 | `wm-logos` (7) | W&M lockups: **horizontal** (the masthead), **default** (stacked, left-aligned), **vertical** (centred), each in white type for dark grounds and navy type for light ones, plus the gold **symbol** | SVG + PNG |
 | `gcs-logos` (6) | Global Citizen Solutions: primary (symbol + name), one-line wordmark, symbol; white and blue | PNG, mostly + SVG |
 | `cnn-portugal-logos` (4) | CNN Portugal: white, red, black, square badge | PNG |
-| `partner-logos` (13) | The nine on the site's partner strip + GFPI, IMGlobalWealth, RedBridge, Trusted Advisor (their own booking pages) | PNG / SVG |
-| `speakers` (26) | One 480×480 headshot per speaker on the site's roster, in the site's order | WebP |
+| `partner-logos` (14) | The nine on the site's partner strip + American Club of Lisbon, GFPI, IMGlobalWealth, RedBridge, Trusted Advisor (their own booking pages) | PNG / SVG |
+| `speakers` (28) | One 480×480 headshot per speaker on the site's roster, in the site's order | WebP / JPG |
 | `imagery` (10) | Share card (1200×630), hero (the red bridge at sunset), EPIC SANA at night, nocturne texture, three darkened Lisbon plates, three Lisbon stock photographs (sunset rooftops, Vasco da Gama Bridge, Arco da Rua Augusta; 2400 px) | WebP / JPG |
 | `fonts` (1) | Caladea + Archivo with their OFL licences | TTF + TXT |
 
@@ -105,7 +105,7 @@ Then stop. Offer the other colourway or format only if the request left it open.
 
 - **Alter a file.** No recolouring, tinting, cropping, stretching, putting a logo on a background, redrawing or "cleaning up". Only the container format and the pixel width change. A version that is not in the library (an all-black or all-white W&M, an outline, a horizontal GCS with the symbol) → say it isn't there, send the closest, and say that a new version is the brand owner's to supply.
 - **Make an asset that doesn't exist** — no generated logos, portraits or photographs. If it isn't in the library, say so; offer the nearest entry. If the site repo is on this machine (`/Volumes/GCS - DISK 1T/GCS 2026/Github/gcs-wealth-migration-summit`, read-only), `assets/img/` there may hold something newer — copy it as is and say it comes from the site, outside the library snapshot.
-- **Send a portrait for, or name, someone who is not on the 26-speaker roster** (`assets.py speaker` says "not on the roster"). The older agenda page lists people with no card on the site; they are not speakers here. Never generate or retouch a portrait, never tie a speaker to a session, and don't send a bio — bios live in `wm-social-media`.
+- **Send a portrait for, or name, someone who is not on the 28-speaker roster** (`assets.py speaker` says "not on the roster"). The older agenda page lists people with no card on the site; they are not speakers here. Never generate or retouch a portrait, never tie a speaker to a session, and don't send a bio — bios live in `wm-social-media`.
 - **Give a partner or media mark a role.** The GCS mark stands alone — nothing written above, beside or over it. CNN Portugal is shown beside GCS in the site's hero; no "official partner" or "in partnership with" wording. The other logos go on a creative only if the user names them for that piece and confirms they are cleared.
 - **Send fonts without their licences** — the SIL OFL texts travel with them.
 - **Answer facts** — dates, prices, programme, who speaks. That is `wm-social-media`'s `FACTS.md`; this skill hands over files, and the programme PDF is not one of them.

@@ -12,7 +12,7 @@ Each recipe lists the facts it may use and the arc (grounds alternate white and 
 
 | Post | Facts allowed | Arc (Nocturne types) | Caption must carry |
 |---|---|---|---|
-| **Announcement / save the date** | dates, city, venue, "Limited to 200", two days, the lede | cover → statement → ledger (`5–6 Nov` · `2 days` · `200` · `26 speakers`) → register | the CTA + link; the tier in force *only if* it will still be true when published |
+| **Announcement / save the date** | dates, city, venue, "Limited to 200", two days, the lede | cover → statement → ledger (`5–6 Nov` · `2 days` · `200` · `28 speakers`) → register | the CTA + link; the tier in force *only if* it will still be true when published |
 | **Day preview** (one per day) | day theme, timed rows from `programme.json`, workshops | cover → programme ×2 (main stage; workshops) → register | "Programme subject to change" |
 | **Session spotlight** | one timed row, its day, the theme it sits in | cover (the session title is the headline) → statement (why it matters — only what the title itself says) → register | time + day; no speaker unless user-confirmed pairing |
 | **Workshop series** (one post per country) | the timed workshop list: Italy, Spain, Portugal (IFICI; real estate), Greece, Caribbean, Panama, Malta, US taxes, Beyond Sanctions | single post / story: workshop title as headline, day + time as the datum | note these are parallel, in the breakout room; Turkey only if the user confirms it |

@@ -53,7 +53,7 @@ The fonts live in the **theme** (`+mj-lt` / `+mn-lt`); no slide hard-codes a fon
 - The theme carries the palette (`Lisbon Nocturne`: dk1 navy, lt1 white, accent1 gold…) with a **dark colour map**, so a text box added in PowerPoint is white on navy instead of invisible; the paper layout flips the map, so there it is navy on white.
 - Every shape is named (`Day marker`, `Session 09:10`, `Price Advance Rate`…) for the Selection Pane. Every picture has alt text (decorative ones are named `Decor…`).
 - Speaker notes: `"notes"` on any slide.
-- Cover and speaker photographs are converted to JPEG ≤ 2000px; a full 26-speaker deck is ~3 MB.
+- Cover and speaker photographs are converted to JPEG ≤ 2000px; a full 28-speaker deck is ~3 MB.
 
 ## Slide types and their spec
 

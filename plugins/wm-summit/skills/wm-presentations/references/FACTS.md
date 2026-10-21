@@ -1,6 +1,6 @@
 # Confirmed facts — Wealth & Migration Summit 2026
 
-**As of 20 Oct 2026**, read from the site repo `gcs-wealth-migration-summit` at commit `ab1fe08`. **Programme source: `programme/build.py` (the table behind `agenda.html`) — the user's decision of 20 Oct 2026**; speakers, rates and site facts from `index.html`. This skill's copy differs from the sibling `wm-social-media` / `w&m-web-banners` skills, which still follow `index.html` for the programme. Machine-readable copies: `references/data/{speakers,programme,programme_index,rates,site}.json`, read through `scripts/facts.py`. Refresh with `scripts/sync_site_facts.py` (see "Keeping this current").
+**As of 21 Oct 2026**, read from the site repo `gcs-wealth-migration-summit` at commit `6725cff`. **Programme source: `programme/build.py` (the table behind `agenda.html`) — the user's decision of 20 Oct 2026**; speakers, rates and site facts from `index.html`. The homepage programme was refreshed and now closely matches `programme/build.py`. Machine-readable copies: `references/data/{speakers,programme,programme_index,rates,site}.json`, read through `scripts/facts.py`. Refresh with `scripts/sync_site_facts.py` (see "Keeping this current").
 
 ## Precedence
 
@@ -21,7 +21,7 @@
 | Open client question: split the Day One Golden Visa session | The programme was restructured; there is no such session any more | Drop the question. Nothing to resolve or avoid |
 | "Approximately 150–200 curated delegates" | **"Limited to 200"** / "Attendance is limited to 200 attendees" | Say 200. Never "150" |
 | Seven audience segments | Four: *Global individuals & families · Legal & tax counsel · Private banking · Industry and Government* | Use the four on the site. The seven are in the older copy deck only |
-| 14 named speakers; ask the user for the roster | **26 speakers** on the site, each with role, bio and portrait | Roster is bundled. Nobody else is named |
+| 14 named speakers; ask the user for the roster | **28 speakers** on the site, each with role, bio and portrait | Roster is bundled. Nobody else is named |
 | Duarte Calheiros Menezes has no portrait (initials) | Portrait exists and is bundled | Use the portrait |
 | Ticket pricing absent; "never invent prices" | Three rate tiers published (below) | Prices are allowed — only the published ones, only the tier in force on the post date |
 | Registration = register interest, "the start of a vetted process", "not a checkout" | **"Secure your place"** → a booking page with payment ("Your place is confirmed once payment is received") | CTA is booking, not enquiry. Follow-up-by-a-human framing is gone |
@@ -51,15 +51,16 @@
 - **Rules**
   1. A session title goes on a slide verbatim from `programme.json` (`full`). Check with `facts.find_session("…")`.
   2. A time goes on a slide only if it is in `facts.known_times()` — now **start and end** times. A deck shows start times by default; end times are opt-in (`end_times: true`) because the agenda's ranges overlap in two places (below).
-  3. **Speaker lines come from the agenda, as written** (`facts.speaker_line`): `Name, Org (Role)`. A slot the agenda marks *To be announced* is drawn as "to be announced" — never a guessed name. Ten people on the agenda are **not** on the site's 26-speaker roster (no card, portrait or bio): Lourenço Alvares, Maggie Williams, Grazi Fulchiron, Diogo Pedro, Joana M., Gonçalo Peixoto, Dr. Joana Costa, Sheree M. Mitchell, Gizane Campos, Adrien Bridge. They may appear in a programme row exactly as the agenda writes them; they get no portrait, no bio slide, no "speakers" count, and the hand-off says they need confirming. Five slots are *to be announced* today (`facts.py names`).
+  3. **Speaker lines come from the agenda, as written** (`facts.speaker_line`): `Name, Org (Role)`. A slot the agenda marks *To be announced* is drawn as "to be announced" — never a guessed name. Ten people on the agenda are **not** on the site's 28-speaker roster (no card, portrait or bio): Lourenço Alvares, Maggie Williams, Grazi Fulchiron, Diogo Pedro, Joana M., Gonçalo Peixoto, Dr. Joana Costa, Sheree M. Mitchell, Gizane Campos, Adrien Bridge. They may appear in a programme row exactly as the agenda writes them; they get no portrait, no bio slide, no "speakers" count, and the hand-off says they need confirming. Five slots are *to be announced* today (`facts.py names`).
   4. **Overlaps the organiser must confirm** (the site's own `THEMES.md`): Day Two coffee 10:55–11:10 runs into the 11:00 tax panel, which runs to 11:15 and into the 11:10 100-Year Life presentation. Start times are shown as published; the hand-off says so.
   5. A programme slide carries the agenda's own line, **"Programme subject to change."**, on its last page (a deck can override it with `note`).
-  6. Count only what is unambiguous: **2 days · 10 workshops · 26 speakers**. Don't state a "session" count — the main-stage rows include coffee, lunch and registration, and nothing on the site defines "session".
+  6. Count only what is unambiguous: **2 days · 10 workshops · 28 speakers**. Don't state a "session" count — the main-stage rows include coffee, lunch and registration, and nothing on the site defines "session".
+- **Agenda tracks page** (`/agenda-tracks`): a thematic-filter version of the programme with four tracks: International Residency, Citizenship Planning, Wealth & Investment, Family & Future. Sessions tagged with one or two themes each.
 - **Workshop countries.** The home page's intro sentence names *Italy, Spain, Portugal, Greece, the Caribbean, Panama, and Turkey*; the agenda's workshop list has **Malta** and **no Turkey**. Use the list; do not mention Turkey or leave out Malta without telling the user.
 
 ## Speakers
 
-26, in the site's order (`python3 scripts/facts.py speakers`). Name, role and bio come from `data/speakers.json` (the site's own cards); portraits from `assets/speakers/<slug>.webp` — all 26 bundled. A person not in the roster gets no portrait, bio or speaker slide and is not counted in the 26. The agenda names ten such people (listed under Programme rule 3): they appear only as a speaker line in a programme row, exactly as the agenda writes them, and are flagged in the hand-off.
+28, in the site's order (`python3 scripts/facts.py speakers`). Name, role and bio come from `data/speakers.json` (the site's own cards); portraits from `assets/speakers/<slug>.webp` — all 28 bundled. New since last update: **José Carlos Reis** (Executive Director & Senior Investment Adviser at Julius Baer), **John McNertney** (CEO at Green Ocean Global Advisors), **Francisca van Dijken** (EMEA Head of Global Client Solutions at Citigroup Private Bank). A person not in the roster gets no portrait, bio or speaker slide and is not counted in the 28. The agenda names ten such people (listed under Programme rule 3): they appear only as a speaker line in a programme row, exactly as the agenda writes them, and are flagged in the hand-off.
 
 **Name and role as the card has them** (`display` in the JSON). Known inconsistencies — flag, don't resolve:
 
@@ -93,6 +94,20 @@ Bios are long and copied verbatim from the site; a card gets **no bio** (`carous
 - **CTA verb:** "Secure your place" (site), "Book your place" (booking page title). Not "Register your interest" — that is the older page (`register-interest.html` still exists: "we will keep you updated on ticket availability").
 - **Where:** domain `wealthandmigrationsummit.com` (from the site's share metadata); booking page `/claim-your-seat`. **Unverified:** whether the site's staging password gate has been lifted (`CLAUDE.md` of the site repo: "currently sits behind HTTP Basic Auth"). **Ask once before printing a URL on a graphic;** until confirmed, graphics say "Link in bio" / "Link in the comments" and the URL goes in a caption only after the user confirms.
 
+## Partner booking pages
+
+Five partner-specific booking pages now exist, each at its own URL, `noindex`. Each shows the Summit's rates with a partner discount or a dedicated HubSpot form:
+
+| Partner | URL path | Discount / mechanism | Promo code |
+|---|---|---|---|
+| IMGlobalWealth | `/imglobalwealth` | 50% off each tier | `WMSIMGLOBALWEALTH25` |
+| The American Club of Lisbon | `/americanclub` | 50% off each tier | `AMERICANCLUBWEALTH50` |
+| Trusted Advisor | `/trustedadvisor` | 50% off each tier | (via HubSpot form, no user-entered code) |
+| GFPI | `/gfpi` | Own HubSpot form | (dedicated form) |
+| RedBridge | `/redbridge` | Own HubSpot form | (dedicated form) |
+
+**Rules:** a slide may reference a partner discount only when the user says so for this specific deck. Never show a promo code unless instructed — codes appear on the partner's own page, not in decks.
+
 ## Partners and media
 
 - The hero shows two marks next to the title: **Global Citizen Solutions** and **CNN Portugal**.
@@ -112,17 +127,17 @@ Delegate or client testimonials · past-edition figures (attendance, countries, 
 
 ## Sources disagree
 
-The site repo holds two schedules and its own `programme/THEMES.md` (19 Oct) calls the mismatch "pending editorial resolution before publication". **This skill follows `programme/build.py` (`agenda.html`) — decided by the user on 20 Oct 2026.** Every deck that shows the programme says so in the hand-off.
+The homepage (`index.html`) was refreshed (commits up to `6725cff`, 21 Oct) and its programme now closely matches `programme/build.py` / `agenda.html` — session titles, formats and times are aligned. **This skill follows `programme/build.py` (`agenda.html`) — decided by the user on 20 Oct 2026.** Remaining differences:
 
 | Topic | `programme/build.py` / `agenda.html` (this skill) | `index.html` (the public home page) |
 |---|---|---|
-| Day One opening | 09:00 Keynote "Opening Remarks", 09:15 "The Future of Investment Migration" (Casaburi, Kadiri) | 09:00 Opening Remarks, 09:10 "The Future of Global Mobility: The Global Citizen in 2026 and Beyond" |
-| Main-stage rows | 14 (Day One) and 17 (Day Two), with end times, format, speakers, moderators | 15 per day, start times only, no speakers |
-| Day One Portugal workshop | "Portugal: From NHR to IFICI & Residence Planning" | "Plan Smart: Combining Residency and Tax Benefits in Portugal — The IFICI Opportunity" |
-| Day Two evening | 16:50–17:30 "Wine Tasting & Farewell Networking" | 16:30 "A Taste of Portugal: A Guided Wine Experience" |
+| Speakers per session | Listed with roles and moderators | Not shown |
+| Session end times | Published for every row | Not shown |
+| Day Two evening | 16:50–17:30 "Wine Tasting & Farewell Networking" | Not listed separately (last: closing remarks 16:40) |
 | Disclaimer | "Programme subject to change." | none |
+| Thematic tracks | Available on `agenda-tracks.html` with 4 filters | Same tracks shown inline via theme tags |
 
-If the client resolves it the other way, run `sync_site_facts.py sync` after changing `extract_agenda` / the source, and re-read this file. Until then: titles, times, formats and speaker lines are the agenda's; the home page's version is not mixed in.
+Titles, times, formats and speaker lines remain the agenda's, as before.
 
 ## Keeping this current
 

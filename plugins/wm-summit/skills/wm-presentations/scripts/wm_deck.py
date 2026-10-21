@@ -954,7 +954,7 @@ class Deck:
         if not acc:
             return
         if acc["names"]:
-            self.warn(0, "the programme shows people the agenda lists but the site's 26-speaker roster does not "
+            self.warn(0, "the programme shows people the agenda lists but the site's 28-speaker roster does not "
                          f"({', '.join(sorted(acc['names']))}) — confirm names and spellings before this leaves GCS")
         if acc["tba"]:
             self.warn(0, f"{len(acc['tba'])} slot(s) are 'to be announced' on the agenda and are drawn as such: " + "; ".join(sorted(acc["tba"])))

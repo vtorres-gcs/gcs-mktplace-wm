@@ -1,9 +1,9 @@
 {
   "_meta": {
     "source": "index.html",
-    "site_commit": "1823ec1",
+    "site_commit": "6725cff",
     "site_dirty": false,
-    "extracted_on": "2026-10-20"
+    "extracted_on": "2026-10-21"
   },
   "speakers": [
     {
@@ -90,7 +90,7 @@
     {
       "order": 10,
       "name": "Dr. Nina Patrick, PhD",
-      "display": "Dr. Nina Patrick",
+      "display": "Dr. Nina Patrick, PhD",
       "role": "Longevity Researcher, Science Communicator & Entrepreneur",
       "bio": "Nina Patrick, PhD is a science communicator, entrepreneur, and longevity researcher. She holds a PhD in pharmaceutical sciences and has founded and exited a healthtech company, served as Head of Innovation at the Champalimaud Foundation, and is currently a Venture Partner at Maze Impact. She is the founder of Nina Patrick Inc., a longevity and health media company, and co-founder of Longevity Wednesdays, a 900+ member professional community in Lisbon.",
       "slug": "nina-patrick",
@@ -162,7 +162,7 @@
     {
       "order": 18,
       "name": "Dr. Laura Madrid, PhD",
-      "display": "Dr. Laura Madrid",
+      "display": "Dr. Laura Madrid, PhD",
       "role": "Global Intelligence Unit Research Lead at Global Citizen Solutions",
       "bio": "Laura Madrid leads the research team at the Global Intelligence Unit at Global Citizen Solutions, focusing on global mobility, migration policy, and international law. She holds a PhD in Public International Law and Migration from University College London and specializes in research on global mobility, residency and citizenship, and migration trends.",
       "slug": "laura-madrid",
@@ -238,6 +238,24 @@
       "role": "Partner & Head of Operations at Cascais Ventures",
       "bio": "Nuno is a co-founder & partner at Cascais Ventures, Portugal's leading Cultural Creation Agency, specializing in the donation route of the Portuguese Residency-by-Investment program. Previously, Nuno was part of the executive team that took Kaltura, a US video technology company, public in the NASDAQ as a unicorn. Before that he created and led Vodafone Group's global TV business unit.",
       "slug": "nuno-sanches",
+      "photo_bundled": true
+    },
+    {
+      "order": 27,
+      "name": "José Carlos Reis",
+      "display": "José Carlos Reis",
+      "role": "Executive Director & Senior Investment Adviser at Julius Baer",
+      "bio": "José Carlos Reis is an Executive Director at Bank Julius Baer Portugal, specializing in investment strategy, asset allocation, and portfolio construction for high-net-worth and ultra-high-net-worth clients. With over 24 years of experience across global financial markets, his expertise spans derivatives, fixed income, equities, and multi-asset investing.\nHaving lived and worked in Singapore, Monaco, and Portugal, and through extensive engagement with sovereign wealth funds, pension funds, asset managers, and family offices across Asia and Latin America, José Carlos has developed a global perspective on wealth management, cross-border investing, and long-term portfolio construction.\nJosé Carlos combines extensive investment expertise with strong academic credentials. He holds a Global Executive MBA from INSEAD, is a CFA Charterholder, and earned a degree in Applied Mathematics.",
+      "slug": "jose-carlos-reis",
+      "photo_bundled": true
+    },
+    {
+      "order": 28,
+      "name": "John McNertney",
+      "display": "John McNertney",
+      "role": "CEO at Green Ocean Global Advisors",
+      "bio": "John brings over 16 years of financial planning experience from his tenure at Merrill Lynch, TD Ameritrade, and independent planning firms in the Bay Area. He holds both CFP and GFP designations, and earned his BS in Psychology from the University of Iowa, with minors in Philosophy and French.\nJohn is an intensely creative professional who is energetic in the application of modern financial planning principles in the service of his clientele. Currently, John is co-located in Lisbon, Portugal, and San Francisco, California. His family lives in Lisbon, and they enjoy exploring continental Europe, meeting new friends, and learning new languages.",
+      "slug": "john-mcnertney",
       "photo_bundled": true
     }
   ]

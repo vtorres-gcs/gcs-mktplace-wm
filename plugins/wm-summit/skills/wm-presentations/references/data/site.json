@@ -1,14 +1,51 @@
 {
   "_meta": {
     "source": "index.html",
-    "site_commit": "ab1fe08",
+    "site_commit": "6725cff",
     "site_dirty": false,
-    "extracted_on": "2026-10-20"
+    "extracted_on": "2026-10-21"
   },
   "domain": "https://wealthandmigrationsummit.com",
   "booking_page": "claim-your-seat",
+  "partner_pages": [
+    {
+      "slug": "americanclub",
+      "name": "The American Club of Lisbon",
+      "promo": "AMERICANCLUBWEALTH50",
+      "discount": "50%",
+      "method": "promo_code"
+    },
+    {
+      "slug": "gfpi",
+      "name": "GFPI",
+      "promo": null,
+      "discount": "50%",
+      "method": "hubspot_form"
+    },
+    {
+      "slug": "imglobalwealth",
+      "name": "IM Global Wealth",
+      "promo": "WMSIMGLOBALWEALTH25",
+      "discount": "25%",
+      "method": "promo_code"
+    },
+    {
+      "slug": "redbridge",
+      "name": "RedBridge",
+      "promo": null,
+      "discount": "50%",
+      "method": "hubspot_form"
+    },
+    {
+      "slug": "trustedadvisor",
+      "name": "Trusted Advisor",
+      "promo": null,
+      "discount": "50%",
+      "method": "hubspot_form"
+    }
+  ],
   "service_line": "5–6 November 2026 · Lisbon",
-  "headline": "Your residency, your citizenship, your Plan B. Don’t let the world decide for you.",
+  "headline": "Your residency, your citizenship, your Plan B. Don't let the world decide for you.",
   "lede": "The Summit gathering for global citizens, advisors, family offices and industry leaders building global mobility and cross-border strategies.",
   "hero_facts": {
     "Attendees": "Limited to 200",
@@ -23,7 +60,7 @@
   ],
   "about_heading": "Capital is becoming mobile, and the right decisions need the right people in the room",
   "programme_heading": "Two days, organized around the decisions and topics that matter most",
-  "workshop_countries_sentence": "Alongside the plenary sessions, Global Citizen Solutions specialists lead parallel immigration and Plan B workshops, building a personal, country-specific roadmap for Italy, Spain, Portugal, Greece, the Caribbean, Panama, and Turkey.",
+  "workshop_countries_sentence": "Alongside the plenary sessions, Global Citizen Solutions specialists lead parallel immigration and Plan B workshops, building a personal, country-specific roadmap for Italy, Spain, Portugal, Greece, the Caribbean, Panama, and Malta.",
   "setting_heading": "Lisbon, a European capital with a global outlook",
   "venue_names_on_site": [
     "EPIC SANA Marques Hotel",
@@ -46,5 +83,22 @@
   "hero_partner_marks": [
     "Global Citizen Solutions",
     "CNN Portugal"
+  ],
+  "speaker_count": 28,
+  "pages": [
+    "index.html",
+    "agenda.html",
+    "agenda-tracks.html",
+    "claim-your-seat.html",
+    "americanclub.html",
+    "gfpi.html",
+    "imglobalwealth.html",
+    "redbridge.html",
+    "trustedadvisor.html",
+    "register-interest.html",
+    "thank-you.html",
+    "gcs-invitees.html",
+    "cookie-policy.html",
+    "privacy-policy.html"
   ]
 }

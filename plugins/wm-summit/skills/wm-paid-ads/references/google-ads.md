@@ -25,9 +25,9 @@ Video is out of scope for this skill (no video exists for the Summit); if the us
 Google picks any headline with any other, in any order, and shows 2–3 of them. So:
 
 - **Every headline must stand alone** and not contradict another. No headline may need its neighbour to make sense ("…in Lisbon" after "Two days" is fine only if the first also works without it).
-- **Cover different jobs**, not synonyms: the event name · the dates and place · a hard fact (two days, ten workshops, 26 speakers, limited to 200) · the topic (Plan B, C and D planning, cross-border strategy) · who it is for (advisors, family offices, global families — third person) · the rate tier and its end date · the call to action ("Secure your place"). Twelve distinct headlines beat fifteen restated ones.
+- **Cover different jobs**, not synonyms: the event name · the dates and place · a hard fact (two days, ten workshops, 28 speakers, limited to 200) · the topic (Plan B, C and D planning, cross-border strategy) · who it is for (advisors, family offices, global families — third person) · the rate tier and its end date · the call to action ("Secure your place"). Twelve distinct headlines beat fifteen restated ones.
 - **Don't pin** unless a line must always show. Pinning one asset to a position removes combinations and lowers Ad Strength. The usual exception is the event name pinned to H1 (so the brand always leads); text that must appear in every ad is pinned to H1, H2 or D1.
-- **No trailing full stop** in a headline; sentence case; no exclamation mark (Google rejects it in headlines); numerals for facts in text assets ("26 speakers"), words only on the graphics.
+- **No trailing full stop** in a headline; sentence case; no exclamation mark (Google rejects it in headlines); numerals for facts in text assets ("28 speakers"), words only on the graphics.
 - Path fields: `Summit` / `Lisbon` (15 chars max each) — they build the display URL `wealthandmigrationsummit.com/Summit/Lisbon`; they are not links.
 - Ad Strength is a hint, not a goal. Do not pad with near-duplicates to reach "Excellent".
 - Optional: a countdown customizer (`{=COUNTDOWN("2026/11/05 09:00:00","en")}`) keeps "days to go" true without a daily edit. The syntax and availability are Google's — confirm in the UI before relying on it; `ads.py` skips the length check for any `{=` text and warns.
