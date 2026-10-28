@@ -3,28 +3,21 @@
 The skill is self-contained at run time: it reads references/data/*.json, never the site.
 This script is the maintenance step that keeps those files honest. It only READS the site repo.
 
-    python3 sync_site_facts.py sync  <site-repo>     # rewrite references/data/*.json
+    python3 sync_site_facts.py sync  <site-repo>     # rewrite references/data/*.json from index.html
     python3 sync_site_facts.py check <site-repo>     # report drift, write nothing (exit 1 on drift)
-
-Sources (decided by the user on 20 Oct 2026):
-  programme.json        programme/build.py (the DAYS table that also feeds agenda.html): every session with
-                        start/end time, format and its speakers, every workshop with its leaders
-  programme_index.json  the programme as index.html publishes it — kept only so `check` can report how the
-                        two still differ; nothing reads it at deck-build time
-  speakers, rates, site index.html
 
 `check` compares, against the bundled copies:
   - speakers (names, roles, order), programme (days, themes, times, titles), rate tiers, hero facts
   - PRODUCT.md / DESIGN.md (verbatim copies that must be replaced when the site changes them)
   - speaker portraits present in the site but missing from assets/speakers/
 
-Standard library only. The site's own programme/THEMES.md calls the index.html / agenda mismatch an open editorial
-question (see references/FACTS.md, "Sources disagree").
+Standard library only. `index.html` is the source for everything here; agenda.html and
+programme/build.py are reported separately because they have disagreed with it before
+(see references/FACTS.md, "Sources disagree").
 """
 
 from datetime import date
 from pathlib import Path
-import ast
 import html
 import json
 import re
@@ -83,71 +76,63 @@ def extract_speakers(src: str) -> list:
 
 def extract_programme(src: str) -> list:
     days = []
-    for sec in re.finditer(r'<section class="day" id="(day-[a-z]+)"[\s\S]*?</section>', src):
-        block = sec.group(0)
-        when = _text(re.search(r'class="day__when">(.*?)</span>', block).group(1))
-        theme = _text(re.search(r'class="day__name">(.*?)</span>', block).group(1))
-        label, short = [p.strip() for p in when.split("·")]
-        tracks = {"main": [], "workshops": []}
-        for label_html, ol in re.findall(r'<h4 class="stations__label">(.*?)</h4>\s*<ol class="stations">([\s\S]*?)</ol>', block):
-            track = "workshops" if "Workshop" in label_html else "main"
-            for li in re.finditer(r'<li class="station( station--break)?" id="([^"]+)">([\s\S]*?)</li>', ol):
-                row = li.group(3)
-                t = re.search(r'<time datetime="([^"]+)">([^<]+)</time>', row)
-                sub = re.search(r'<span class="station__sub">([\s\S]*?)</span>', row)
-                head = re.sub(r'<span class="station__sub">[\s\S]*?</span>', "", re.search(r"</time><span>([\s\S]*)</span></div>", row).group(1))
-                title = _text(head)
-                tail = _text(sub.group(1)) if sub else None
-                tracks[track].append({
-                    "id": li.group(2),
-                    "time": t.group(2),
-                    "iso": t.group(1),
-                    "kind": "break" if li.group(1) else ("workshop" if track == "workshops" else "session"),
-                    "title": title,
-                    "subtitle": tail,
-                    "full": f"{title} {tail}" if tail else title,
-                })
-        days.append({"day": label, "date": short, "iso": tracks["main"][0]["iso"][:10], "theme": theme, **tracks})
-    return days
+    for day_n, sec in enumerate(re.finditer(r'<section class="prog-day"[^>]*>([\s\S]*?)</section>', src), 1):
+        block = sec.group(1)
+        kicker_m = re.search(r'class="prog-day__kicker">(.*?)</p>', block)
+        theme_m = re.search(r'<h2 id="day-\d+-h">(.*?)</h2>', block)
+        kicker = _text(kicker_m.group(1)) if kicker_m else ""
+        theme = html.unescape(_text(theme_m.group(1))) if theme_m else ""
+        parts = kicker.split(" · ", 1)
+        day_label = parts[0].strip()
+        date_str = parts[1].strip() if len(parts) > 1 else ""
 
+        tracks: dict = {"main": [], "workshops": []}
 
-def extract_agenda(site: Path) -> dict:
-    """The programme as programme/build.py defines it. The DAYS literal is read with ast and evaluated with
-    no builtins — build.py itself is never imported (it pulls in playwright/pymupdf and writes files)."""
-    tree = ast.parse((site / "programme" / "build.py").read_text(encoding="utf-8"))
-    gcs, days_node = None, None
-    for node in tree.body:
-        if isinstance(node, ast.Assign) and len(node.targets) == 1 and isinstance(node.targets[0], ast.Name):
-            if node.targets[0].id == "GCS":
-                gcs = ast.literal_eval(node.value)
-            elif node.targets[0].id == "DAYS":
-                days_node = node.value
-    if days_node is None:
-        raise SystemExit("programme/build.py has no DAYS table — the site changed shape; update extract_agenda")
-    raw = eval(compile(ast.Expression(days_node), "<DAYS>", "eval"), {"__builtins__": {}}, {"GCS": gcs, "dict": dict})
-    days = []
-    for n, d in enumerate(raw, 1):
-        seen, main, workshops = set(), [], []
-        for start, end, fmt, title, spk in d["main"]:
-            rid = f"d{n}-{start.replace(':', '')}"
-            while rid in seen:
-                rid += "b"
-            seen.add(rid)
-            main.append({
-                "id": rid, "time": start, "end": end, "iso": f"{d['iso']}T{start}",
-                "kind": "break" if fmt is None else "session", "format": fmt,
+        def _parse_li(li_html, track, brk_n):
+            is_brk = 'class="prog-brk"' in li_html
+            t = re.search(r'<time datetime="([^"]+)">([^<]+)</time>', li_html)
+            if not t:
+                return None
+            if is_brk:
+                raw = re.sub(r'<[^>]+>', ' ', li_html)
+                title = html.unescape(" ".join(raw.split()).replace(t.group(2), "", 1).strip())
+                brk_n[0] += 1
+                return {
+                    "id": f"d{day_n}-brk-{brk_n[0]:02d}",
+                    "time": t.group(2), "iso": t.group(1),
+                    "kind": "break", "title": title, "subtitle": None, "full": title,
+                }
+            id_m = re.search(r'id="([^"]+)"', li_html)
+            title_m = re.search(r'class="prog-ses__title">([\s\S]*?)</h4>', li_html)
+            title = html.unescape(_text(title_m.group(1))) if title_m else ""
+            is_workshop = "workshop" in (id_m.group(1) if id_m else "")
+            actual_track = "workshops" if is_workshop else track
+            return {
+                "id": id_m.group(1) if id_m else f"d{day_n}-unk",
+                "time": t.group(2), "iso": t.group(1),
+                "kind": "workshop" if actual_track == "workshops" else "session",
                 "title": title, "subtitle": None, "full": title,
-                "speakers": [{"name": nm, "org": org, "role": role} for nm, org, role in spk],
-            })
-        for start, title, names in d["breakout"]:
-            workshops.append({
-                "id": f"d{n}-w{start.replace(':', '')}", "time": start, "iso": f"{d['iso']}T{start}",
-                "kind": "workshop", "title": title, "subtitle": None, "full": title, "speakers": list(names),
-            })
-        days.append({"day": d["label"], "date": d["short"].split(" ", 1)[1], "iso": d["iso"], "theme": d["theme"],
-                     "main": main, "workshops": workshops})
-    note = re.search(r'class="prog-intro__note">([\s\S]*?)</p>', (site / "agenda.html").read_text(encoding="utf-8"))
-    return {"days": days, "disclaimer": _text(note.group(1)) if note else None}
+                "_track": actual_track,
+            }
+
+        brk_n = [0]
+        for li_html in re.findall(r'<li class="prog-brk"[^>]*>[\s\S]*?</li>', block):
+            row = _parse_li(li_html, "main", brk_n)
+            if row:
+                tracks["main"].append(row)
+
+        for track_m in re.finditer(r'<div class="prog-track([^"]*)">([\s\S]*?)</div>\s*</div>', block):
+            is_side = "prog-track--side" in track_m.group(1)
+            track_name = "workshops" if is_side else "main"
+            for li_html in re.findall(r'<li class="prog-(?:ses|brk)"[^>]*>[\s\S]*?</li>', track_m.group(2)):
+                row = _parse_li(li_html, track_name, brk_n)
+                if row:
+                    actual = row.pop("_track", track_name)
+                    tracks[actual].append(row)
+
+        iso_date = next((r["iso"][:10] for r in tracks["main"] if r["kind"] != "break"), "")
+        days.append({"day": day_label, "date": date_str, "iso": iso_date, "theme": theme, **tracks})
+    return days
 
 
 def extract_rates(src: str) -> dict:
@@ -165,6 +150,11 @@ def extract_rates(src: str) -> dict:
     return {"tiers": tiers, "included": included, "limit": limit, "cta": cta, "cta_href": cta_href}
 
 
+def _extract_strategic(src: str) -> list:
+    m = re.search(r'class="strategic__logos">([\s\S]*?)</ul>', src)
+    return [html.unescape(a) for a in re.findall(r'<li><img[^>]+alt="([^"]+)"', m.group(1))] if m else []
+
+
 def extract_site(src: str, site: Path) -> dict:
     og_image = re.search(r'<meta property="og:image" content="([^"]+)"', src).group(1)
     domain = re.match(r"https?://[^/]+", og_image).group(0)
@@ -180,13 +170,12 @@ def extract_site(src: str, site: Path) -> dict:
         "who_is_in_the_room": [_text(x) for x in re.findall(r"<span>([\s\S]*?)</span>", room)],
         "about_heading": _text(re.search(r'id="canyon-h"[^>]*>([\s\S]*?)</h2>', src).group(1)),
         "programme_heading": _text(re.search(r'id="line-h"[^>]*>([\s\S]*?)</h2>', src).group(1)),
-        "workshop_countries_sentence": _text(re.search(r'class="line__disclaimer">([\s\S]*?)</p>', src).group(1)),
         "setting_heading": _text(re.search(r'id="mirror-h"[^>]*>([\s\S]*?)</h2>', src).group(1)),
         "venue_names_on_site": sorted(set(re.findall(r"EPIC SANA Marqu[eê]s(?: Hotel)?", src + (site / "claim-your-seat.html").read_text(encoding="utf-8")))),
         "partner_enquiries": "events@globalcitizensolutions.com",
-        "partner_cta": _text(re.search(r'id="beacon-h"[^>]*>([\s\S]*?)</h2>', src).group(1)),
         "partner_logos_on_site": [html.unescape(a) for a in re.findall(r'<li><img src="assets/img/[^"]+" alt="([^"]+)"', re.search(r'class="beacon__logos">([\s\S]*?)</ul>', src).group(1))],
         "hero_partner_marks": re.findall(r'class="partner__logo[^"]*">[\s\S]*?alt="([^"]+)"', src),
+        "strategic_partners": _extract_strategic(src),
     }
 
 
@@ -194,8 +183,7 @@ def extract_all(site: Path) -> dict:
     src = (site / "index.html").read_text(encoding="utf-8")
     return {
         "speakers": extract_speakers(src),
-        "programme_index": extract_programme(src),
-        "agenda": extract_agenda(site),
+        "programme": extract_programme(src),
         "rates": extract_rates(src),
         "site": extract_site(src, site),
     }
@@ -214,18 +202,16 @@ def sync(site: Path):
     DATA.mkdir(parents=True, exist_ok=True)
     files = {
         "speakers.json": _wrap(site, "speakers", got["speakers"]),
-        "programme.json": {"_meta": _meta(site, "programme/build.py"), **got["agenda"]},
-        "programme_index.json": _wrap(site, "days", got["programme_index"]),
+        "programme.json": _wrap(site, "days", got["programme"]),
         "rates.json": {"_meta": _meta(site, "index.html"), **got["rates"]},
         "site.json": {"_meta": _meta(site, "index.html"), **got["site"]},
     }
     for name, payload in files.items():
         (DATA / name).write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         print(f"wrote references/data/{name}")
-    days = got["agenda"]["days"]
-    n_sp, n_main = len(got["speakers"]), sum(len(d["main"]) for d in days)
-    n_ws = sum(len(d["workshops"]) for d in days)
-    print(f"{n_sp} speakers · {len(days)} days · {n_main} main-stage rows · {n_ws} workshops · {len(got['rates']['tiers'])} rate tiers")
+    n_sp, n_main = len(got["speakers"]), sum(len(d["main"]) for d in got["programme"])
+    n_ws = sum(len(d["workshops"]) for d in got["programme"])
+    print(f"{n_sp} speakers · {len(got['programme'])} days · {n_main} main-stage rows · {n_ws} workshops · {len(got['rates']['tiers'])} rate tiers")
     missing = [s["slug"] for s in got["speakers"] if not s["photo_bundled"]]
     if missing:
         print("WARN  portraits not bundled in assets/speakers/:", ", ".join(missing))
@@ -255,7 +241,7 @@ def _diff_list(label, old, new, key):
 def check(site: Path) -> bool:
     got = extract_all(site)
     drift = []
-    stored = {n: _load(f"{n}.json") for n in ("speakers", "programme", "programme_index", "rates", "site")}
+    stored = {n: _load(f"{n}.json") for n in ("speakers", "programme", "rates", "site")}
     if not all(stored.values()):
         print("DRIFT references/data/*.json missing — run `sync` first")
         return False
@@ -264,17 +250,13 @@ def check(site: Path) -> bool:
     old_order = [s["name"] for s in stored["speakers"]["speakers"]]
     if old_order != [s["name"] for s in got["speakers"]] and set(old_order) == {s["name"] for s in got["speakers"]}:
         drift.append("speakers: same people, new order (roster order decides card order)")
-    for label, old_days, new_days in (("programme", stored["programme"]["days"], got["agenda"]["days"]),
-                                      ("programme (index.html copy)", stored["programme_index"]["days"], got["programme_index"])):
-        for old, new in zip(old_days, new_days):
-            if old["theme"] != new["theme"]:
-                drift.append(f"{label}: {new['day']} theme changed — {old['theme']!r} -> {new['theme']!r}")
-            for track in ("main", "workshops"):
-                drift += _diff_list(f"{label} {new['day']} {track}", old[track], new[track], lambda r: r["id"])
-        if len(old_days) != len(new_days):
-            drift.append(f"{label}: number of days changed")
-    if stored["programme"].get("disclaimer") != got["agenda"]["disclaimer"]:
-        drift.append(f"programme: disclaimer changed — {stored['programme'].get('disclaimer')!r} -> {got['agenda']['disclaimer']!r}")
+    for old, new in zip(stored["programme"]["days"], got["programme"]):
+        if old["theme"] != new["theme"]:
+            drift.append(f"programme: {new['day']} theme changed — {old['theme']!r} -> {new['theme']!r}")
+        for track in ("main", "workshops"):
+            drift += _diff_list(f"programme {new['day']} {track}", old[track], new[track], lambda r: r["id"])
+    if len(stored["programme"]["days"]) != len(got["programme"]):
+        drift.append("programme: number of days changed")
     if stored["rates"]["tiers"] != got["rates"]["tiers"]:
         drift.append("rates: tiers changed (prices or dates)")
     for k in ("included", "limit", "cta", "cta_href"):
@@ -293,11 +275,11 @@ def check(site: Path) -> bool:
     if missing:
         drift.append("portraits missing from assets/speakers/: " + ", ".join(missing))
 
-    # The two programme sources still disagree. That is the site's open editorial question, not drift in this skill.
-    a_titles = {r["full"] for d in got["agenda"]["days"] for t in ("main", "workshops") for r in d[t] if r["kind"] != "break"}
-    i_titles = {r["full"] for d in got["programme_index"] for t in ("main", "workshops") for r in d[t] if r["kind"] != "break"}
-    print(f"NOTE  programme: this skill follows programme/build.py; index.html shows the other version "
-          f"({len(a_titles - i_titles)} titles only in build.py, {len(i_titles - a_titles)} only on the home page)")
+    # The other two programme sources: report, never trust. They have disagreed with index.html before.
+    for other in ("agenda.html", "programme/build.py"):
+        p = site / other
+        if p.is_file() and p.stat().st_mtime < (site / "index.html").stat().st_mtime:
+            print(f"NOTE  {other} is older than index.html — if the programme differs, index.html wins for titles and times")
 
     print(f"bundled facts extracted {stored['site']['_meta']['extracted_on']} from site commit {stored['site']['_meta']['site_commit']}; "
           f"site is now at {_git(site, 'rev-parse', '--short', 'HEAD') or 'unknown'}")

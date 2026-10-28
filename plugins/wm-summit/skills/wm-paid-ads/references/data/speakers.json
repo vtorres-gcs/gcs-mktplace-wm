@@ -1,9 +1,9 @@
 {
   "_meta": {
     "source": "index.html",
-    "site_commit": "6725cff",
+    "site_commit": "f2fbee2",
     "site_dirty": false,
-    "extracted_on": "2026-10-21"
+    "extracted_on": "2026-10-27"
   },
   "speakers": [
     {
@@ -71,42 +71,6 @@
     },
     {
       "order": 8,
-      "name": "Adalberto Pucca",
-      "display": "Adalberto Pucca",
-      "role": "Head of Global Client Advisory at Global Citizen Solutions",
-      "bio": "Adalberto Pucca is Head of Global Client Advisory at Global Citizen Solutions, where he leads the firm's global commercial strategy and its sales and business development activities.",
-      "slug": "adalberto-pucca",
-      "photo_bundled": true
-    },
-    {
-      "order": 9,
-      "name": "Ayoub Rebroub",
-      "display": "Ayoub Rebroub",
-      "role": "Legal Manager, Malta at Endevio Group",
-      "bio": "Ayoub Rebroub is the newly appointed CEO of Endevio Group, a Malta-based advisory firm specialising in investment migration and global mobility solutions. With over eight years of industry experience, he has advised hundreds of international families and investors on Malta’s residency and citizenship programmes. He holds an MBA and is a Professional Member of the Investment Migration Council (IMC).",
-      "slug": "ayoub-rebroub",
-      "photo_bundled": true
-    },
-    {
-      "order": 10,
-      "name": "Dr. Nina Patrick, PhD",
-      "display": "Dr. Nina Patrick, PhD",
-      "role": "Longevity Researcher, Science Communicator & Entrepreneur",
-      "bio": "Nina Patrick, PhD is a science communicator, entrepreneur, and longevity researcher. She holds a PhD in pharmaceutical sciences and has founded and exited a healthtech company, served as Head of Innovation at the Champalimaud Foundation, and is currently a Venture Partner at Maze Impact. She is the founder of Nina Patrick Inc., a longevity and health media company, and co-founder of Longevity Wednesdays, a 900+ member professional community in Lisbon.",
-      "slug": "nina-patrick",
-      "photo_bundled": true
-    },
-    {
-      "order": 11,
-      "name": "Nathalie Willis-Davis",
-      "display": "Nathalie Willis-Davis",
-      "role": "Founder & Managing Director at Tendoria",
-      "bio": "Nathalie is the Founder and Managing Director of Tendoria, an educational consultancy specializing in school placement in Portugal and Spain, and global university admissions advisory. Together with her team of international education experts, Nathalie helps families make informed and confident educational decisions through highly personalized guidance.",
-      "slug": "nathalie-willis-davis",
-      "photo_bundled": true
-    },
-    {
-      "order": 12,
       "name": "Duarte Calheiros Menezes",
       "display": "Duarte Calheiros Menezes",
       "role": "Partner & Fund Manager at BlueCrow Capital",
@@ -115,43 +79,7 @@
       "photo_bundled": true
     },
     {
-      "order": 13,
-      "name": "Athanassios (Thanos) Tsoukalas",
-      "display": "Athanassios (Thanos) Tsoukalas",
-      "role": "Legal Manager, Greece at AT Legal",
-      "bio": "Thanos Tsoukalas is an attorney at law and founder of AT LEGAL, a boutique Greek law firm with offices in Athens and Corfu. He holds an LL.B. from the National & Kapodistrian University of Athens and an LL.M. with distinction in International & European Business Law from the Vrije Universiteit Brussel. His work is focused on investment migration, Golden Visas, real estate and cross-border advisory, serving global investors, high-net-worth individuals, foreign property buyers and businesses.",
-      "slug": "thanos-tsoukalas",
-      "photo_bundled": true
-    },
-    {
-      "order": 14,
-      "name": "Nuno Serafim",
-      "display": "Nuno Serafim",
-      "role": "Partner at C2 Capital",
-      "bio": "Nuno Serafim is Partner and Head of Public Markets at C2 Capital Partners, where he oversees the firm's liquid investment strategies. With more than 25 years of experience across financial markets and asset management, he has held senior investment and leadership positions at some of Portugal's largest asset management firms, overseeing more than €5 billion in assets throughout his career.",
-      "slug": "nuno-serafim",
-      "photo_bundled": true
-    },
-    {
-      "order": 15,
-      "name": "Cintia Mano",
-      "display": "Cintia Mano",
-      "role": "Chief Investment Officer at European Longevity Hub",
-      "bio": "Cintia Mano is Chief Investment Officer at the European Longevity Hub, where she focuses on investment and innovation in the longevity economy. She is an experienced angel investor and former CEO of an international angel investment community, with a track record supporting startups across multiple markets. She is also the author of Angel Investing Explained.",
-      "slug": "cintia-mano",
-      "photo_bundled": true
-    },
-    {
-      "order": 16,
-      "name": "Joe Rice",
-      "display": "Joe Rice",
-      "role": "Head of Citizenship Programs at Global Citizen Solutions",
-      "bio": "Joe Rice brings over two decades of expertise to his role as Head of Citizenship Programs at Global Citizen Solutions. Combining professional knowledge with personal experience, having obtained second citizenship himself and pursuing Portuguese residency, Joe has guided hundreds of clients through global mobility journeys. He is particularly renowned for his expertise in Caribbean citizenship programs, with established relationships across Antigua and Barbuda, Dominica, Grenada, St. Kitts and Nevis, and St. Lucia.",
-      "slug": "joe-rice",
-      "photo_bundled": true
-    },
-    {
-      "order": 17,
+      "order": 9,
       "name": "Bernardo Meyrelles",
       "display": "Bernardo Meyrelles",
       "role": "Country Head, Portugal at EFG",
@@ -160,16 +88,106 @@
       "photo_bundled": true
     },
     {
+      "order": 10,
+      "name": "Adalberto Pucca",
+      "display": "Adalberto Pucca",
+      "role": "Head of Global Client Advisory at Global Citizen Solutions",
+      "bio": "Adalberto Pucca is Head of Global Client Advisory at Global Citizen Solutions, where he leads the firm's global commercial strategy and its sales and business development activities.",
+      "slug": "adalberto-pucca",
+      "photo_bundled": true
+    },
+    {
+      "order": 11,
+      "name": "Ayoub Rebroub",
+      "display": "Ayoub Rebroub",
+      "role": "Legal Manager, Malta at Endevio Group",
+      "bio": "Ayoub Rebroub is the newly appointed CEO of Endevio Group, a Malta-based advisory firm specialising in investment migration and global mobility solutions. With over eight years of industry experience, he has advised hundreds of international families and investors on Malta’s residency and citizenship programmes. He holds an MBA and is a Professional Member of the Investment Migration Council (IMC).",
+      "slug": "ayoub-rebroub",
+      "photo_bundled": true
+    },
+    {
+      "order": 12,
+      "name": "José Carlos Reis",
+      "display": "José Carlos Reis",
+      "role": "Executive Director & Senior Investment Adviser at Julius Baer",
+      "bio": "José Carlos Reis is an Executive Director at Bank Julius Baer Portugal, specializing in investment strategy, asset allocation, and portfolio construction for high-net-worth and ultra-high-net-worth clients. With over 24 years of experience across global financial markets, his expertise spans derivatives, fixed income, equities, and multi-asset investing.\nHaving lived and worked in Singapore, Monaco, and Portugal, and through extensive engagement with sovereign wealth funds, pension funds, asset managers, and family offices across Asia and Latin America, José Carlos has developed a global perspective on wealth management, cross-border investing, and long-term portfolio construction.\nJosé Carlos combines extensive investment expertise with strong academic credentials. He holds a Global Executive MBA from INSEAD, is a CFA Charterholder, and earned a degree in Applied Mathematics.",
+      "slug": "jose-carlos-reis-square",
+      "photo_bundled": false
+    },
+    {
+      "order": 13,
+      "name": "John McNertney",
+      "display": "John McNertney",
+      "role": "CEO at Green Ocean Global Advisors",
+      "bio": "John brings over 16 years of financial planning experience from his tenure at Merrill Lynch, TD Ameritrade, and independent planning firms in the Bay Area. He holds both CFP and GFP designations, and earned his BS in Psychology from the University of Iowa, with minors in Philosophy and French.\nJohn is an intensely creative professional who is energetic in the application of modern financial planning principles in the service of his clientele. Currently, John is co-located in Lisbon, Portugal, and San Francisco, California. His family lives in Lisbon, and they enjoy exploring continental Europe, meeting new friends, and learning new languages.",
+      "slug": "john-mcnertney",
+      "photo_bundled": false
+    },
+    {
+      "order": 14,
+      "name": "Dr. Nina Patrick, PhD",
+      "display": "Dr. Nina Patrick",
+      "role": "Longevity Researcher, Science Communicator & Entrepreneur",
+      "bio": "Nina Patrick, PhD is a science communicator, entrepreneur, and longevity researcher. She holds a PhD in pharmaceutical sciences and has founded and exited a healthtech company, served as Head of Innovation at the Champalimaud Foundation, and is currently a Venture Partner at Maze Impact. She is the founder of Nina Patrick Inc., a longevity and health media company, and co-founder of Longevity Wednesdays, a 900+ member professional community in Lisbon.",
+      "slug": "nina-patrick",
+      "photo_bundled": true
+    },
+    {
+      "order": 15,
+      "name": "Nathalie Willis-Davis",
+      "display": "Nathalie Willis-Davis",
+      "role": "Founder & Managing Director at Tendoria",
+      "bio": "Nathalie is the Founder and Managing Director of Tendoria, an educational consultancy specializing in school placement in Portugal and Spain, and global university admissions advisory. Together with her team of international education experts, Nathalie helps families make informed and confident educational decisions through highly personalized guidance.",
+      "slug": "nathalie-willis-davis",
+      "photo_bundled": true
+    },
+    {
+      "order": 16,
+      "name": "Athanassios (Thanos) Tsoukalas",
+      "display": "Athanassios (Thanos) Tsoukalas",
+      "role": "Legal Manager, Greece at AT Legal",
+      "bio": "Thanos Tsoukalas is an attorney at law and founder of AT LEGAL, a boutique Greek law firm with offices in Athens and Corfu. He holds an LL.B. from the National & Kapodistrian University of Athens and an LL.M. with distinction in International & European Business Law from the Vrije Universiteit Brussel. His work is focused on investment migration, Golden Visas, real estate and cross-border advisory, serving global investors, high-net-worth individuals, foreign property buyers and businesses.",
+      "slug": "thanos-tsoukalas",
+      "photo_bundled": true
+    },
+    {
+      "order": 17,
+      "name": "Nuno Serafim",
+      "display": "Nuno Serafim",
+      "role": "Partner at C2 Capital",
+      "bio": "Nuno Serafim is Partner and Head of Public Markets at C2 Capital Partners, where he oversees the firm's liquid investment strategies. With more than 25 years of experience across financial markets and asset management, he has held senior investment and leadership positions at some of Portugal's largest asset management firms, overseeing more than €5 billion in assets throughout his career.",
+      "slug": "nuno-serafim",
+      "photo_bundled": true
+    },
+    {
       "order": 18,
+      "name": "Cintia Mano",
+      "display": "Cintia Mano",
+      "role": "Chief Investment Officer at European Longevity Hub",
+      "bio": "Cintia Mano is Chief Investment Officer at the European Longevity Hub, where she focuses on investment and innovation in the longevity economy. She is an experienced angel investor and former CEO of an international angel investment community, with a track record supporting startups across multiple markets. She is also the author of Angel Investing Explained.",
+      "slug": "cintia-mano",
+      "photo_bundled": true
+    },
+    {
+      "order": 19,
+      "name": "Joe Rice",
+      "display": "Joe Rice",
+      "role": "Head of Citizenship Programs at Global Citizen Solutions",
+      "bio": "Joe Rice brings over two decades of expertise to his role as Head of Citizenship Programs at Global Citizen Solutions. Combining professional knowledge with personal experience, having obtained second citizenship himself and pursuing Portuguese residency, Joe has guided hundreds of clients through global mobility journeys. He is particularly renowned for his expertise in Caribbean citizenship programs, with established relationships across Antigua and Barbuda, Dominica, Grenada, St. Kitts and Nevis, and St. Lucia.",
+      "slug": "joe-rice",
+      "photo_bundled": true
+    },
+    {
+      "order": 20,
       "name": "Dr. Laura Madrid, PhD",
-      "display": "Dr. Laura Madrid, PhD",
+      "display": "Dr. Laura Madrid",
       "role": "Global Intelligence Unit Research Lead at Global Citizen Solutions",
       "bio": "Laura Madrid leads the research team at the Global Intelligence Unit at Global Citizen Solutions, focusing on global mobility, migration policy, and international law. She holds a PhD in Public International Law and Migration from University College London and specializes in research on global mobility, residency and citizenship, and migration trends.",
       "slug": "laura-madrid",
       "photo_bundled": true
     },
     {
-      "order": 19,
+      "order": 21,
       "name": "Albert Morgenstern",
       "display": "Albert Morgenstern",
       "role": "Chief Financial Officer at Construnews · Academic Collaborator at ESADE Business School",
@@ -178,7 +196,7 @@
       "photo_bundled": true
     },
     {
-      "order": 20,
+      "order": 22,
       "name": "Yanimar Hernandez",
       "display": "Yanimar Hernandez",
       "role": "Legal Manager, Spain at Global Citizen Solutions",
@@ -187,7 +205,7 @@
       "photo_bundled": true
     },
     {
-      "order": 21,
+      "order": 23,
       "name": "Ruth Shaber, MD",
       "display": "Ruth Shaber, MD",
       "role": "Founder & President at Tara Health Foundation",
@@ -196,7 +214,7 @@
       "photo_bundled": true
     },
     {
-      "order": 22,
+      "order": 24,
       "name": "João Pacheco Gonçalves",
       "display": "João Pacheco Gonçalves",
       "role": "Head of Institutional Relations at Global Citizen Solutions",
@@ -205,16 +223,16 @@
       "photo_bundled": true
     },
     {
-      "order": 23,
+      "order": 25,
       "name": "Marc Jancou",
       "display": "Marc Jancou",
       "role": "Founder at Marc Jancou Contemporary & Porto Arts Club",
       "bio": "Marc Jancou is an art dealer and cultural entrepreneur with over 30 years of experience working in the art world. Since opening his first gallery in 1991, Marc Jancou has supported numerous contemporary art projects and artists at various stages in their careers.",
-      "slug": "marc-jancou",
-      "photo_bundled": true
+      "slug": "marc-jancou-portrait",
+      "photo_bundled": false
     },
     {
-      "order": 24,
+      "order": 26,
       "name": "Luca Calabrese",
       "display": "Luca Calabrese",
       "role": "Legal Manager, Italy at Global Citizen Solutions",
@@ -223,7 +241,7 @@
       "photo_bundled": true
     },
     {
-      "order": 25,
+      "order": 27,
       "name": "Diane Bidna",
       "display": "Diane Bidna",
       "role": "University & Career Counselor at TASIS Portugal",
@@ -232,7 +250,7 @@
       "photo_bundled": true
     },
     {
-      "order": 26,
+      "order": 28,
       "name": "Nuno Sanches",
       "display": "Nuno Sanches",
       "role": "Partner & Head of Operations at Cascais Ventures",
@@ -241,22 +259,31 @@
       "photo_bundled": true
     },
     {
-      "order": 27,
-      "name": "José Carlos Reis",
-      "display": "José Carlos Reis",
-      "role": "Executive Director & Senior Investment Adviser at Julius Baer",
-      "bio": "José Carlos Reis is an Executive Director at Bank Julius Baer Portugal, specializing in investment strategy, asset allocation, and portfolio construction for high-net-worth and ultra-high-net-worth clients. With over 24 years of experience across global financial markets, his expertise spans derivatives, fixed income, equities, and multi-asset investing.\nHaving lived and worked in Singapore, Monaco, and Portugal, and through extensive engagement with sovereign wealth funds, pension funds, asset managers, and family offices across Asia and Latin America, José Carlos has developed a global perspective on wealth management, cross-border investing, and long-term portfolio construction.\nJosé Carlos combines extensive investment expertise with strong academic credentials. He holds a Global Executive MBA from INSEAD, is a CFA Charterholder, and earned a degree in Applied Mathematics.",
-      "slug": "jose-carlos-reis",
-      "photo_bundled": true
+      "order": 29,
+      "name": "Sheree Mitchell",
+      "display": "Sheree Mitchell",
+      "role": "Founder at Immersa Global",
+      "bio": "Sheree Mitchell is an American entrepreneur and Founder of Immersa Global, a boutique destination management company connecting (U)HNW American travelers with Portugal since 2015. Recognized on Travel + Leisure’s A-List of top global travel experts, she serves as President of ASTA Portugal, Vice President of the American Club of Lisbon, and a Board Member of the Fulbright Commission in Portugal. Her work spans entrepreneurship, cultural diplomacy, and transatlantic relations, reflecting her commitment to fostering meaningful connections and creating lasting value in the country she now calls home.",
+      "slug": "sheree-mitchell",
+      "photo_bundled": false
     },
     {
-      "order": 28,
-      "name": "John McNertney",
-      "display": "John McNertney",
-      "role": "CEO at Green Ocean Global Advisors",
-      "bio": "John brings over 16 years of financial planning experience from his tenure at Merrill Lynch, TD Ameritrade, and independent planning firms in the Bay Area. He holds both CFP and GFP designations, and earned his BS in Psychology from the University of Iowa, with minors in Philosophy and French.\nJohn is an intensely creative professional who is energetic in the application of modern financial planning principles in the service of his clientele. Currently, John is co-located in Lisbon, Portugal, and San Francisco, California. His family lives in Lisbon, and they enjoy exploring continental Europe, meeting new friends, and learning new languages.",
-      "slug": "john-mcnertney",
-      "photo_bundled": true
+      "order": 30,
+      "name": "Teresa Barbosa",
+      "display": "Teresa Barbosa",
+      "role": "Founder and Managing Partner at Simplify Somm",
+      "bio": "Teresa Barbosa is the founder and managing partner of Simplify Somm, a company specialising in the distribution of Portuguese wines, and represents João M. Barbosa Vinhos, a family wine business rooted in Portugal’s winemaking heritage. Teresa is an Environmental Engineer, a sommelier and a teacher at Lisbon’s School of Hospitality and Tourism, combining an analytical background with specialised wine knowledge and an entrepreneurial approach to the sector.",
+      "slug": "teresa-barbosa",
+      "photo_bundled": false
+    },
+    {
+      "order": 31,
+      "name": "António Henriques",
+      "display": "António Henriques",
+      "role": "Chief Executive Officer at Bison Bank",
+      "bio": "António Henriques is the Chief Executive Officer and a Member of the Board of Directors of Bison Bank. He holds a Bachelor's degree in Business Organization and Management and an MBA with a specialization in Information Management. António also serves as a lecturer in two postgraduate programs on Web3 and Blockchain at ISAG – European Business School, in Porto, and at Nova School of Business and Economics, in Lisbon. With more than 30 years of experience in investment banking and asset management, António has extensive leadership expertise in business development, internal control, operations, organizational management, information systems, quality and sustainability. Throughout his career, he has led numerous performance improvement, productivity and organizational transformation initiatives.",
+      "slug": "antonio-henriques",
+      "photo_bundled": false
     }
   ]
 }

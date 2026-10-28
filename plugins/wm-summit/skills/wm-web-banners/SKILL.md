@@ -5,7 +5,7 @@ allowed-tools: Bash(*), Read, Write, Edit, AskUserQuestion
 metadata:
   last_updated: "2026-10-21"
   updated_by: claude-skill-creator
-  change_note: "Sync with site repo at 6725cff: 28 speakers, FACTS.md + data JSONs + PRODUCT.md + DESIGN.md refreshed, partner booking pages documented."
+  change_note: "Sync with site repo at f2fbee2: 31 speakers (added Sheree Mitchell, Teresa Barbosa, António Henriques); Hadley Gamble as Summit Host; homepage session titles now canonical; FACTS.md + data JSONs refreshed."
 ---
 
 # Web banners — Wealth & Migration Summit 2026

@@ -1,691 +1,451 @@
 {
   "_meta": {
-    "source": "programme/build.py",
-    "site_commit": "6725cff",
+    "source": "index.html",
+    "site_commit": "f2fbee2",
     "site_dirty": false,
-    "extracted_on": "2026-10-21"
+    "extracted_on": "2026-10-27"
   },
   "days": [
     {
       "day": "Day One",
-      "date": "5 Nov",
+      "date": "Thursday, 5 November",
       "iso": "2026-11-05",
       "theme": "The New Geography of Wealth & Mobility",
       "main": [
         {
-          "id": "d01-0830",
+          "id": "d1-brk-01",
           "time": "08:30",
-          "end": "09:00",
           "iso": "2026-11-05T08:30",
           "kind": "break",
-          "format": null,
           "title": "Coffee, Registration & Networking",
-          "speakers": []
+          "subtitle": null,
+          "full": "Coffee, Registration & Networking"
         },
         {
-          "id": "d01-0900",
+          "id": "d1-brk-02",
+          "time": "10:10",
+          "iso": "2026-11-05T10:10",
+          "kind": "break",
+          "title": "Coffee & Networking",
+          "subtitle": null,
+          "full": "Coffee & Networking"
+        },
+        {
+          "id": "d1-brk-03",
+          "time": "12:30",
+          "iso": "2026-11-05T12:30",
+          "kind": "break",
+          "title": "Networking Lunch",
+          "subtitle": null,
+          "full": "Networking Lunch"
+        },
+        {
+          "id": "d1-brk-04",
+          "time": "15:15",
+          "iso": "2026-11-05T15:15",
+          "kind": "break",
+          "title": "Coffee & Networking",
+          "subtitle": null,
+          "full": "Coffee & Networking"
+        },
+        {
+          "id": "d1-session-01",
           "time": "09:00",
-          "end": "09:15",
           "iso": "2026-11-05T09:00",
           "kind": "session",
-          "format": "Keynote",
           "title": "Opening Remarks",
-          "speakers": [
-            {
-              "name": "Mehdi Kadiri",
-              "org": "Global Citizen Solutions",
-              "role": null
-            }
-          ]
+          "subtitle": null,
+          "full": "Opening Remarks"
         },
         {
-          "id": "d01-0915",
-          "time": "09:15",
-          "end": "10:00",
-          "iso": "2026-11-05T09:15",
+          "id": "d1-session-02",
+          "time": "09:10",
+          "iso": "2026-11-05T09:10",
           "kind": "session",
-          "format": "Panel",
-          "title": "The Future of Investment Migration",
-          "speakers": [
-            {
-              "name": "Patricia Casaburi",
-              "org": "Global Citizen Solutions",
-              "role": null
-            },
-            {
-              "name": "Mehdi Kadiri",
-              "org": "Global Citizen Solutions",
-              "role": null
-            }
-          ]
+          "title": "The Future of Global Mobility: The Global Citizen in 2026 and Beyond",
+          "subtitle": null,
+          "full": "The Future of Global Mobility: The Global Citizen in 2026 and Beyond"
         },
         {
-          "id": "d01-1000",
-          "time": "10:00",
-          "end": "10:30",
-          "iso": "2026-11-05T10:00",
+          "id": "d1-session-03",
+          "time": "09:40",
+          "iso": "2026-11-05T09:40",
           "kind": "session",
-          "format": "Panel",
-          "title": "Where Wealth Is Moving: Global Outflows, Inflows & New Hubs",
-          "speakers": [
-            {
-              "name": "João Pacheco Gonçalves",
-              "org": "Global Citizen Solutions",
-              "role": "Moderator"
-            },
-            {
-              "name": "Private banking speaker",
-              "org": "To be announced",
-              "role": null
-            }
-          ]
+          "title": "Where Wealth Is Moving, and Why: New Hubs and What They Mean for You",
+          "subtitle": null,
+          "full": "Where Wealth Is Moving, and Why: New Hubs and What They Mean for You"
         },
         {
-          "id": "d01-1055",
-          "time": "10:55",
-          "end": "11:10",
-          "iso": "2026-11-05T10:55",
+          "id": "d1-brk-05",
+          "time": "10:10",
+          "iso": "2026-11-05T10:10",
           "kind": "break",
-          "format": null,
           "title": "Coffee & Networking",
-          "speakers": []
+          "subtitle": null,
+          "full": "Coffee & Networking"
         },
         {
-          "id": "d01-1110",
-          "time": "11:10",
-          "end": "11:55",
-          "iso": "2026-11-05T11:10",
+          "id": "d1-session-04",
+          "time": "10:40",
+          "iso": "2026-11-05T10:40",
           "kind": "session",
-          "format": "Panel",
-          "title": "What’s in It for Governments? Attracting Foreign Investment and Wealth Creators",
-          "speakers": [
-            {
-              "name": "H.E. Calvin St Juste",
-              "org": "St Kitts and Nevis",
-              "role": null
-            },
-            {
-              "name": "Alex Muscat",
-              "org": "Malta",
-              "role": null
-            },
-            {
-              "name": "Joe Rice",
-              "org": "Global Citizen Solutions",
-              "role": "Moderator"
-            }
-          ]
+          "title": "From Pioneer to Benchmark: St Kitts and Nevis and Caribbean Citizenship",
+          "subtitle": null,
+          "full": "From Pioneer to Benchmark: St Kitts and Nevis and Caribbean Citizenship"
         },
         {
-          "id": "d01-1155",
-          "time": "11:55",
-          "end": "12:40",
-          "iso": "2026-11-05T11:55",
+          "id": "d1-session-05",
+          "time": "11:00",
+          "iso": "2026-11-05T11:00",
           "kind": "session",
-          "format": "Panel",
-          "title": "Portugal’s Investment Fund Landscape: Opportunities Across Sectors",
-          "speakers": [
-            {
-              "name": "Pedro Lino",
-              "org": "Optimize Investment Partners",
-              "role": null
-            },
-            {
-              "name": "Duarte Calheiros Menezes",
-              "org": "BlueCrow Capital",
-              "role": null
-            },
-            {
-              "name": "Nuno Serafim",
-              "org": "C2 Capital",
-              "role": null
-            },
-            {
-              "name": "Lourenço Alvares",
-              "org": "Global Citizen Solutions",
-              "role": "Moderator"
-            }
-          ]
+          "title": "What's in It for Nations? The Value of Attracting Foreign Investment and Wealth Creators",
+          "subtitle": null,
+          "full": "What's in It for Nations? The Value of Attracting Foreign Investment and Wealth Creators"
         },
         {
-          "id": "d01-1240",
-          "time": "12:40",
-          "end": "14:00",
-          "iso": "2026-11-05T12:40",
+          "id": "d1-session-06",
+          "time": "11:45",
+          "iso": "2026-11-05T11:45",
+          "kind": "session",
+          "title": "Capital with Purpose: How Portugal's Golden Visa Investments Are Contributing to the Economy and Society",
+          "subtitle": null,
+          "full": "Capital with Purpose: How Portugal's Golden Visa Investments Are Contributing to the Economy and Society"
+        },
+        {
+          "id": "d1-brk-06",
+          "time": "12:30",
+          "iso": "2026-11-05T12:30",
           "kind": "break",
-          "format": null,
           "title": "Networking Lunch",
-          "speakers": []
+          "subtitle": null,
+          "full": "Networking Lunch"
         },
         {
-          "id": "d01-1400",
+          "id": "d1-session-07",
           "time": "14:00",
-          "end": "14:40",
           "iso": "2026-11-05T14:00",
           "kind": "session",
-          "format": "Presentation",
-          "title": "Europe Mobility 2027: Residency, Investment & the Path to Citizenship",
-          "speakers": [
-            {
-              "name": "Adalberto Pucca",
-              "org": "Global Citizen Solutions",
-              "role": null
-            },
-            {
-              "name": "Luca Calabrese",
-              "org": "Global Citizen Solutions",
-              "role": "Q&A"
-            },
-            {
-              "name": "Yanimar Hernandez",
-              "org": "Global Citizen Solutions",
-              "role": "Q&A"
-            },
-            {
-              "name": "Thanos Tsoukalas",
-              "org": "Global Citizen Solutions",
-              "role": "Q&A"
-            }
-          ]
+          "title": "Europe 2027: Your Roadmap to Residency in Spain, Italy, Greece and Malta",
+          "subtitle": null,
+          "full": "Europe 2027: Your Roadmap to Residency in Spain, Italy, Greece and Malta"
         },
         {
-          "id": "d01-1440",
-          "time": "14:40",
-          "end": "15:20",
-          "iso": "2026-11-05T14:40",
+          "id": "d1-session-08",
+          "time": "14:45",
+          "iso": "2026-11-05T14:45",
           "kind": "session",
-          "format": "Presentation",
-          "title": "USA Immigration Policy: Investment Visa and Talent Visa",
-          "speakers": [
-            {
-              "name": "Speaker",
-              "org": "To be announced",
-              "role": null
-            },
-            {
-              "name": "Adalberto Pucca",
-              "org": "Global Citizen Solutions",
-              "role": "Q&A Moderator"
-            }
-          ]
+          "title": "The United States Opportunity: Visa Pathways for Investors & Global Talent",
+          "subtitle": null,
+          "full": "The United States Opportunity: Visa Pathways for Investors & Global Talent"
         },
         {
-          "id": "d01-1520",
-          "time": "15:20",
-          "end": "15:35",
-          "iso": "2026-11-05T15:20",
+          "id": "d1-brk-07",
+          "time": "15:15",
+          "iso": "2026-11-05T15:15",
           "kind": "break",
-          "format": null,
           "title": "Coffee & Networking",
-          "speakers": []
+          "subtitle": null,
+          "full": "Coffee & Networking"
         },
         {
-          "id": "d01-1535",
+          "id": "d1-session-09",
           "time": "15:35",
-          "end": "16:10",
           "iso": "2026-11-05T15:35",
           "kind": "session",
-          "format": "Presentation",
-          "title": "Asset Location vs. Asset Allocation: The New Wealth Discipline",
-          "speakers": [
-            {
-              "name": "Speaker",
-              "org": "To be announced",
-              "role": null
-            }
-          ]
+          "title": "Asset Location vs. Asset Allocation",
+          "subtitle": null,
+          "full": "Asset Location vs. Asset Allocation"
         },
         {
-          "id": "d01-1610",
+          "id": "d1-session-10",
           "time": "16:10",
-          "end": "16:50",
           "iso": "2026-11-05T16:10",
           "kind": "session",
-          "format": "Fireside Chat",
-          "title": "The Global Citizen’s Checklist: Banking, Healthcare and Everyday Logistics Abroad",
-          "speakers": [
-            {
-              "name": "Maggie Williams",
-              "org": null,
-              "role": null
-            },
-            {
-              "name": "Grazi Fulchiron",
-              "org": null,
-              "role": null
-            }
-          ]
+          "title": "The Global Citizen's Checklist: Banking, Healthcare and Everyday Logistics Abroad",
+          "subtitle": null,
+          "full": "The Global Citizen's Checklist: Banking, Healthcare and Everyday Logistics Abroad"
         },
         {
-          "id": "d01-1650",
+          "id": "d1-session-11",
           "time": "16:50",
-          "end": "17:00",
           "iso": "2026-11-05T16:50",
           "kind": "session",
-          "format": "Host Remarks",
-          "title": "Closing Remarks, Day One",
-          "speakers": [
-            {
-              "name": "Mehdi Kadiri",
-              "org": "Global Citizen Solutions",
-              "role": null
-            }
-          ]
+          "title": "Closing Remarks – Day 1",
+          "subtitle": null,
+          "full": "Closing Remarks – Day 1"
         }
       ],
       "workshops": [
         {
-          "id": "d01-w1100",
+          "id": "d1-workshop-01",
           "time": "11:00",
           "iso": "2026-11-05T11:00",
           "kind": "workshop",
-          "title": "Portugal: From NHR to IFICI & Residence Planning",
-          "leaders": [
-            "Diogo Pedro",
-            "Joana M."
-          ]
+          "title": "Plan Smart: Combining Residency and Tax Benefits in Portugal — The IFICI Opportunity",
+          "subtitle": null,
+          "full": "Plan Smart: Combining Residency and Tax Benefits in Portugal — The IFICI Opportunity"
         },
         {
-          "id": "d01-w1200",
+          "id": "d1-workshop-02",
           "time": "12:00",
           "iso": "2026-11-05T12:00",
           "kind": "workshop",
           "title": "Italy Immigration Workshop",
-          "leaders": [
-            "Luca Calabrese"
-          ]
+          "subtitle": null,
+          "full": "Italy Immigration Workshop"
         },
         {
-          "id": "d01-w1400",
+          "id": "d1-workshop-03",
           "time": "14:00",
           "iso": "2026-11-05T14:00",
           "kind": "workshop",
           "title": "Portugal Real Estate",
-          "leaders": [
-            "Gonçalo Peixoto"
-          ]
+          "subtitle": null,
+          "full": "Portugal Real Estate"
         },
         {
-          "id": "d01-w1500",
+          "id": "d1-workshop-04",
           "time": "15:00",
           "iso": "2026-11-05T15:00",
           "kind": "workshop",
           "title": "Beyond Sanctions: Residency and Compliance Solutions for Restricted Nationals",
-          "leaders": [
-            "Joe Rice"
-          ]
+          "subtitle": null,
+          "full": "Beyond Sanctions: Residency and Compliance Solutions for Restricted Nationals"
         },
         {
-          "id": "d01-w1600",
+          "id": "d1-workshop-05",
           "time": "16:00",
           "iso": "2026-11-05T16:00",
           "kind": "workshop",
           "title": "Greece Immigration Workshop",
-          "leaders": [
-            "Thanos Tsoukalas"
-          ]
+          "subtitle": null,
+          "full": "Greece Immigration Workshop"
         }
       ]
     },
     {
       "day": "Day Two",
-      "date": "6 Nov",
+      "date": "Friday, 6 November",
       "iso": "2026-11-06",
       "theme": "Global Wealth & the International Family",
       "main": [
         {
-          "id": "d02-0830",
+          "id": "d2-brk-01",
           "time": "08:30",
-          "end": "09:15",
           "iso": "2026-11-06T08:30",
           "kind": "break",
-          "format": null,
           "title": "Coffee, Registration & Networking",
-          "speakers": []
+          "subtitle": null,
+          "full": "Coffee, Registration & Networking"
         },
         {
-          "id": "d02-0915",
+          "id": "d2-brk-02",
+          "time": "10:45",
+          "iso": "2026-11-06T10:45",
+          "kind": "break",
+          "title": "Coffee & Networking",
+          "subtitle": null,
+          "full": "Coffee & Networking"
+        },
+        {
+          "id": "d2-brk-03",
+          "time": "12:30",
+          "iso": "2026-11-06T12:30",
+          "kind": "break",
+          "title": "Networking Lunch",
+          "subtitle": null,
+          "full": "Networking Lunch"
+        },
+        {
+          "id": "d2-brk-04",
+          "time": "15:00",
+          "iso": "2026-11-06T15:00",
+          "kind": "break",
+          "title": "Coffee & Networking",
+          "subtitle": null,
+          "full": "Coffee & Networking"
+        },
+        {
+          "id": "d2-brk-05",
+          "time": "16:30",
+          "iso": "2026-11-06T16:30",
+          "kind": "break",
+          "title": "A Taste of Portugal: A Guided Wine Experience",
+          "subtitle": null,
+          "full": "A Taste of Portugal: A Guided Wine Experience"
+        },
+        {
+          "id": "d2-session-01",
           "time": "09:15",
-          "end": "09:30",
           "iso": "2026-11-06T09:15",
           "kind": "session",
-          "format": "Host Remarks",
-          "title": "Day Two Welcome",
-          "speakers": [
-            {
-              "name": "Mehdi Kadiri",
-              "org": "Global Citizen Solutions",
-              "role": null
-            }
-          ]
+          "title": "Day 2 Welcome",
+          "subtitle": null,
+          "full": "Day 2 Welcome"
         },
         {
-          "id": "d02-0930",
+          "id": "d2-session-02",
           "time": "09:30",
-          "end": "10:15",
           "iso": "2026-11-06T09:30",
           "kind": "session",
-          "format": "Panel",
-          "title": "Where Is Capital Going? Markets, Uncertainty and the Investor’s Next Move",
-          "speakers": [
-            {
-              "name": "Pedro Lino",
-              "org": "Optimize Investment Partners",
-              "role": null
-            }
-          ]
+          "title": "Money Without Borders: Diversification and Wealth Management for the Global Citizen in 2026",
+          "subtitle": null,
+          "full": "Money Without Borders: Diversification and Wealth Management for the Global Citizen in 2026"
         },
         {
-          "id": "d02-1015",
+          "id": "d2-session-03",
           "time": "10:15",
-          "end": "10:55",
           "iso": "2026-11-06T10:15",
           "kind": "session",
-          "format": "Panel",
-          "title": "Family Wealth & Succession",
-          "speakers": [
-            {
-              "name": "Bernardo Meyrelles",
-              "org": "EFG",
-              "role": null
-            },
-            {
-              "name": "Family office & succession experts",
-              "org": "To be announced",
-              "role": null
-            }
-          ]
+          "title": "Investment Migration in a Changing World: New Destinations and Lessons Learned",
+          "subtitle": null,
+          "full": "Investment Migration in a Changing World: New Destinations and Lessons Learned"
         },
         {
-          "id": "d02-1055",
-          "time": "10:55",
-          "end": "11:10",
-          "iso": "2026-11-06T10:55",
+          "id": "d2-brk-06",
+          "time": "10:45",
+          "iso": "2026-11-06T10:45",
           "kind": "break",
-          "format": null,
           "title": "Coffee & Networking",
-          "speakers": []
+          "subtitle": null,
+          "full": "Coffee & Networking"
         },
         {
-          "id": "d02-1100",
-          "time": "11:00",
-          "end": "11:15",
-          "iso": "2026-11-06T11:00",
+          "id": "d2-session-04",
+          "time": "11:15",
+          "iso": "2026-11-06T11:15",
           "kind": "session",
-          "format": "Panel",
-          "title": "The Global Wealth Playbook: Tax & Jurisdiction",
-          "speakers": [
-            {
-              "name": "Albert Morgenstern",
-              "org": "ESADE Business School",
-              "role": null
-            },
-            {
-              "name": "Dr. Laura Madrid",
-              "org": "Global Citizen Solutions",
-              "role": "Moderator"
-            }
-          ]
+          "title": "Building a Global Plan B, C and D: Contingency Planning for Global Families",
+          "subtitle": null,
+          "full": "Building a Global Plan B, C and D: Contingency Planning for Global Families"
         },
         {
-          "id": "d02-1110",
-          "time": "11:10",
-          "end": "11:30",
-          "iso": "2026-11-06T11:10",
-          "kind": "session",
-          "format": "Presentation",
-          "title": "Are You Really Ready for a 100-Year Life?",
-          "speakers": [
-            {
-              "name": "Dr. Nina Patrick",
-              "org": null,
-              "role": null
-            }
-          ]
-        },
-        {
-          "id": "d02-1130",
-          "time": "11:30",
-          "end": "11:50",
-          "iso": "2026-11-06T11:30",
-          "kind": "session",
-          "format": "Panel",
-          "title": "Longevity Is the New Luxury",
-          "speakers": [
-            {
-              "name": "Cintia Mano",
-              "org": "European Longevity Hub",
-              "role": null
-            },
-            {
-              "name": "Dr. Nina Patrick",
-              "org": null,
-              "role": null
-            },
-            {
-              "name": "Dr. Joana Costa",
-              "org": "B-Life Clinic",
-              "role": null
-            }
-          ]
-        },
-        {
-          "id": "d02-1150",
+          "id": "d2-session-05",
           "time": "11:50",
-          "end": "12:35",
           "iso": "2026-11-06T11:50",
           "kind": "session",
-          "format": "Panel",
-          "title": "Building a Global Plan B, C and D: Residence, Assets & Contingency",
-          "speakers": [
-            {
-              "name": "João Pacheco Gonçalves",
-              "org": "Global Citizen Solutions",
-              "role": null
-            },
-            {
-              "name": "Joe Rice",
-              "org": "Global Citizen Solutions",
-              "role": null
-            },
-            {
-              "name": "Dr. Laura Madrid",
-              "org": "Global Citizen Solutions",
-              "role": null
-            },
-            {
-              "name": "Mehdi Kadiri",
-              "org": "Global Citizen Solutions",
-              "role": null
-            }
-          ]
+          "title": "Inside the Private Bank: How International Families Structure Their Wealth",
+          "subtitle": null,
+          "full": "Inside the Private Bank: How International Families Structure Their Wealth"
         },
         {
-          "id": "d02-1235",
-          "time": "12:35",
-          "end": "14:00",
-          "iso": "2026-11-06T12:35",
+          "id": "d2-brk-07",
+          "time": "12:30",
+          "iso": "2026-11-06T12:30",
           "kind": "break",
-          "format": null,
           "title": "Networking Lunch",
-          "speakers": []
+          "subtitle": null,
+          "full": "Networking Lunch"
         },
         {
-          "id": "d02-1400",
+          "id": "d2-session-06",
           "time": "14:00",
-          "end": "14:30",
           "iso": "2026-11-06T14:00",
           "kind": "session",
-          "format": "Fireside Chat",
-          "title": "The Regulatory Horizon: How EU Policy Is Reshaping Investment Migration",
-          "speakers": [
-            {
-              "name": "Bruno L’Ecuyer",
-              "org": "Investment Migration Council",
-              "role": null
-            },
-            {
-              "name": "Joana M.",
-              "org": null,
-              "role": "Moderator"
-            }
-          ]
+          "title": "Are You Really Ready for a 100-Year Life?",
+          "subtitle": null,
+          "full": "Are You Really Ready for a 100-Year Life?"
         },
         {
-          "id": "d02-1430",
+          "id": "d2-session-07",
           "time": "14:30",
-          "end": "15:10",
           "iso": "2026-11-06T14:30",
           "kind": "session",
-          "format": "Fireside Chat",
-          "title": "Beyond the Golden Visa: Integration and Contribution",
-          "speakers": [
-            {
-              "name": "Ruth Shaber, MD",
-              "org": "Tara Health Foundation",
-              "role": null
-            },
-            {
-              "name": "Sheree M. Mitchell",
-              "org": "Immersa Global",
-              "role": null
-            }
-          ]
+          "title": "Longevity Is the New Luxury",
+          "subtitle": null,
+          "full": "Longevity Is the New Luxury"
         },
         {
-          "id": "d02-1510",
-          "time": "15:10",
-          "end": "15:25",
-          "iso": "2026-11-06T15:10",
+          "id": "d2-brk-08",
+          "time": "15:00",
+          "iso": "2026-11-06T15:00",
           "kind": "break",
-          "format": null,
           "title": "Coffee & Networking",
-          "speakers": []
+          "subtitle": null,
+          "full": "Coffee & Networking"
         },
         {
-          "id": "d02-1525",
-          "time": "15:25",
-          "end": "16:00",
-          "iso": "2026-11-06T15:25",
+          "id": "d2-session-08",
+          "time": "15:20",
+          "iso": "2026-11-06T15:20",
           "kind": "session",
-          "format": "Panel",
-          "title": "Raising Global Children: Education, Identity & Mobility",
-          "speakers": [
-            {
-              "name": "Nathalie Willis-Davis",
-              "org": "Tendoria",
-              "role": null
-            },
-            {
-              "name": "Diane Bidna",
-              "org": "TASIS Portugal",
-              "role": null
-            },
-            {
-              "name": "Gizane Campos",
-              "org": "Global Citizen Solutions",
-              "role": "Moderator"
-            }
-          ]
+          "title": "The Return on Giving: How Contribution Builds Social Capital and a Sense of Belonging — The Tara Health Foundation Story",
+          "subtitle": null,
+          "full": "The Return on Giving: How Contribution Builds Social Capital and a Sense of Belonging — The Tara Health Foundation Story"
         },
         {
-          "id": "d02-1600",
-          "time": "16:00",
-          "end": "16:40",
-          "iso": "2026-11-06T16:00",
+          "id": "d2-session-09",
+          "time": "15:45",
+          "iso": "2026-11-06T15:45",
           "kind": "session",
-          "format": "Panel",
-          "title": "Beyond Equities and Property: Gold, Art, Watches & Other Passion Assets",
-          "speakers": [
-            {
-              "name": "Marc Jancou",
-              "org": "Marc Jancou Contemporary",
-              "role": null
-            },
-            {
-              "name": "Adrien Bridge",
-              "org": null,
-              "role": null
-            }
-          ]
+          "title": "Growing Up Global: Education, Belonging and Raising Children Across Borders",
+          "subtitle": null,
+          "full": "Growing Up Global: Education, Belonging and Raising Children Across Borders"
         },
         {
-          "id": "d02-1640",
-          "time": "16:40",
-          "end": "16:50",
-          "iso": "2026-11-06T16:40",
+          "id": "d2-session-10",
+          "time": "16:20",
+          "iso": "2026-11-06T16:20",
           "kind": "session",
-          "format": "Host Remarks",
           "title": "Closing Remarks",
-          "speakers": [
-            {
-              "name": "Mehdi Kadiri",
-              "org": "Global Citizen Solutions",
-              "role": null
-            }
-          ]
+          "subtitle": null,
+          "full": "Closing Remarks"
         },
         {
-          "id": "d02-1650",
-          "time": "16:50",
-          "end": "17:30",
-          "iso": "2026-11-06T16:50",
+          "id": "d2-brk-09",
+          "time": "16:30",
+          "iso": "2026-11-06T16:30",
           "kind": "break",
-          "format": null,
-          "title": "Wine Tasting & Farewell Networking",
-          "speakers": []
+          "title": "A Taste of Portugal: A Guided Wine Experience",
+          "subtitle": null,
+          "full": "A Taste of Portugal: A Guided Wine Experience"
         }
       ],
       "workshops": [
         {
-          "id": "d02-w1100",
+          "id": "d2-workshop-01",
           "time": "11:00",
           "iso": "2026-11-06T11:00",
           "kind": "workshop",
-          "title": "Tips and Advice on Taxes for Americans Abroad",
-          "leaders": [
-            "Albert Morgenstern"
-          ]
+          "title": "Tips and advice on Taxes for Americans abroad",
+          "subtitle": null,
+          "full": "Tips and advice on Taxes for Americans abroad"
         },
         {
-          "id": "d02-w1200",
+          "id": "d2-workshop-02",
           "time": "12:00",
           "iso": "2026-11-06T12:00",
           "kind": "workshop",
           "title": "Spain Immigration Workshop",
-          "leaders": [
-            "Yanimar Hernandez"
-          ]
+          "subtitle": null,
+          "full": "Spain Immigration Workshop"
         },
         {
-          "id": "d02-w1400",
+          "id": "d2-workshop-03",
           "time": "14:00",
           "iso": "2026-11-06T14:00",
           "kind": "workshop",
           "title": "Caribbean Citizenship Workshop",
-          "leaders": [
-            "Joe Rice"
-          ]
+          "subtitle": null,
+          "full": "Caribbean Citizenship Workshop"
         },
         {
-          "id": "d02-w1500",
+          "id": "d2-workshop-04",
           "time": "15:00",
           "iso": "2026-11-06T15:00",
           "kind": "workshop",
           "title": "Panama Residence & Investment Options",
-          "leaders": [
-            "To be announced"
-          ]
+          "subtitle": null,
+          "full": "Panama Residence & Investment Options"
         },
         {
-          "id": "d02-w1600",
+          "id": "d2-workshop-05",
           "time": "16:00",
           "iso": "2026-11-06T16:00",
           "kind": "workshop",
           "title": "Malta Residence & Citizenship Workshop",
-          "leaders": [
-            "Ayoub Rebroub"
-          ]
+          "subtitle": null,
+          "full": "Malta Residence & Citizenship Workshop"
         }
       ]
     }

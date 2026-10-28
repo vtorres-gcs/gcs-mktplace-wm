@@ -5,7 +5,7 @@ allowed-tools: Bash(*), Edit, Write, mcp__Claude_Browser__preview_start, mcp__Cl
 metadata:
   last_updated: "2026-10-21"
   updated_by: claude-skill-creator
-  change_note: "Sync with site repo at 6725cff: 28 speakers (added José Carlos Reis, John McNertney), 5 partner booking pages (American Club, GFPI, RedBridge, Trusted Advisor, IMGlobalWealth), IMGW promo code WMSIMGLOBALWEALTH25, agenda-tracks.html thematic filter page, FACTS.md + data JSONs + PRODUCT.md + DESIGN.md refreshed, new speaker photos and partner logos added."
+  change_note: "Sync with site repo at f2fbee2: 31 speakers (added Sheree Mitchell, Teresa Barbosa, António Henriques; Sheree Mitchell upgraded from agenda-only); Hadley Gamble added as Summit Host (not a speaker); 8 new partner booking pages (AmCham, PHKCCI, Bison Bank, Atlântico, BPCC, WMS50, LinkedIn, GCS Clients); Bison Bank added as strategic partner; homepage session titles now canonical (approved); FACTS.md + data JSONs refreshed; new speaker photos added."
 ---
 
 # Social Media — Wealth & Migration Summit 2026

@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "as_of": "2026-10-21",
-    "note": "Snapshot of the Summit's assets, collected from the site repo (gcs-wealth-migration-summit) and the wm-summit sibling skills. Paths are relative to assets/. Updated 21 Oct 2026: 28 speakers (added José Carlos Reis, John McNertney, Francisca van Dijken), American Club partner logo added."
+    "as_of": "2026-10-27",
+    "note": "Snapshot of the Summit's assets, collected from the site repo (gcs-wealth-migration-summit) and the wm-summit sibling skills. Paths are relative to assets/. Updated 27 Oct 2026: 31 speakers (added Sheree Mitchell, Teresa Barbosa, António Henriques); new partner logos: Bison Bank (white + colour), AmCham, PHKCCI, BPCC; Hadley Gamble added as Host (not a speaker)."
   },
   "bundles": {
     "logos": [
@@ -16,7 +16,7 @@
       "fonts"
     ]
   },
-  "speaker_caution": "Client-supplied headshot, as supplied (never generated or altered). 480×480 px — fine for slides and social, too small for print. Name and role are the site's card; a speaker's name is not tied to any session. Two speakers (José Carlos Reis, John McNertney) have JPG originals instead of WebP.",
+  "speaker_caution": "Client-supplied headshot, as supplied (never generated or altered). 480×480 px — fine for slides and social, too small for print. Name and role are the site's card; a speaker's name is not tied to any session. Two speakers (José Carlos Reis, John McNertney) have JPG originals instead of WebP. Hadley Gamble is the Summit Host (not a speaker on the roster); her portrait is in assets/speakers/ for host-card use only.",
   "site_ignore": [
     "assets/img/hero-900.webp",
     "assets/img/epic-sana-900.webp",
@@ -944,6 +944,146 @@
       "cleared": false
     },
     {
+      "id": "partner.bisonbank",
+      "title": "Bison Bank — logo (colour)",
+      "kind": "logo",
+      "group": "partner-logos",
+      "files": [
+        "logos/partners/bisonbank.svg"
+      ],
+      "ground": "light",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "partner",
+        "parceiro",
+        "parceira",
+        "patrocinador",
+        "sponsor",
+        "bison bank",
+        "bison",
+        "bank",
+        "strategic",
+        "estratégico"
+      ],
+      "caution": "Third-party logo. Bison Bank appears as a strategic partner in the site's hero and has its own booking page (/bisonbank). Send as a file only; it goes on a creative only if the user confirms it is cleared. Never add a role beyond what the site states.",
+      "cleared": false
+    },
+    {
+      "id": "partner.bisonbank-white",
+      "title": "Bison Bank — logo (white)",
+      "kind": "logo",
+      "group": "partner-logos",
+      "files": [
+        "logos/partners/bisonbank-white.svg"
+      ],
+      "ground": "dark",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "partner",
+        "parceiro",
+        "parceira",
+        "patrocinador",
+        "sponsor",
+        "bison bank",
+        "bison",
+        "bank",
+        "white",
+        "branco",
+        "branca",
+        "strategic",
+        "estratégico"
+      ],
+      "caution": "Third-party logo. Bison Bank appears as a strategic partner in the site's hero and has its own booking page (/bisonbank). Send as a file only; it goes on a creative only if the user confirms it is cleared. Never add a role beyond what the site states.",
+      "cleared": false
+    },
+    {
+      "id": "partner.amcham",
+      "title": "AmCham Portugal — logo",
+      "kind": "logo",
+      "group": "partner-logos",
+      "files": [
+        "logos/partners/amcham.png"
+      ],
+      "ground": "any",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "partner",
+        "parceiro",
+        "parceira",
+        "patrocinador",
+        "sponsor",
+        "amcham",
+        "amcham portugal",
+        "american chamber of commerce"
+      ],
+      "caution": "Third-party logo from this partner's own booking page on the site (/amcham). The site does not describe the partnership beyond that page. Send as a file only; it goes on a creative only if the user confirms it is cleared. Never add a role.",
+      "cleared": false
+    },
+    {
+      "id": "partner.phkcci",
+      "title": "PHKCCI — logo",
+      "kind": "logo",
+      "group": "partner-logos",
+      "files": [
+        "logos/partners/phkcci.png"
+      ],
+      "ground": "any",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "partner",
+        "parceiro",
+        "parceira",
+        "patrocinador",
+        "sponsor",
+        "phkcci",
+        "portuguese hong kong chamber"
+      ],
+      "caution": "Third-party logo from this partner's own booking page on the site (/phkcci). The site does not describe the partnership beyond that page. Send as a file only; it goes on a creative only if the user confirms it is cleared. Never add a role.",
+      "cleared": false
+    },
+    {
+      "id": "partner.bpcc",
+      "title": "BPCC — logo",
+      "kind": "logo",
+      "group": "partner-logos",
+      "files": [
+        "logos/partners/bpcc.png"
+      ],
+      "ground": "any",
+      "aliases": [
+        "logo",
+        "logotipo",
+        "logótipo",
+        "marca",
+        "lockup",
+        "partner",
+        "parceiro",
+        "parceira",
+        "patrocinador",
+        "sponsor",
+        "bpcc",
+        "british portuguese chamber of commerce"
+      ],
+      "caution": "Third-party logo from this partner's own booking page on the site (/bpcc). The site does not describe the partnership beyond that page. Send as a file only; it goes on a creative only if the user confirms it is cleared. Never add a role.",
+      "cleared": false
+    },
+    {
       "id": "img.og-share",
       "title": "Share card — headline on the hero photograph (1200×630)",
       "kind": "graphic",
@@ -1307,6 +1447,15 @@
     "speakers/nuno-sanches.webp": "assets/img/speakers/nuno-sanches.webp",
     "speakers/jose-carlos-reis.jpg": "assets/img/speakers/jose-carlos-reis.jpg",
     "speakers/john-mcnertney.jpg": "assets/img/speakers/john-mcnertney.jpg",
-    "logos/partners/americanclub.png": "assets/img/americanclub-logo.png"
+    "logos/partners/americanclub.png": "assets/img/americanclub-logo.png",
+    "logos/partners/bisonbank.svg": "assets/img/bisonbank.svg",
+    "logos/partners/bisonbank-white.svg": "assets/img/bisonbank-white.svg",
+    "logos/partners/amcham.png": "assets/img/amcham-logo.png",
+    "logos/partners/phkcci.png": "assets/img/phkcci-logo.png",
+    "logos/partners/bpcc.png": "assets/img/bpcc-logo.png",
+    "speakers/sheree-mitchell.webp": "assets/img/speakers/sheree-mitchell.webp",
+    "speakers/teresa-barbosa.webp": "assets/img/speakers/teresa-barbosa.webp",
+    "speakers/antonio-henriques.webp": "assets/img/speakers/antonio-henriques.webp",
+    "speakers/hadley-gamble.webp": "assets/img/speakers/hadley-gamble.webp"
   }
 }

@@ -5,7 +5,7 @@ allowed-tools: Bash(*), Read, Write, Edit, AskUserQuestion
 metadata:
   last_updated: "2026-10-21"
   updated_by: claude-skill-creator
-  change_note: "Script only: video production (Magnific / Kling, characters, burned captions) removed. Facts synced with site repo at 6725cff (copied from wm-social-media)."
+  change_note: "Script only (video production removed). Facts synced with site repo at f2fbee2: 31 speakers, Hadley Gamble as Summit Host, homepage session titles now canonical; FACTS.md refreshed."
 ---
 
 # wm-reels — Reel scripts for the Wealth and Migration Summit 2026

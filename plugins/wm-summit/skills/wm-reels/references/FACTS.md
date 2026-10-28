@@ -1,6 +1,6 @@
 # Confirmed facts — Wealth & Migration Summit 2026
 
-**As of 21 Oct 2026**, read from the site repo `gcs-wealth-migration-summit` at commit `6725cff` (`index.html` last changed 21 Oct via `ef8ec1a`). Machine-readable copies: `references/data/{speakers,programme,rates,site}.json`, read through `scripts/facts.py`. Refresh with `scripts/sync_site_facts.py` (see "Keeping this current").
+**As of 27 Oct 2026**, read from the site repo `gcs-wealth-migration-summit` at commit `f2fbee2` (three new speakers added; homepage session titles updated to approved versions). Machine-readable copies: `references/data/{speakers,programme,rates,site}.json`, read through `scripts/facts.py`. Refresh with `scripts/sync_site_facts.py` (see "Keeping this current").
 
 ## Precedence
 
@@ -55,14 +55,16 @@
   2. A time goes on a slide only if it is in `facts.known_times()`. Don't compute, round or infer end times — the site publishes start times; `agenda.html` also has end times from `build.py`.
   3. Speaker↔session pairings from `agenda.html` / `data/programme.json` may be used. The pairings are generated from `programme/build.py`.
   4. A post that names sessions carries "Programme subject to change" in the caption (the agenda page says it).
-  5. Count only what is unambiguous: **2 days · 10 workshops · 28 speakers**. Don't state a "session" count — the main-stage rows include coffee, lunch and registration, and nothing on the site defines "session".
+  5. Count only what is unambiguous: **2 days · 10 workshops · 31 speakers**. Don't state a "session" count — the main-stage rows include coffee, lunch and registration, and nothing on the site defines "session".
 - **Workshop countries.** The intro sentence on the site names *Italy, Spain, Portugal, Greece, the Caribbean, Panama, and Turkey*; the timed list has **Malta** and **no Turkey**. For a workshop post use the timed list; do not mention Turkey or leave out Malta without telling the user.
 
 ## Speakers
 
-28, in the site's order (`python3 scripts/facts.py speakers`). Name, role and bio come from `data/speakers.json` (the site's own cards); portraits from `assets/speakers/<slug>.webp` — all 28 bundled. A person not in the roster is not named, drawn or implied.
+31, in the site's order (`python3 scripts/facts.py speakers`). Name, role and bio come from `data/speakers.json` (the site's own cards); portraits from `assets/speakers/<slug>.webp` — all 31 bundled. A person not in the roster is not named, drawn or implied.
 
-**Agenda-only names** (appear in `agenda.html` as session participants but have no speaker card on the site): Maggie Williams, Grazi Fulchiron, Sheree M. Mitchell, Adrien Bridge, Dr. Joana Costa, Diogo Pedro, Joana M., Gonçalo Peixoto, Lourenço Alvares, Gizane Campos. These are **not** in the speaker roster — they have no card, no portrait, no bio. A post may name them as session participants (from `programme.json`) but must not present them as "speakers" with a portrait.
+**Summit Host (not on the speaker roster):** Hadley Gamble — veteran CNN anchor, listed on the site as Host. Her portrait (`hadley-gamble.webp`) is in `assets/speakers/`. She appears in the hero section alongside speakers. Do **not** count her in the "31 speakers" figure and do not present her as a speaker — she is the host. Use "hosted by Hadley Gamble" or "Summit Host" framing only.
+
+**Agenda-only names** (appear in `agenda.html` as session participants but have no speaker card on the site): Maggie Williams, Grazi Fulchiron, Adrien Bridge, Dr. Joana Costa, Diogo Pedro, Joana M., Gonçalo Peixoto, Lourenço Alvares, Gizane Campos. These are **not** in the speaker roster — they have no card, no portrait, no bio. A post may name them as session participants (from `programme.json`) but must not present them as "speakers" with a portrait.
 
 **Name and role as the card has them** (`display` in the JSON). Known inconsistencies — flag, don't resolve:
 
@@ -82,6 +84,9 @@
 - **Francisca van Dijken** — EMEA Head of Global Client Solutions at Citigroup Private Bank. Portrait: `francisca-van-dijken.webp`
 - **José Carlos Reis** — Executive Director & Senior Investment Adviser at Julius Baer. Portrait: `jose-carlos-reis.jpg`
 - **John McNertney** — CEO at Green Ocean Global Advisors. Portrait: `john-mcnertney.jpg`
+- **Sheree Mitchell** — Founder at Immersa Global. Portrait: `sheree-mitchell.webp`. (Previously agenda-only; now has a full speaker card.)
+- **Teresa Barbosa** — Founder and Managing Partner at Simplify Somm. Portrait: `teresa-barbosa.webp`
+- **António Henriques** — Chief Executive Officer at Bison Bank. Portrait: `antonio-henriques.webp`
 
 Bios are long and copied verbatim from the site; a speaker card carries name, role and portrait, no bio — a spotlight caption may quote ≤ 40 words of it, whole sentences only.
 
@@ -104,7 +109,7 @@ Bios are long and copied verbatim from the site; a speaker card carries name, ro
 
 ## Partner booking pages
 
-Five partner-specific booking pages exist, each with its own discount or form. These are `noindex` — they are shared privately via partner channels, not from the public site.
+Partner-specific booking pages exist, each with its own discount or form. These are `noindex` — they are shared privately via partner channels, not from the public site.
 
 | Page | Partner | Discount | Promo code | Form |
 |---|---|---|---|---|
@@ -113,15 +118,23 @@ Five partner-specific booking pages exist, each with its own discount or form. T
 | `/redbridge` | RedBridge | 50% | *(applied via dedicated form)* | RedBridge-specific HubSpot form |
 | `/trustedadvisor` | Trusted Advisor | 50% | *(applied via dedicated form)* | Trusted Advisor-specific HubSpot form |
 | `/imglobalwealth` | IMGlobalWealth | 25% | `WMSIMGLOBALWEALTH25` | Main HubSpot form |
+| `/amcham` | AmCham Portugal | *(details not extracted)* | *(not extracted)* | *(not extracted)* |
+| `/phkcci` | PHKCCI | *(details not extracted)* | *(not extracted)* | *(not extracted)* |
+| `/bisonbank` | Bison Bank | *(details not extracted)* | *(not extracted)* | *(not extracted)* |
+| `/atlantico` | Atlântico Europa | *(details not extracted)* | *(not extracted)* | *(not extracted)* |
+| `/bpcc` | BPCC | *(details not extracted)* | *(not extracted)* | *(not extracted)* |
+| `/wms50` | *(details not extracted)* | 50%? | *(not extracted)* | *(not extracted)* |
+| `/linkedin` | *(LinkedIn-sourced leads)* | *(details not extracted)* | *(not extracted)* | *(not extracted)* |
+| `/gcs-clients` | GCS Clients | *(details not extracted)* | *(not extracted)* | *(not extracted)* |
 
-**Rule:** partner booking pages and their promo codes are private distribution channels. A social post must **not** publish a promo code or a partner page URL unless the user explicitly clears it for that post.
+**Rule:** partner booking pages and their promo codes are private distribution channels. A social post must **not** publish a promo code or a partner page URL unless the user explicitly clears it for that post. For new pages where details were not extracted, ask the user before using any discount details.
 
 ## Partners and media
 
-- The hero shows two marks next to the title: **Global Citizen Solutions** and **CNN Portugal**.
-- The partner strip under "Interested in partnering with the Summit?" shows ten logos: Goldcrest Portugal Real Estate, Optimize Investment Partners, CapitalPartners (a member of Gaw Capital), Blue Crow, Lisboa 2030, Portuguese Chamber of Commerce, CNN Portugal, Atlântico Europa, João M. Barbosa, Cascais Ventures. **The site does not say what each one is** (sponsor, partner, media, venue-side). The skill does not say either.
-- Five additional partners have their own booking pages (see "Partner booking pages" above): The American Club of Lisbon, GFPI, RedBridge, Trusted Advisor, IMGlobalWealth. Their logos are in `assets/img/` (`americanclub-logo.png`, `gfpi-logo.png`, `redbridge-logo.svg`, `trustedadvisor-logo.png`, `imglobalwealth-logo.png`).
-- **Rule:** no partner or sponsor logo on a social creative unless the user names it for this post and confirms it is cleared for social use. **Exception (user instruction, 20 Oct 2026):** the two marks the hero shows beside the title — Global Citizen Solutions and CNN Portugal — close the cover and the final slide by default. Nothing is written above, beside or over the GCS mark. No tiers, no "official partner of…" wording, no thank-you posts that imply a role. Logos live in `assets/img/` (`summit_assets` keys `partner.*`); several speakers' companies appear there too (Optimize, Blue Crow, Cascais Ventures) — a speaker card is not a partnership statement.
+- The hero shows two marks next to the title: **Global Citizen Solutions** and **CNN Portugal**. It also shows a **strategic partners** block with **Bison Bank** listed there.
+- The partner strip under "Interested in partnering with the Summit?" shows: Goldcrest Portugal Real Estate, Optimize Investment Partners, CapitalPartners (a member of Gaw Capital), Blue Crow, Lisboa 2030, Portuguese Chamber of Commerce, CNN Portugal, Atlântico Europa, João M. Barbosa, Cascais Ventures, SpartanFX, Capital Green, and others. **The site does not say what each one is** (sponsor, partner, media, venue-side). The skill does not say either.
+- Additional partners have their own booking pages (see "Partner booking pages" above): The American Club of Lisbon, GFPI, RedBridge, Trusted Advisor, IMGlobalWealth, AmCham Portugal, PHKCCI, Bison Bank, Atlântico Europa, BPCC. Their logos are bundled in `assets/logos/partners/`.
+- **Rule:** no partner or sponsor logo on a social creative unless the user names it for this post and confirms it is cleared for social use. **Exception (user instruction, 20 Oct 2026):** the two marks the hero shows beside the title — Global Citizen Solutions and CNN Portugal — close the cover and the final slide by default. Nothing is written above, beside or over the GCS mark. No tiers, no "official partner of…" wording, no thank-you posts that imply a role. Several speakers' companies appear as sponsors too — a speaker card is not a partnership statement.
 - **Partner enquiries:** the site now opens a form ("Explore partnership"); it does not print an address. `events@globalcitizensolutions.com` is in `PRODUCT.md` and the copy deck. Use it only after the user confirms it is still the route; otherwise "Link in bio".
 
 ## Spelling and verbatim copy
@@ -134,15 +147,16 @@ Five partner-specific booking pages exist, each with its own discount or form. T
 
 Delegate or client testimonials · past-edition figures (attendance, countries, sessions) · GCS-owned photography of Lisbon or the venue (the site's imagery is generated and on the client's replacement list; the venue photo on the site is not evidence for a claim) · sponsor tiers or sponsor roles · session end times on `index.html` (though `agenda.html` now has them from `build.py`) · who "Maggie Williams", "Grazi Fulchiron" and the other agenda-only names are beyond their session participation · any statement about attendance numbers so far.
 
-## Sources — now aligned
+## Sources — now aligned (with one exception)
 
-As of commit `6725cff`, `index.html` and `agenda.html` are generated from the same `programme/build.py` source and agree on session titles, times and speakers. The earlier mismatch between the two pages (documented in the 20 Oct version of this file) has been resolved. `agenda-tracks.html` is a filtered view of the same data with thematic tags.
+As of commit `f2fbee2`, `agenda.html` is the authoritative generated source for speaker↔session pairings, end times and workshop details. `index.html` has been updated with **approved final session titles** that differ from `agenda.html` in some cases — `data/programme.json` reflects the `index.html` (homepage) titles as the canonical public-facing versions. When `agenda.html` and `index.html` differ on a title, use the `index.html` / `programme.json` version. `agenda-tracks.html` is a filtered view of the programme data with thematic tags.
 
 **Residual differences:**
 - `index.html` does not show speaker↔session pairings; `agenda.html` does.
 - `index.html` does not show session end times; `agenda.html` does.
 - `agenda.html` uses "L'Ecuyer"; speaker card says "L'ecuyer". Use card spelling.
 - The Day Two overlap (`10:55–11:10` coffee, `11:00–11:15` tax panel, `11:10–11:30` longevity) persists in the programme data and needs organiser confirmation.
+- Some session titles on `agenda.html` may differ from `programme.json` / `index.html` — always prefer `programme.json`.
 
 ## Keeping this current
 

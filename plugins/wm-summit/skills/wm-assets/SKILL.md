@@ -5,7 +5,7 @@ allowed-tools: Bash(*), Read, AskUserQuestion, SendUserFile
 metadata:
   last_updated: "2026-10-21"
   updated_by: claude-skill-creator
-  change_note: "Sync with site repo at 6725cff: 28 speakers (added José Carlos Reis, John McNertney), American Club partner logo added (14 partners total), IMGW promo code updated to WMSIMGLOBALWEALTH25, 4 new partner booking pages. catalog.json and site_map updated."
+  change_note: "Sync with site repo at f2fbee2: 31 speakers (added Sheree Mitchell, Teresa Barbosa, António Henriques); Hadley Gamble portrait bundled as Host; 5 new partner logos (Bison Bank colour + white, AmCham, PHKCCI, BPCC); catalog.json and site_map updated."
 ---
 
 # Assets — Wealth & Migration Summit 2026

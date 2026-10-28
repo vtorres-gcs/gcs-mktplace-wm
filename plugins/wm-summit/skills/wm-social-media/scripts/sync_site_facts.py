@@ -76,31 +76,62 @@ def extract_speakers(src: str) -> list:
 
 def extract_programme(src: str) -> list:
     days = []
-    for sec in re.finditer(r'<section class="day" id="(day-[a-z]+)"[\s\S]*?</section>', src):
-        block = sec.group(0)
-        when = _text(re.search(r'class="day__when">(.*?)</span>', block).group(1))
-        theme = _text(re.search(r'class="day__name">(.*?)</span>', block).group(1))
-        label, short = [p.strip() for p in when.split("·")]
-        tracks = {"main": [], "workshops": []}
-        for label_html, ol in re.findall(r'<h4 class="stations__label">(.*?)</h4>\s*<ol class="stations">([\s\S]*?)</ol>', block):
-            track = "workshops" if "Workshop" in label_html else "main"
-            for li in re.finditer(r'<li class="station( station--break)?" id="([^"]+)">([\s\S]*?)</li>', ol):
-                row = li.group(3)
-                t = re.search(r'<time datetime="([^"]+)">([^<]+)</time>', row)
-                sub = re.search(r'<span class="station__sub">([\s\S]*?)</span>', row)
-                head = re.sub(r'<span class="station__sub">[\s\S]*?</span>', "", re.search(r"</time><span>([\s\S]*)</span></div>", row).group(1))
-                title = _text(head)
-                tail = _text(sub.group(1)) if sub else None
-                tracks[track].append({
-                    "id": li.group(2),
-                    "time": t.group(2),
-                    "iso": t.group(1),
-                    "kind": "break" if li.group(1) else ("workshop" if track == "workshops" else "session"),
-                    "title": title,
-                    "subtitle": tail,
-                    "full": f"{title} {tail}" if tail else title,
-                })
-        days.append({"day": label, "date": short, "iso": tracks["main"][0]["iso"][:10], "theme": theme, **tracks})
+    for day_n, sec in enumerate(re.finditer(r'<section class="prog-day"[^>]*>([\s\S]*?)</section>', src), 1):
+        block = sec.group(1)
+        kicker_m = re.search(r'class="prog-day__kicker">(.*?)</p>', block)
+        theme_m = re.search(r'<h2 id="day-\d+-h">(.*?)</h2>', block)
+        kicker = _text(kicker_m.group(1)) if kicker_m else ""
+        theme = html.unescape(_text(theme_m.group(1))) if theme_m else ""
+        parts = kicker.split(" · ", 1)
+        day_label = parts[0].strip()
+        date_str = parts[1].strip() if len(parts) > 1 else ""
+
+        tracks: dict = {"main": [], "workshops": []}
+
+        def _parse_li(li_html, track, brk_n):
+            is_brk = 'class="prog-brk"' in li_html
+            t = re.search(r'<time datetime="([^"]+)">([^<]+)</time>', li_html)
+            if not t:
+                return None
+            if is_brk:
+                raw = re.sub(r'<[^>]+>', ' ', li_html)
+                title = html.unescape(" ".join(raw.split()).replace(t.group(2), "", 1).strip())
+                brk_n[0] += 1
+                return {
+                    "id": f"d{day_n}-brk-{brk_n[0]:02d}",
+                    "time": t.group(2), "iso": t.group(1),
+                    "kind": "break", "title": title, "subtitle": None, "full": title,
+                }
+            id_m = re.search(r'id="([^"]+)"', li_html)
+            title_m = re.search(r'class="prog-ses__title">([\s\S]*?)</h4>', li_html)
+            title = html.unescape(_text(title_m.group(1))) if title_m else ""
+            is_workshop = "workshop" in (id_m.group(1) if id_m else "")
+            actual_track = "workshops" if is_workshop else track
+            return {
+                "id": id_m.group(1) if id_m else f"d{day_n}-unk",
+                "time": t.group(2), "iso": t.group(1),
+                "kind": "workshop" if actual_track == "workshops" else "session",
+                "title": title, "subtitle": None, "full": title,
+                "_track": actual_track,
+            }
+
+        brk_n = [0]
+        for li_html in re.findall(r'<li class="prog-brk"[^>]*>[\s\S]*?</li>', block):
+            row = _parse_li(li_html, "main", brk_n)
+            if row:
+                tracks["main"].append(row)
+
+        for track_m in re.finditer(r'<div class="prog-track([^"]*)">([\s\S]*?)</div>\s*</div>', block):
+            is_side = "prog-track--side" in track_m.group(1)
+            track_name = "workshops" if is_side else "main"
+            for li_html in re.findall(r'<li class="prog-(?:ses|brk)"[^>]*>[\s\S]*?</li>', track_m.group(2)):
+                row = _parse_li(li_html, track_name, brk_n)
+                if row:
+                    actual = row.pop("_track", track_name)
+                    tracks[actual].append(row)
+
+        iso_date = next((r["iso"][:10] for r in tracks["main"] if r["kind"] != "break"), "")
+        days.append({"day": day_label, "date": date_str, "iso": iso_date, "theme": theme, **tracks})
     return days
 
 
@@ -119,6 +150,11 @@ def extract_rates(src: str) -> dict:
     return {"tiers": tiers, "included": included, "limit": limit, "cta": cta, "cta_href": cta_href}
 
 
+def _extract_strategic(src: str) -> list:
+    m = re.search(r'class="strategic__logos">([\s\S]*?)</ul>', src)
+    return [html.unescape(a) for a in re.findall(r'<li><img[^>]+alt="([^"]+)"', m.group(1))] if m else []
+
+
 def extract_site(src: str, site: Path) -> dict:
     og_image = re.search(r'<meta property="og:image" content="([^"]+)"', src).group(1)
     domain = re.match(r"https?://[^/]+", og_image).group(0)
@@ -134,13 +170,12 @@ def extract_site(src: str, site: Path) -> dict:
         "who_is_in_the_room": [_text(x) for x in re.findall(r"<span>([\s\S]*?)</span>", room)],
         "about_heading": _text(re.search(r'id="canyon-h"[^>]*>([\s\S]*?)</h2>', src).group(1)),
         "programme_heading": _text(re.search(r'id="line-h"[^>]*>([\s\S]*?)</h2>', src).group(1)),
-        "workshop_countries_sentence": _text(re.search(r'class="line__disclaimer">([\s\S]*?)</p>', src).group(1)),
         "setting_heading": _text(re.search(r'id="mirror-h"[^>]*>([\s\S]*?)</h2>', src).group(1)),
         "venue_names_on_site": sorted(set(re.findall(r"EPIC SANA Marqu[eê]s(?: Hotel)?", src + (site / "claim-your-seat.html").read_text(encoding="utf-8")))),
         "partner_enquiries": "events@globalcitizensolutions.com",
-        "partner_cta": _text(re.search(r'id="beacon-h"[^>]*>([\s\S]*?)</h2>', src).group(1)),
         "partner_logos_on_site": [html.unescape(a) for a in re.findall(r'<li><img src="assets/img/[^"]+" alt="([^"]+)"', re.search(r'class="beacon__logos">([\s\S]*?)</ul>', src).group(1))],
         "hero_partner_marks": re.findall(r'class="partner__logo[^"]*">[\s\S]*?alt="([^"]+)"', src),
+        "strategic_partners": _extract_strategic(src),
     }
 
 
